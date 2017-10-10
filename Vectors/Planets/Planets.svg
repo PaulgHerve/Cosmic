@@ -1,0 +1,2236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Planets.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6842">
+      <stop
+         style="stop-color:#cae5e8;stop-opacity:0"
+         offset="0"
+         id="stop6844" />
+      <stop
+         id="stop6846"
+         offset="0.84032506"
+         style="stop-color:#f0f8f9;stop-opacity:0.00392157" />
+      <stop
+         style="stop-color:#f7fbfc;stop-opacity:0.15686275"
+         offset="0.92084938"
+         id="stop6848" />
+      <stop
+         id="stop6852"
+         offset="0.97067428"
+         style="stop-color:#fafcfd;stop-opacity:0.37790698" />
+      <stop
+         style="stop-color:#fdfeff;stop-opacity:0.02325581"
+         offset="1"
+         id="stop6850" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6804"
+       inkscape:collect="always">
+      <stop
+         id="stop6806"
+         offset="0"
+         style="stop-color:#cae5e8;stop-opacity:0" />
+      <stop
+         style="stop-color:#f0f8f9;stop-opacity:0"
+         offset="0.72154981"
+         id="stop6810" />
+      <stop
+         id="stop6812"
+         offset="0.96955788"
+         style="stop-color:#f7fbfc;stop-opacity:0.09803922" />
+      <stop
+         style="stop-color:#fbfdfe;stop-opacity:0.3137255"
+         offset="0.99013126"
+         id="stop6854" />
+      <stop
+         id="stop6808"
+         offset="1"
+         style="stop-color:#fdfeff;stop-opacity:0.00290698" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6767">
+      <stop
+         style="stop-color:#cae5e8;stop-opacity:1;"
+         offset="0"
+         id="stop6769" />
+      <stop
+         style="stop-color:#cae5e8;stop-opacity:0;"
+         offset="1"
+         id="stop6771" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6667"
+       inkscape:collect="always">
+      <stop
+         id="stop6669"
+         offset="0"
+         style="stop-color:#00c4ea;stop-opacity:0" />
+      <stop
+         style="stop-color:#cae5e8;stop-opacity:0.55523258"
+         offset="0.58081776"
+         id="stop6671" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.59354836"
+         offset="0.70657241"
+         id="stop6673" />
+      <stop
+         id="stop6675"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6600">
+      <stop
+         style="stop-color:#db6c15;stop-opacity:0.07843138"
+         offset="0"
+         id="stop6602" />
+      <stop
+         id="stop6604"
+         offset="0.69999999"
+         style="stop-color:#fb2f18;stop-opacity:0.1627907" />
+      <stop
+         style="stop-color:#ff551e;stop-opacity:0"
+         offset="1"
+         id="stop6606" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6584"
+       inkscape:collect="always">
+      <stop
+         id="stop6586"
+         offset="0"
+         style="stop-color:#f3600d;stop-opacity:1" />
+      <stop
+         style="stop-color:#a12800;stop-opacity:0.47058824"
+         offset="0.87705117"
+         id="stop6588" />
+      <stop
+         id="stop6590"
+         offset="1"
+         style="stop-color:#fb3015;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5554"
+       inkscape:collect="always">
+      <stop
+         id="stop5556"
+         offset="0"
+         style="stop-color:#ffffc8;stop-opacity:0.07843138" />
+      <stop
+         style="stop-color:#ff946d;stop-opacity:0.15686275"
+         offset="0.49749109"
+         id="stop5558" />
+      <stop
+         id="stop5560"
+         offset="1"
+         style="stop-color:#fff0d5;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5542"
+       inkscape:collect="always">
+      <stop
+         id="stop5544"
+         offset="0"
+         style="stop-color:#db6c15;stop-opacity:0.07843138" />
+      <stop
+         style="stop-color:#fb2f18;stop-opacity:0.22352941"
+         offset="0.49749109"
+         id="stop5546" />
+      <stop
+         id="stop5548"
+         offset="1"
+         style="stop-color:#ff551e;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5534">
+      <stop
+         style="stop-color:#f3600d;stop-opacity:1"
+         offset="0"
+         id="stop5536" />
+      <stop
+         id="stop5538"
+         offset="0.80000001"
+         style="stop-color:#a12800;stop-opacity:0.47058824" />
+      <stop
+         style="stop-color:#130d0f;stop-opacity:0"
+         offset="1"
+         id="stop5540" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4316">
+      <stop
+         style="stop-color:#000000;stop-opacity:0"
+         offset="0"
+         id="stop4318" />
+      <stop
+         id="stop4324"
+         offset="0.96624672"
+         style="stop-color:#ffffff;stop-opacity:0" />
+      <stop
+         id="stop4320"
+         offset="0.98679346"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         style="stop-color:#fff0ff;stop-opacity:0"
+         offset="1"
+         id="stop4322" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5892"
+       inkscape:collect="always">
+      <stop
+         id="stop5894"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:0" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.59354836"
+         offset="0.69999999"
+         id="stop5896" />
+      <stop
+         id="stop5898"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5858">
+      <stop
+         style="stop-color:#000300;stop-opacity:0.25882354"
+         offset="0"
+         id="stop5860" />
+      <stop
+         id="stop5862"
+         offset="0.35466728"
+         style="stop-color:#0770a8;stop-opacity:0.29803923" />
+      <stop
+         style="stop-color:#ffc431;stop-opacity:0.01176471"
+         offset="1"
+         id="stop5864" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5651">
+      <stop
+         style="stop-color:#000000;stop-opacity:0"
+         offset="0"
+         id="stop5653" />
+      <stop
+         id="stop5901"
+         offset="0.43246552"
+         style="stop-color:#002c52;stop-opacity:0" />
+      <stop
+         id="stop5655"
+         offset="0.66955674"
+         style="stop-color:#ffffff;stop-opacity:0.59354836" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="1"
+         id="stop5657" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5591">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5593" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop5595" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5519"
+       inkscape:collect="always">
+      <stop
+         id="stop5521"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:0.14193548" />
+      <stop
+         style="stop-color:#382b1c;stop-opacity:0.09019608"
+         offset="0.86030537"
+         id="stop5523" />
+      <stop
+         id="stop5525"
+         offset="1"
+         style="stop-color:#fff0ff;stop-opacity:0.50196081" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5385"
+       inkscape:collect="always">
+      <stop
+         id="stop5387"
+         offset="0"
+         style="stop-color:#c9fff8;stop-opacity:0.31764707" />
+      <stop
+         style="stop-color:#defff3;stop-opacity:0.15686275"
+         offset="0.49749109"
+         id="stop5389" />
+      <stop
+         id="stop5391"
+         offset="1"
+         style="stop-color:#8fe1f2;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5377">
+      <stop
+         style="stop-color:#c9fff8;stop-opacity:0.31764707"
+         offset="0"
+         id="stop5379" />
+      <stop
+         id="stop5381"
+         offset="0.49749109"
+         style="stop-color:#8cfff3;stop-opacity:0.15686275" />
+      <stop
+         style="stop-color:#8fe1f2;stop-opacity:0"
+         offset="1"
+         id="stop5383" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5317">
+      <stop
+         style="stop-color:#ffffe5;stop-opacity:1"
+         offset="0"
+         id="stop5319" />
+      <stop
+         id="stop5321"
+         offset="0.80000001"
+         style="stop-color:#d8ffff;stop-opacity:0.77254903" />
+      <stop
+         style="stop-color:#5cc9ff;stop-opacity:0"
+         offset="1"
+         id="stop5323" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5239"
+       inkscape:collect="always">
+      <stop
+         id="stop5241"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         style="stop-color:#e8ffff;stop-opacity:0.77419353"
+         offset="0.80000001"
+         id="stop5243" />
+      <stop
+         id="stop5245"
+         offset="1"
+         style="stop-color:#abffff;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5145">
+      <stop
+         style="stop-color:#fffff0;stop-opacity:1"
+         offset="0"
+         id="stop5147" />
+      <stop
+         id="stop5149"
+         offset="0.80000001"
+         style="stop-color:#ffff73;stop-opacity:0.70588237" />
+      <stop
+         style="stop-color:#fff0d5;stop-opacity:0"
+         offset="1"
+         id="stop5151" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4989"
+       inkscape:collect="always">
+      <stop
+         id="stop4991"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.47058824"
+         offset="0.79251879"
+         id="stop4993" />
+      <stop
+         id="stop4995"
+         offset="1"
+         style="stop-color:#c8c8c8;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4290">
+      <stop
+         style="stop-color:#ffffc8;stop-opacity:0.07843138"
+         offset="0"
+         id="stop4292" />
+      <stop
+         id="stop4294"
+         offset="0.49749109"
+         style="stop-color:#ffff90;stop-opacity:0.15686275" />
+      <stop
+         style="stop-color:#fff0d5;stop-opacity:0"
+         offset="1"
+         id="stop4296" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4218">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0"
+         id="stop4220" />
+      <stop
+         id="stop4222"
+         offset="0.79251879"
+         style="stop-color:#ffffff;stop-opacity:0.47058824" />
+      <stop
+         style="stop-color:#c8c8c8;stop-opacity:0"
+         offset="1"
+         id="stop4224" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4160-1"
+       inkscape:collect="always">
+      <stop
+         id="stop4182"
+         offset="0"
+         style="stop-color:#ffffc8;stop-opacity:0.72674417" />
+      <stop
+         style="stop-color:#ffff90;stop-opacity:0.2994186"
+         offset="0.80000001"
+         id="stop4186" />
+      <stop
+         id="stop4184"
+         offset="1"
+         style="stop-color:#fff0d5;stop-opacity:0" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4160-1"
+       id="radialGradient4178"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0871281,0,0,1.0871281,1286.1181,-2919.254)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83369905,0,0,0.83369905,3462.0958,89.007494)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-0"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76050331,0,0,0.76050331,3488.0281,128.18326)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5554"
+       id="radialGradient4178-6"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,893.19886,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-2"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83369905,0,0,0.83369905,4419.5659,89.007494)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-0-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76050331,0,0,0.76050331,4445.4982,128.18326)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-0-9-6"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76050331,0,0,0.76050331,2430.2439,128.18326)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-0-1"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76050331,0,0,0.76050331,1472.7738,128.18326)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-2-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83369905,0,0,0.83369905,2404.3116,89.007495)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-6"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83369905,0,0,0.83369905,1446.8415,89.007495)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-0-9-6-8"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76050331,0,0,0.76050331,6367.7439,128.18326)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-0-1-0"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76050331,0,0,0.76050331,5410.2738,128.18326)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-2-9-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83369905,0,0,0.83369905,6341.8116,89.007495)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-6-5"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83369905,0,0,0.83369905,5384.3415,89.007495)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-0-9-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76050331,0,0,0.76050331,8382.9982,128.18326)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-0-5"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76050331,0,0,0.76050331,7425.5281,128.18326)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-2-92"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83369905,0,0,0.83369905,8357.0659,89.007495)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-3"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83369905,0,0,0.83369905,7399.5958,89.007495)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4989"
+       id="radialGradient4178-4-0-9-9-4"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.76050331,0,0,0.76050331,9258.0428,128.18326)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4218"
+       id="radialGradient4178-4-2-92-1"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.83369905,0,0,0.83369905,9232.1105,89.007495)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5145"
+       id="radialGradient4178-8"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1869214,0,0,1.1869214,4505.4462,-2972.6653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4290"
+       id="radialGradient4178-6-6"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,4147.8823,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5239"
+       id="radialGradient4178-8-8"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1869214,0,0,1.1869214,11037.992,-2972.6653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5377"
+       id="radialGradient4178-6-6-0"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,10680.428,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5317"
+       id="radialGradient4178-8-8-0"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1869214,0,0,1.1869214,14137.992,-2972.6653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5377"
+       id="radialGradient4178-6-6-0-8"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,13780.428,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5239"
+       id="radialGradient4178-8-8-7"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1869214,0,0,1.1869214,7626.2018,-2972.6653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5385"
+       id="radialGradient4178-6-6-0-3"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,7268.6378,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5519"
+       id="radialGradient4178-6-6-0-8-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.51915464,0,0,0.51915464,17924.572,-2615.2635)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5519"
+       id="radialGradient4178-6-6-0-8-9-2"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1861401,0,0,0.15256079,17688.269,2255.7483)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5858"
+       id="radialGradient4178-6-6-0-8-9-5-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.4140828,0,0,0.19999592,17607.512,2228.4938)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5591"
+       id="radialGradient5597-8"
+       cx="18108.502"
+       cy="-2337.4019"
+       fx="18108.502"
+       fy="-2337.4019"
+       r="163.0699"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.7644878,0,0,0.76028213,4264.7739,-560.31701)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5651"
+       id="radialGradient4178-8-8-0-5-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.39166362,0,0,0.39166362,17969.742,-2547.0278)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5892"
+       id="radialGradient4178-8-8-0-5-9-7"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.33728956,0,0,0.33728956,17989.006,-2517.9258)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5858"
+       id="radialGradient4178-6-6-0-8-9-5-9-0"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9037768,0,0,0.60703946,17788.306,2020.5798)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5858"
+       id="radialGradient4178-6-6-0-8-9-5-9-2"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.66143268,0,0,0.43389738,17874.165,2113.2489)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-5"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3096382,0,0,0.3096382,17998.709,-2504.1585)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-2"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.28065288,0,0,0.28065288,18008.979,-2488.645)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.32498337,0,0,0.32498337,17993.272,-2512.3715)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.34544358,0,0,0.34544358,17983.54,-2527.0753)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-2-6"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.32188119,0,0,0.32188119,17994.372,-2510.7112)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-6"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.30111311,0,0,0.30111311,18001.73,-2499.5957)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-7"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.34544358,0,0,0.34544358,17987.264,-2518.9653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-7-8"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.59219543,0,0,0.10343741,17895.486,-2395.776)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-6-9"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.5161995,0,0,0.09016336,17925.619,-2388.6716)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-65"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.59219543,0,0,0.10343741,17901.904,-2398.2043)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-2-6-0"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.55180231,0,0,0.09638201,17913.006,-2391.9999)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-5-8-2"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.60879144,0,0,0.10633619,17892.816,-2397.3275)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-4"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.55712039,0,0,0.09731092,17911.121,-2392.4969)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-2-7"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.74456644,0,0,0.13005169,17844.713,-2411.6701)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-5-7"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.53081409,0,0,0.09271607,17920.44,-2390.0378)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-65-6"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.59219543,0,0,0.10343741,17901.904,-2398.2043)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-7-8-4"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.59219543,0,0,0.10343741,17895.486,-2395.776)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-5-8-2-9"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.60879144,0,0,0.10633619,17892.816,-2397.3275)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-2-6-0-4"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.55180231,0,0,0.09638201,17913.006,-2391.9999)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-4-4"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.55712039,0,0,0.09731092,17911.121,-2392.4969)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-6-9-6"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.5161995,0,0,0.09016336,17925.619,-2388.6716)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-5-7-4"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.53081409,0,0,0.09271607,17920.44,-2390.0378)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-2-7-9"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.74456644,0,0,0.13005169,17844.713,-2411.6701)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5651"
+       id="radialGradient4178-8-8-0-5-9-5"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.68053709,0,0,-0.11210233,17867.399,-2282.09)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5651"
+       id="radialGradient4178-8-8-0-5-9-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.6441837,0,0,1.6441837,17525.995,-3217.4008)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6584"
+       id="radialGradient4178-81"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0699302,0,0,1.0699302,-1682.7889,-2910.0493)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5542"
+       id="radialGradient4178-6-4"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,-2081.8012,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5651"
+       id="radialGradient4178-8-8-0-5-9-72"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.39166362,0,0,0.39166362,17969.742,-2547.0278)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5651"
+       id="radialGradient4178-8-8-0-5-9-5-0"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.68053709,0,0,-0.11210233,17867.399,-2282.09)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5534"
+       id="radialGradient4178-81-3"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0871281,0,0,1.0871281,-1688.8819,-2919.254)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5239"
+       id="radialGradient4178-8-8-7-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1869214,0,0,1.1869214,7626.2018,-2972.6653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5317"
+       id="radialGradient4178-8-8-0-5"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1869214,0,0,1.1869214,14137.992,-2972.6653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5239"
+       id="radialGradient4178-8-8-1"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1869214,0,0,1.1869214,11037.992,-2972.6653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5145"
+       id="radialGradient4178-8-89"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1869214,0,0,1.1869214,4505.4462,-2972.6653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4160-1"
+       id="radialGradient4178-5"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0871281,0,0,1.0871281,1286.1181,-2919.254)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6600"
+       id="radialGradient4178-6-4-3"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,-2081.8012,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5385"
+       id="radialGradient4178-6-6-0-3-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,7268.6378,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5377"
+       id="radialGradient4178-6-6-0-8-98"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,13780.428,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5377"
+       id="radialGradient4178-6-6-0-2"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,10680.428,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4290"
+       id="radialGradient4178-6-6-3"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,4147.8823,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5554"
+       id="radialGradient4178-6-5"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(2.1961743,0,0,2.1961743,893.1989,-3512.837)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6667"
+       id="radialGradient4178-8-8-0-5-9-72-1"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.14275123,0,0,0.14275123,20887.615,-2413.8051)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6667"
+       id="radialGradient4178-8-8-0-5-9-72-1-1"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.14275123,0,0,0.14275123,20887.615,-2413.8051)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6767"
+       id="radialGradient6773"
+       cx="19288.189"
+       cy="-2337.4019"
+       fx="19288.189"
+       fy="-2337.4019"
+       r="9.7340078"
+       gradientTransform="matrix(1.2074717,0,0,48.299354,-2351.7534,110557.59)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6804"
+       id="radialGradient4178-8-8-0-5-9-72-1-7"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.64633419,0,0,0.64633419,20709.205,-2683.3325)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6842"
+       id="radialGradient4178-8-8-0-5-9-72-1-7-9"
+       cx="354.28571"
+       cy="535.21936"
+       fx="354.28571"
+       fy="535.21936"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.22901313,0,0,0.22901313,20857.054,-2459.9742)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#505050"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.04"
+     inkscape:cx="7976.7493"
+     inkscape:cy="1206.7834"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="-2472.6641,4037.1379"
+       orientation="-0.70710678,0.70710678"
+       id="guide6608" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Back"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <ellipse
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.06700003;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-58"
+       cy="2337.4019"
+       cx="18108.502"
+       rx="420.23254"
+       ry="54.05011"
+       transform="scale(1,-1)"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Rear Effects"
+     style="display:inline">
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="1671.2721"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Giant.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6"
+       r="295.36768"
+       cy="535.21936"
+       cx="3757.4634" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-7"
+       r="295.36768"
+       cy="535.21936"
+       cx="4714.9336" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-60"
+       r="295.36768"
+       cy="535.21936"
+       cx="1742.2091" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-2-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-7-2"
+       r="295.36768"
+       cy="535.21936"
+       cx="2699.6792" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-3);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-8"
+       r="295.36768"
+       cy="535.21936"
+       cx="7694.9634" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-2-92);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-7-9"
+       r="295.36768"
+       cy="535.21936"
+       cx="8652.4336" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-6-5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-60-7"
+       r="295.36768"
+       cy="535.21936"
+       cx="5679.709" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-2-9-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-7-2-0"
+       r="295.36768"
+       cy="535.21936"
+       cx="6637.1792" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-2-92-1);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-7-9-1"
+       r="295.36768"
+       cy="535.21936"
+       cx="9527.4785" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="4925.9556"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Yellow_Sun.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="11458.501"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Giant.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="14558.502"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Super.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-3);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-0"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="8046.7109"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\White_Dwarf.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.175;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8"
+       cy="-2337.4019"
+       cx="18108.502"
+       r="183.92908"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853" />
+    <ellipse
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.85;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-5-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-5-4"
+       cy="2335.5354"
+       cx="18108.502"
+       rx="500.98935"
+       ry="70.855705"
+       transform="scale(1,-1)"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853" />
+    <ellipse
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient5597-8);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2-5-6-7-0-6"
+       cx="18108.502"
+       cy="-2337.4019"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853"
+       rx="124.66496"
+       ry="123.97914" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-2"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853"
+       r="119.49688"
+       cy="-2337.4019"
+       cx="18108.502" />
+    <ellipse
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.472;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-5-9-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-5-4-31"
+       cy="2345.479"
+       cx="18108.502"
+       rx="320.19525"
+       ry="215.06541"
+       transform="scale(1,-1)"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853" />
+    <ellipse
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.85;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-5-9-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-5-4-9"
+       cy="2345.479"
+       cx="18108.502"
+       rx="234.33617"
+       ry="153.72365"
+       transform="scale(1,-1)"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-8"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="-1303.7279"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9-72-1-1);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-0-4-8"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Pulsar.png"
+       inkscape:export-xdpi="45.028858"
+       inkscape:export-ydpi="45.028858"
+       r="50.574722"
+       cy="-2337.4019"
+       cx="20938.189" />
+    <ellipse
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient6773);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-0-4-84"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Pulsar.png"
+       inkscape:export-xdpi="45.028858"
+       inkscape:export-ydpi="45.028858"
+       cy="-2337.4019"
+       cx="20938.189"
+       rx="11.753539"
+       ry="470.1463" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9-72-1-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-0-4-6"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Pulsar.png"
+       inkscape:export-xdpi="45.028858"
+       inkscape:export-ydpi="45.028858"
+       r="228.98697"
+       cy="-2337.4019"
+       cx="20938.189" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9-72-1-7-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-0-4-6-3"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Pulsar.png"
+       inkscape:export-xdpi="45.028858"
+       inkscape:export-ydpi="45.028858"
+       r="81.136078"
+       cy="-2337.4019"
+       cx="20938.189" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#fbfdfe;fill-opacity:0.31372549;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-0-4-6-2"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Pulsar.png"
+       inkscape:export-xdpi="45.028858"
+       inkscape:export-ydpi="45.028858"
+       r="511.67102"
+       cy="-2337.4019"
+       cx="20938.189" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Base"
+     style="display:inline">
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ef2118;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141"
+       cx="1671.2721"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Giant.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#76d35b;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-0"
+       cx="3757.4634"
+       cy="535.21936"
+       r="250" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#428258;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-0-2"
+       cx="4714.9336"
+       cy="535.21936"
+       r="250" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#e49358;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-0-7"
+       cx="1742.2091"
+       cy="535.21936"
+       r="250" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffe96f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-0-2-0"
+       cx="2699.6792"
+       cy="535.21936"
+       r="250" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#0fbba5;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-0-8"
+       cx="7694.9634"
+       cy="535.21936"
+       r="250" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#736e72;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-0-2-4"
+       cx="8652.4336"
+       cy="535.21936"
+       r="250" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#425b58;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-0-7-8"
+       cx="5679.709"
+       cy="535.21936"
+       r="250" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#2382bd;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-0-2-0-6"
+       cx="6637.1792"
+       cy="535.21936"
+       r="250" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#b6ecfa;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-0-2-4-9"
+       cx="9527.4785"
+       cy="535.21936"
+       r="250"
+       inkscape:export-xdpi="20.709963"
+       inkscape:export-ydpi="20.709963"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Frozen.png" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ff6245;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2"
+       cx="4925.9556"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Yellow_Sun.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#48dcf2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2-5"
+       cx="11458.501"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Giant.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#489ef2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2-5-6"
+       cx="14558.502"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Super.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#e8fff2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2-5-66"
+       cx="8046.7109"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\White_Dwarf.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2-5-6-7-7-3"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853"
+       cx="18108.502"
+       cy="-2337.4019"
+       r="90.227776" />
+    <circle
+       style="display:inline;color:#000000;clip-rule:nonzero;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ff1832;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-8"
+       cx="-1303.7279"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-0-4-4"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Pulsar.png"
+       inkscape:export-xdpi="45.028858"
+       inkscape:export-ydpi="45.028858"
+       r="39.477627"
+       cy="-2337.4019"
+       cx="20938.189" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Forward"
+     style="display:inline">
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9-5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 18028.832,-2379.5254 a 241.10458,39.716255 0 0 0 -161.436,37.4356 241.10458,39.716255 0 0 0 241.106,39.7168 241.10458,39.716255 0 0 0 241.105,-39.7168 241.10458,39.716255 0 0 0 -161.375,-37.4356 90.227776,90.227776 0 0 1 10.498,42.1231 l -90.228,0 -90.229,0 a 90.227776,90.227776 0 0 1 10.559,-42.1231 z"
+       id="path4141-7-2-6-3-4-0-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853" />
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9-5-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 18028.832,-2379.5254 a 241.10458,39.716255 0 0 0 -161.436,37.4356 241.10458,39.716255 0 0 0 241.106,39.7168 241.10458,39.716255 0 0 0 241.105,-39.7168 241.10458,39.716255 0 0 0 -161.375,-37.4356 90.227776,90.227776 0 0 1 10.498,42.1231 l -90.228,0 -90.229,0 a 90.227776,90.227776 0 0 1 10.559,-42.1231 z"
+       id="path4141-7-2-6-3-4-0-1-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-03"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="1671.2721"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Giant.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-3);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-8"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="4925.9556"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Yellow_Sun.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-7"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="11458.501"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Giant.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-98);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-81"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="14558.502"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Super.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-3-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-0-7"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="8046.7104"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\White_Dwarf.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-3);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-8-7"
+       r="778.07324"
+       cy="-2337.4019"
+       cx="-1303.7279"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ef2118;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-4"
+       cx="1671.2721"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Giant.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ff6245;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2-4"
+       cx="4925.9556"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Yellow_Sun.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#48dcf2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2-5-7"
+       cx="11458.501"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Giant.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#489ef2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2-5-6-6"
+       cx="14558.502"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Super.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#e8fff2;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-2-5-66-4"
+       cx="8046.7104"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\White_Dwarf.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ff1832;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-8-9"
+       cx="-1303.7279"
+       cy="-2337.4019"
+       r="360.60327"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-08"
+       r="385.15396"
+       cy="-2337.4019"
+       cx="1671.2721"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Giant.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-89);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-2"
+       r="420.50931"
+       cy="-2337.4019"
+       cx="4925.9556"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Yellow_Sun.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-1);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-4"
+       r="420.50931"
+       cy="-2337.4019"
+       cx="11458.501"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Giant.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4"
+       r="420.50931"
+       cy="-2337.4019"
+       cx="14558.502"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Super.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-7-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-1-8"
+       r="420.50931"
+       cy="-2337.4019"
+       cx="8046.7104"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\White_Dwarf.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-81-3);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-8-3"
+       r="385.15396"
+       cy="-2337.4019"
+       cx="-1303.7279"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Front"
+     style="display:inline">
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.206;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-6"
+       r="269.43546"
+       cy="535.21936"
+       cx="3757.4634" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.206;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-0-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-6-1"
+       r="269.43546"
+       cy="535.21936"
+       cx="4714.9336" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.206;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-0-1);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-6-0"
+       r="269.43546"
+       cy="535.21936"
+       cx="1742.2091" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.206;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-0-9-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-6-1-4"
+       r="269.43546"
+       cy="535.21936"
+       cx="2699.6792" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.206;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-0-5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-6-2"
+       r="269.43546"
+       cy="535.21936"
+       cx="7694.9634" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.206;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-0-9-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-6-1-2"
+       r="269.43546"
+       cy="535.21936"
+       cx="8652.4336" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.206;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-0-1-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-6-0-0"
+       r="269.43546"
+       cy="535.21936"
+       cx="5679.709" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.206;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-0-9-6-8);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-6-1-4-5"
+       r="269.43546"
+       cy="535.21936"
+       cx="6637.1792" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.206;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-4-0-9-9-4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-6-6-1-2-1"
+       r="269.43546"
+       cy="535.21936"
+       cx="9527.4785"
+       inkscape:export-xdpi="20.709963"
+       inkscape:export-ydpi="20.709963"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Frozen.png" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7"
+       r="385.15396"
+       cy="-2337.4019"
+       cx="1671.2721"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Giant.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2"
+       r="420.50931"
+       cy="-2337.4019"
+       cx="4925.9556"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Yellow_Sun.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6"
+       r="420.50931"
+       cy="-2337.4019"
+       cx="11458.501"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Giant.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3"
+       r="420.50931"
+       cy="-2337.4019"
+       cx="14558.502"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Blue_Super.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-1"
+       r="420.50931"
+       cy="-2337.4019"
+       cx="8046.7109"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\White_Dwarf.png"
+       inkscape:export-xdpi="29.611609"
+       inkscape:export-ydpi="29.611609" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853"
+       r="138.76083"
+       cy="-2337.4019"
+       cx="18108.502" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-6"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853"
+       r="582.51086"
+       cy="-2337.4019"
+       cx="18108.502" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.794;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-81);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-8"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+       inkscape:export-xdpi="29.61161"
+       inkscape:export-ydpi="29.61161"
+       r="379.061"
+       cy="-2337.4019"
+       cx="-1303.7279" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9-72);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-0"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853"
+       r="138.76083"
+       cy="-2337.4019"
+       cx="18108.502" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-8-8-0-5-9-72-1);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-2-6-3-4-0-0-4"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Pulsar.png"
+       inkscape:export-xdpi="45.028858"
+       inkscape:export-ydpi="45.028858"
+       r="50.574722"
+       cy="-2337.4019"
+       cx="20938.189" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="Filter"
+     style="display:inline">
+    <g
+       id="g5223"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-0-4-9"
+         d="m 18188.892,-2378.1608 a 90.227758,90.227758 0 0 1 9.838,40.7587 l -180.456,0 a 90.227758,90.227758 0 0 1 9.567,-40.2955 216.67565,37.846228 0 0 0 -132.807,34.8546 216.67565,37.846228 0 0 0 216.676,37.847 216.67565,37.846228 0 0 0 216.676,-37.847 216.67565,37.846228 0 0 0 -139.494,-35.3178 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-65);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-0-4-8-6"
+         d="m 18026.842,-2375.6922 a 216.67565,37.846228 0 0 0 -138.224,35.2774 216.67565,37.846228 0 0 0 216.676,37.8471 216.67565,37.846228 0 0 0 216.676,-37.8471 216.67565,37.846228 0 0 0 -131.658,-34.8041 90.227758,90.227758 0 0 1 3.159,7.7845 90.227758,90.227758 0 0 1 0,0.021 90.227758,90.227758 0 0 1 0.315,0.8645 90.227758,90.227758 0 0 1 0,0.01 90.227758,90.227758 0 0 1 2.097,7.1497 90.227758,90.227758 0 0 1 0.473,1.8476 90.227758,90.227758 0 0 1 1.186,6.3193 90.227758,90.227758 0 0 1 0.15,0.9945 90.227758,90.227758 0 0 1 0.292,1.9285 90.227758,90.227758 0 0 1 0.457,5.3524 90.227758,90.227758 0 0 1 0.278,5.5418 l -180.456,0 a 90.227758,90.227758 0 0 1 0.344,-6.7546 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 0.405,-4.1586 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 0.755,-4.9637 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 0.747,-3.7394 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 1.332,-5.1948 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 0.724,-2.3614 90.227758,90.227758 0 0 1 0.301,-0.9831 90.227758,90.227758 0 0 1 1.948,-5.3235 90.227758,90.227758 0 0 1 0,-0.011 90.227758,90.227758 0 0 1 2.001,-4.7681 90.227758,90.227758 0 0 1 0,-0.01 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-7-8);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-5-4-3"
+         d="m 18027.265,-2376.6362 a 222.74788,38.906854 0 0 0 -141.511,36.2214 222.74788,38.906854 0 0 0 222.748,38.9072 222.74788,38.906854 0 0 0 222.748,-38.9072 222.74788,38.906854 0 0 0 -141.608,-36.1924 90.227758,90.227758 0 0 1 9.088,39.2051 l -180.456,0 a 90.227758,90.227758 0 0 1 8.991,-39.2341 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-5-8-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-7-9-4"
+         d="m 18191.614,-2372.5168 a 90.227758,90.227758 0 0 1 7.116,35.1147 l -180.456,0 a 90.227758,90.227758 0 0 1 7.234,-35.1122 201.8964,35.264776 0 0 0 -118.903,32.0995 201.8964,35.264776 0 0 0 201.897,35.2649 201.8964,35.264776 0 0 0 201.897,-35.2649 201.8964,35.264776 0 0 0 -118.785,-32.102 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-2-6-0);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-0-2"
+         d="m 18191.428,-2372.9093 a 90.227758,90.227758 0 0 1 7.302,35.5072 l -180.456,0 a 90.227758,90.227758 0 0 1 7.396,-35.4959 203.8422,35.604641 0 0 0 -121.01,32.4832 203.8422,35.604641 0 0 0 203.842,35.6057 203.8422,35.604641 0 0 0 203.842,-35.6057 203.8422,35.604641 0 0 0 -120.916,-32.4945 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-0-4-5-6"
+         d="m 18024.428,-2369.9396 a 188.86985,32.989455 0 0 0 -104.796,29.5248 188.86985,32.989455 0 0 0 188.87,32.9893 188.86985,32.989455 0 0 0 188.87,-32.9893 188.86985,32.989455 0 0 0 -104.806,-29.497 90.227758,90.227758 0 0 1 6.164,32.5097 l -180.456,0 a 90.227758,90.227758 0 0 1 6.154,-32.5375 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-6-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-5-1"
+         d="m 18024.872,-2370.996 a 194.21711,33.923451 0 0 0 -110.588,30.5812 194.21711,33.923451 0 0 0 194.218,33.9232 194.21711,33.923451 0 0 0 194.217,-33.9232 194.21711,33.923451 0 0 0 -110.544,-30.5661 90.227758,90.227758 0 0 1 6.555,33.5788 l -180.456,0 a 90.227758,90.227758 0 0 1 6.598,-33.5939 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-5-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <a
+         transform="matrix(0.64618081,0,0,0.64618081,6407.1378,-827.01793)"
+         id="a4903"
+         style="display:inline;opacity:0.15">
+        <path
+           inkscape:connector-curvature="0"
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.175;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-2-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           d="m 18240.053,-2383.7207 a 139.6324,139.6324 0 0 1 8.082,46.3184 l -279.266,0 a 139.6324,139.6324 0 0 1 7.947,-46.2559 272.42596,47.584007 0 0 0 -140.74,41.5937 272.42596,47.584007 0 0 0 272.426,47.584 272.42596,47.584007 0 0 0 272.426,-47.584 272.42596,47.584007 0 0 0 -140.875,-41.6562 z"
+           id="path4141-7-0-0-0-9-8-1-7-2" />
+      </a>
+    </g>
+    <g
+       transform="translate(0,-2.3437453)"
+       style="display:inline"
+       id="g5223-1"
+       inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Black_Hole.png"
+       inkscape:export-xdpi="39.552853"
+       inkscape:export-ydpi="39.552853">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-0-4-9-0"
+         d="m 18188.892,-2378.1608 a 90.227758,90.227758 0 0 1 9.838,40.7587 l -180.456,0 a 90.227758,90.227758 0 0 1 9.567,-40.2955 216.67565,37.846228 0 0 0 -132.807,34.8546 216.67565,37.846228 0 0 0 216.676,37.847 216.67565,37.846228 0 0 0 216.676,-37.847 216.67565,37.846228 0 0 0 -139.494,-35.3178 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-65-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-0-4-8-6-2"
+         d="m 18026.842,-2375.6922 a 216.67565,37.846228 0 0 0 -138.224,35.2774 216.67565,37.846228 0 0 0 216.676,37.8471 216.67565,37.846228 0 0 0 216.676,-37.8471 216.67565,37.846228 0 0 0 -131.658,-34.8041 90.227758,90.227758 0 0 1 3.159,7.7845 90.227758,90.227758 0 0 1 0,0.021 90.227758,90.227758 0 0 1 0.315,0.8645 90.227758,90.227758 0 0 1 0,0.01 90.227758,90.227758 0 0 1 2.097,7.1497 90.227758,90.227758 0 0 1 0.473,1.8476 90.227758,90.227758 0 0 1 1.186,6.3193 90.227758,90.227758 0 0 1 0.15,0.9945 90.227758,90.227758 0 0 1 0.292,1.9285 90.227758,90.227758 0 0 1 0.457,5.3524 90.227758,90.227758 0 0 1 0.278,5.5418 l -180.456,0 a 90.227758,90.227758 0 0 1 0.344,-6.7546 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 0.405,-4.1586 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 0.755,-4.9637 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 0.747,-3.7394 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 1.332,-5.1948 90.227758,90.227758 0 0 1 0,-0.01 90.227758,90.227758 0 0 1 0.724,-2.3614 90.227758,90.227758 0 0 1 0.301,-0.9831 90.227758,90.227758 0 0 1 1.948,-5.3235 90.227758,90.227758 0 0 1 0,-0.011 90.227758,90.227758 0 0 1 2.001,-4.7681 90.227758,90.227758 0 0 1 0,-0.01 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-7-8-4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-5-4-3-6"
+         d="m 18027.265,-2376.6362 a 222.74788,38.906854 0 0 0 -141.511,36.2214 222.74788,38.906854 0 0 0 222.748,38.9072 222.74788,38.906854 0 0 0 222.748,-38.9072 222.74788,38.906854 0 0 0 -141.608,-36.1924 90.227758,90.227758 0 0 1 9.088,39.2051 l -180.456,0 a 90.227758,90.227758 0 0 1 8.991,-39.2341 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-5-8-2-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-7-9-4-5"
+         d="m 18191.614,-2372.5168 a 90.227758,90.227758 0 0 1 7.116,35.1147 l -180.456,0 a 90.227758,90.227758 0 0 1 7.234,-35.1122 201.8964,35.264776 0 0 0 -118.903,32.0995 201.8964,35.264776 0 0 0 201.897,35.2649 201.8964,35.264776 0 0 0 201.897,-35.2649 201.8964,35.264776 0 0 0 -118.785,-32.102 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-2-6-0-4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-0-2-0"
+         d="m 18191.428,-2372.9093 a 90.227758,90.227758 0 0 1 7.302,35.5072 l -180.456,0 a 90.227758,90.227758 0 0 1 7.396,-35.4959 203.8422,35.604641 0 0 0 -121.01,32.4832 203.8422,35.604641 0 0 0 203.842,35.6057 203.8422,35.604641 0 0 0 203.842,-35.6057 203.8422,35.604641 0 0 0 -120.916,-32.4945 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-4-4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-0-4-5-6-6"
+         d="m 18024.428,-2369.9396 a 188.86985,32.989455 0 0 0 -104.796,29.5248 188.86985,32.989455 0 0 0 188.87,32.9893 188.86985,32.989455 0 0 0 188.87,-32.9893 188.86985,32.989455 0 0 0 -104.806,-29.497 90.227758,90.227758 0 0 1 6.164,32.5097 l -180.456,0 a 90.227758,90.227758 0 0 1 6.154,-32.5375 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-6-9-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4141-7-0-0-0-9-8-1-5-1-3"
+         d="m 18024.872,-2370.996 a 194.21711,33.923451 0 0 0 -110.588,30.5812 194.21711,33.923451 0 0 0 194.218,33.9232 194.21711,33.923451 0 0 0 194.217,-33.9232 194.21711,33.923451 0 0 0 -110.544,-30.5661 90.227758,90.227758 0 0 1 6.555,33.5788 l -180.456,0 a 90.227758,90.227758 0 0 1 6.598,-33.5939 z"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-5-7-4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <a
+         transform="matrix(0.64618081,0,0,0.64618081,6407.1378,-827.01793)"
+         id="a4903-6"
+         style="display:inline;opacity:0.15">
+        <path
+           inkscape:connector-curvature="0"
+           style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.175;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-2-7-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+           d="m 18240.053,-2383.7207 a 139.6324,139.6324 0 0 1 8.082,46.3184 l -279.266,0 a 139.6324,139.6324 0 0 1 7.947,-46.2559 272.42596,47.584007 0 0 0 -140.74,41.5937 272.42596,47.584007 0 0 0 272.426,47.584 272.42596,47.584007 0 0 0 272.426,-47.584 272.42596,47.584007 0 0 0 -140.875,-41.6562 z"
+           id="path4141-7-0-0-0-9-8-1-7-2-0" />
+      </a>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="Filter 1"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-5"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="113.29208" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-7"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="102.68678" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-0"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="118.90665" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-2-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-7-9"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="117.77162" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-0-4"
+       cy="-2342.1873"
+       cx="18105.924"
+       r="126.39275" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-0-4-5"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="110.17288" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-0-4-8"
+       cy="-2334.0771"
+       cx="18109.65"
+       r="126.39275" />
+  </g>
+</svg>
