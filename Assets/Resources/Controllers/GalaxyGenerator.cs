@@ -32,6 +32,8 @@ public class GalaxyGenerator : MonoBehaviour {
         {
             GenerateStar(galaxy);
         }
+
+        galaxy.transform.Rotate(0, 10, 15, Space.Self);
     }
 
     private Star GenerateStar(GameObject galaxy)
@@ -49,11 +51,11 @@ public class GalaxyGenerator : MonoBehaviour {
 
     private void DestroyGalaxy()
     {
-        for (int i = stars.Count - 1; i >= 0; i--)
-        {
-            Star star = stars[i];
+        Galaxy g = FindObjectOfType<Galaxy>();
 
-            Destroy(star.gameObject);
+        if (g)
+        {
+            Destroy(g.gameObject);
         }
 
         stars.Clear();

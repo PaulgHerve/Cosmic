@@ -13,8 +13,7 @@ public class Star : MonoBehaviour {
     private Vector3 movement;
     private bool isRotating = false;
 
-    public float cY;
-    public float cR;
+    float scale;
 
     void Awake()
     {
@@ -37,13 +36,14 @@ public class Star : MonoBehaviour {
 
     public void Generate(float galaxySize)
     {
-        float center = 20 + (50 * (galaxySize / 3));
+        int passes = 3;
+
+        float center = 120 + (20 * (galaxySize / 3));
         oscillation = Random.Range(-1, 1.01f) * (1 + galaxySize);
-        int passes = 2;
         float deviation = .5f;
-        float x = (10 / deviation) * (3 + galaxySize / 3);
-        float y = (.25f / deviation) * (3 + galaxySize / 3);
-        float z = (25 / deviation) * (3 + galaxySize / 3);
+        float x = (20 / deviation) * (3 + galaxySize / 6);
+        float y = (3f / deviation) * (3 + galaxySize / 6);
+        float z = (36 / deviation) * (3 + galaxySize / 6);
         x = Random.Range(-x, x + 1);
         y = Random.Range(-y, y + 1);
         z = Random.Range(-z, z + 1);
@@ -66,34 +66,89 @@ public class Star : MonoBehaviour {
         if (z < 0) { z -= center; }
 
         Vector3 startPos = new Vector3(x, y, z);
-        int spriteIndex = Random.Range(0, System.Enum.GetNames(typeof(starType)).Length);
+        int spriteIndex = Determine_Star_Type();
 
         sprite.sprite = GalaxyGenerator.Get_Star_Sprite(spriteIndex);
 
-        transform.position = startPos;
-        rDistance = Mathf.Abs(z);
+        InitializeScale((starType)spriteIndex);
 
-        transform.localPosition = Vector3.ClampMagnitude(transform.position, rDistance);
+        transform.localPosition = startPos;
+
+        rDistance = transform.localPosition.magnitude;
+
+        transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+
+        InitializeMovement(20);
+
+        for (int i = 0; i < 60; i++)
+        {
+            RotateAroundGalaxyCenter();
+        }
 
         InitializeMovement();
 
         isRotating = true;
     }
 
+    private int Determine_Star_Type()
+    {
+        int index = 0;
+        float roll = Random.Range(0, 101);
+
+        if (roll < 6) { index = 0; }
+        else if (roll < 16) { index = 1; }
+        else if (roll < 26) { index = 2; }
+        else if (roll < 31) { index = 3; }
+        else if (roll < 41) { index = 4; }
+        else if (roll < 46) { index = 5; }
+        else if (roll < 56) { index = 6; }
+        else { index = 7; }
+
+        return index;
+    }
+
     private void InitializeMovement()
     {
-        int passes = 2;
-        float deviation = .1f;
-        float x = 1f;
+        float deviation = .2f;
+        float x = .5f;
+        float y = 0f;
+        float z = 0;
+
+        x = SlopeFloat(x, deviation);
+
+        movement = new Vector3(x, y, z);
+    }
+
+    private void InitializeMovement(float speed)
+    {
+        float deviation = .2f;
+        float x = speed;
         float y = 0;
         float z = 0;
 
-        for (int i = 0; i < passes; i++)
-        {
-            x = SlopeFloat(x, deviation);
-        }
+        x = SlopeFloat(x, deviation);
 
         movement = new Vector3(x, y, z);
+    }
+
+    private void InitializeScale(starType sType)
+    {
+        int t = (int)sType;
+        float scaleMult = 1;
+        float scaler = Random.Range(.5f, 1.01f);
+
+        if (t == 0)      { scaleMult = .15f; }                  //Black Hole
+        else if (t == 1) { scaleMult = .50f; }                  //Blue 
+        else if (t == 2) { scaleMult = .80f; }                  //Blue Super
+        else if (t == 3) { scaleMult = .20f; }                  //Pulsar
+        else if (t == 4) { scaleMult = .25f; }                  //Red Dwarf
+        else if (t == 5) { scaleMult = 1.0f; }                  //Red Giant
+        else if (t == 6) { scaleMult = .2f; }                   //White Dwarf
+        else if (t == 7) { scaleMult = .40f; }                  //Yellow
+
+        scaler *= scaleMult;
+
+        sprite.transform.localScale *= scaler;
     }
 
     //Rotates Camera Around a centerpoint
@@ -101,14 +156,14 @@ public class Star : MonoBehaviour {
     {
         Vector3 targetPos = new Vector3(0, 0, 0);
 
-        Vector3 relative = targetPos - transform.position;
+        Vector3 relative = targetPos - transform.localPosition;
         Quaternion current = transform.localRotation;
         Quaternion rotation = Quaternion.LookRotation(relative);
 
         transform.Translate(movement);        
 
         transform.localRotation = Quaternion.Slerp(current, rotation, 1);
-        transform.localPosition = Vector3.ClampMagnitude(transform.position, rDistance);
+        transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
     }
 
     private void RotateWiggle()
@@ -118,11 +173,9 @@ public class Star : MonoBehaviour {
 
         Vector3 newPos = transform.localPosition;
 
-        newPos.y += currentY;
-        cY = currentY;
-        cR = currentRotation;
+        //newPos.y += currentY;
 
-        transform.position = newPos;
+        transform.localPosition = newPos;
     }
 
     private float SlopeFloat(float max, float deviation)
@@ -136,7 +189,7 @@ public class Star : MonoBehaviour {
         float rand2 = max - Random.Range(0, (max * deviation));
 
         max -= rand1;
-        max += rand2;
+        max += rand2 * .8f;
 
         return max;
     }
