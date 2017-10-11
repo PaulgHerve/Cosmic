@@ -41,7 +41,7 @@ public class Star : MonoBehaviour {
         float center = 120 + (20 * (galaxySize / 3));
         oscillation = Random.Range(-1, 1.01f) * (1 + galaxySize);
         float deviation = .5f;
-        float x = (20 / deviation) * (3 + galaxySize / 6);
+        float x = (15 / deviation) * (3 + galaxySize / 6);
         float y = (3f / deviation) * (3 + galaxySize / 6);
         float z = (36 / deviation) * (3 + galaxySize / 6);
         x = Random.Range(-x, x + 1);
@@ -80,7 +80,7 @@ public class Star : MonoBehaviour {
 
         InitializeMovement(20);
 
-        for (int i = 0; i < 60; i++)
+        for (int i = 0; i < 50; i++)
         {
             RotateAroundGalaxyCenter();
         }
@@ -109,19 +109,16 @@ public class Star : MonoBehaviour {
 
     private void InitializeMovement()
     {
-        float deviation = .2f;
-        float x = .5f;
+        float x = Random.Range(-.02f, .03f);
         float y = 0f;
         float z = 0;
-
-        x = SlopeFloat(x, deviation);
 
         movement = new Vector3(x, y, z);
     }
 
     private void InitializeMovement(float speed)
     {
-        float deviation = .2f;
+        float deviation = .1f;
         float x = speed;
         float y = 0;
         float z = 0;
@@ -173,7 +170,7 @@ public class Star : MonoBehaviour {
 
         Vector3 newPos = transform.localPosition;
 
-        //newPos.y += currentY;
+        newPos.y += currentY;
 
         transform.localPosition = newPos;
     }

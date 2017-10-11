@@ -3,13 +3,16 @@ using System.Collections;
 
 public class Galaxy : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
 	
 	}
 	
-	// Update is called once per frame
 	void Update () {
-	
+        Rotate();
 	}
+
+    void Rotate()
+    {
+        transform.Rotate(0, -.1f, 0, Space.Self);
+    }
 }
