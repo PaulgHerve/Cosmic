@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Selection_Circle.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4605">
+      <stop
+         style="stop-color:#db6c15;stop-opacity:0"
+         offset="0"
+         id="stop4607" />
+      <stop
+         id="stop4609"
+         offset="0.92690068"
+         style="stop-color:#ffffff;stop-opacity:0" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="1"
+         id="stop4611" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5542"
+       inkscape:collect="always">
+      <stop
+         id="stop5544"
+         offset="0"
+         style="stop-color:#db6c15;stop-opacity:0" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0"
+         offset="0.92690068"
+         id="stop5546" />
+      <stop
+         id="stop5548"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4316">
+      <stop
+         style="stop-color:#000000;stop-opacity:0"
+         offset="0"
+         id="stop4318" />
+      <stop
+         id="stop4324"
+         offset="0.96624672"
+         style="stop-color:#ffffff;stop-opacity:0" />
+      <stop
+         id="stop4320"
+         offset="0.98679346"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         style="stop-color:#fff0ff;stop-opacity:0"
+         offset="1"
+         id="stop4322" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-5"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.3096382,0,0,0.3096382,17998.709,-2504.1585)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-2"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.28065288,0,0,0.28065288,18008.979,-2488.645)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.32498337,0,0,0.32498337,17993.272,-2512.3715)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.34544358,0,0,0.34544358,17983.54,-2527.0753)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-2-6"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.32188119,0,0,0.32188119,17994.372,-2510.7112)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-6"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.30111311,0,0,0.30111311,18001.73,-2499.5957)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4316"
+       id="radialGradient4178-6-6-0-8-9-3-7-8-7"
+       cx="354.28497"
+       cy="535.21942"
+       fx="354.28497"
+       fy="535.21942"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.34544358,0,0,0.34544358,17987.264,-2518.9653)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5542"
+       id="radialGradient4178-6-4"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60733)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-1"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60732)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-93"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60732)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-3"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60732)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-9"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60733)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-1-6"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60732)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-93-2"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60732)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-3-1"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60732)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-37"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60733)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-1-66"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60732)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-93-9"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60732)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4605"
+       id="radialGradient4178-6-4-3-2"
+       cx="276.84296"
+       cy="489.06955"
+       fx="276.84296"
+       fy="489.06955"
+       r="354.28571"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.82042395,1.177695,-1.1958233,-0.83305286,1130.1165,484.60732)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#505050"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.22627417"
+     inkscape:cx="1129.0306"
+     inkscape:cy="1884.741"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="-2472.6641,4037.1379"
+       orientation="-0.70710678,0.70710678"
+       id="guide6608" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Back"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Rear Effects"
+     style="display:inline">
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:5.00000001;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.62745098;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-8-4"
+       inkscape:export-filename="C:\Users\Paulh\Documents\Cosmic\Assets\Resources\UI\Sprites\Selection_Circle.png"
+       inkscape:export-xdpi="44.495213"
+       inkscape:export-ydpi="44.495213"
+       transform="matrix(0.70710678,-0.70710678,-0.70710678,-0.70710678,0,0)"
+       cx="1075.0674"
+       cy="-791.91003"
+       r="395.97952" />
+    <g
+       id="g4724"
+       transform="matrix(1.2102173,0,0,1.2102173,872.28396,-824.35954)"
+       inkscape:export-filename="C:\Users\Paulh\Documents\Cosmic\Assets\Resources\UI\Sprites\Selection_Circle.png"
+       inkscape:export-xdpi="44.495213"
+       inkscape:export-ydpi="44.495213">
+      <path
+         d="M 696.24613,701.54277 A 371.63925,371.63925 0 0 1 278.20978,874.6991 l 96.18731,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39709"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         d="M 696.24616,701.54277 A 371.63925,371.63925 0 0 1 278.20981,874.6991 l 96.18732,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39713"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-80"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-1);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         d="M 696.24616,701.54277 A 371.63925,371.63925 0 0 1 278.20981,874.6991 l 96.18732,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39713"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-40"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-93);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         d="M 696.24616,701.54277 A 371.63925,371.63925 0 0 1 278.20981,874.6991 l 96.18732,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39713"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-45"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-3);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    </g>
+    <g
+       transform="matrix(-0.85575285,-0.85575285,0.85575285,-0.85575285,1204.4456,561.50046)"
+       style="display:inline"
+       id="g4724-1"
+       inkscape:export-filename="C:\Users\Paulh\Documents\Cosmic\Assets\Resources\UI\Sprites\Selection_Circle.png"
+       inkscape:export-xdpi="44.495213"
+       inkscape:export-ydpi="44.495213">
+      <path
+         d="M 696.24613,701.54277 A 371.63925,371.63925 0 0 1 278.20978,874.6991 l 96.18731,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39709"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-405"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         d="M 696.24616,701.54277 A 371.63925,371.63925 0 0 1 278.20981,874.6991 l 96.18732,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39713"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-80-6"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-1-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         d="M 696.24616,701.54277 A 371.63925,371.63925 0 0 1 278.20981,874.6991 l 96.18732,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39713"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-40-6"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-93-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         d="M 696.24616,701.54277 A 371.63925,371.63925 0 0 1 278.20981,874.6991 l 96.18732,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39713"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-45-7"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-3-1);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    </g>
+    <g
+       transform="matrix(-0.31322729,1.1689801,-1.1689801,-0.31322729,2045.5273,-476.34667)"
+       style="display:inline"
+       id="g4724-9"
+       inkscape:export-filename="C:\Users\Paulh\Documents\Cosmic\Assets\Resources\UI\Sprites\Selection_Circle.png"
+       inkscape:export-xdpi="44.495213"
+       inkscape:export-ydpi="44.495213">
+      <path
+         d="M 696.24613,701.54277 A 371.63925,371.63925 0 0 1 278.20978,874.6991 l 96.18731,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39709"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-9"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-37);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         d="M 696.24616,701.54277 A 371.63925,371.63925 0 0 1 278.20981,874.6991 l 96.18732,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39713"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-80-64"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-1-66);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         d="M 696.24616,701.54277 A 371.63925,371.63925 0 0 1 278.20981,874.6991 l 96.18732,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39713"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-40-61"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-93-9);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <path
+         d="M 696.24616,701.54277 A 371.63925,371.63925 0 0 1 278.20981,874.6991 l 96.18732,-358.97596 z"
+         sodipodi:end="1.8325957"
+         sodipodi:start="0.52359878"
+         sodipodi:ry="371.63925"
+         sodipodi:rx="371.63925"
+         sodipodi:cy="515.72314"
+         sodipodi:cx="374.39713"
+         sodipodi:type="arc"
+         inkscape:export-ydpi="29.61161"
+         inkscape:export-xdpi="29.61161"
+         inkscape:export-filename="C:\Users\Mutwe\Documents\UnityGames\Cosmic\Assets\Resources\Planets\Sprites\Red_Dwarf.png"
+         id="path4141-7-0-8-45-9"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.23000004;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-4-3-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    </g>
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:6.49730396;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.62745098;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-8-4-0"
+       inkscape:export-filename="C:\Users\Paulh\Documents\Cosmic\Assets\Resources\UI\Sprites\Selection_Circle.png"
+       inkscape:export-xdpi="44.495213"
+       inkscape:export-ydpi="44.495213"
+       transform="matrix(0.70710678,-0.70710678,-0.70710678,-0.70710678,0,0)"
+       cx="1075.0674"
+       cy="-791.91003"
+       r="514.55988" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Base"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Forward"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Front"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="Filter"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="Filter 1"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-5"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="113.29208" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-7"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="102.68678" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-0"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="118.90665" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-2-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-7-9"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="117.77162" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-0-4"
+       cy="-2342.1873"
+       cx="18105.924"
+       r="126.39275" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-0-4-5"
+       cy="-2338.4341"
+       cx="18108.41"
+       r="110.17288" />
+    <circle
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.15;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4178-6-6-0-8-9-3-7-8-7);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:12.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="path4141-7-0-0-0-9-8-1-0-4-8"
+       cy="-2334.0771"
+       cx="18109.65"
+       r="126.39275" />
+  </g>
+</svg>
