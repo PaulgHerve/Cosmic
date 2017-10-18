@@ -13,8 +13,7 @@ public class InputController : MonoBehaviour {
     public static bool GetTouch()
     {
         bool touch;
-
-        //touch = Input.GetTouch(0) == true;
+        
         touch = Input.GetMouseButton(0);
 
         return touch;
