@@ -32,36 +32,32 @@ public class Star : MonoBehaviour {
         }
     }
 
-    public void Generate(float galaxySize)
+    public void Generate(float galaxySize, float armVal)
     {
-        int passes = 3;
+        int passes = 5;
 
-        float center = 120 + (20 * (galaxySize / 3));
+        float center = 48 + (10 * (galaxySize / 3));
         oscillation = Random.Range(-1, 1.01f) * (1 + galaxySize);
         float deviation = .5f;
-        float x = (15 / deviation) * (3 + galaxySize / 6);
-        float y = (3f / deviation) * (3 + galaxySize / 6);
-        float z = (36 / deviation) * (3 + galaxySize / 6);
-        x = Random.Range(-x, x + 1);
-        y = Random.Range(-y, y + 1);
-        z = Random.Range(-z, z + 1);
-        x *= passes;
-        y *= passes;
-        z *= passes;
-
-        //One free deviation on the y axis
-        y = SlopeFloat(y, deviation);
+        float starDensity = .5f;
+        float armWidth = (3 / deviation) * (3 + galaxySize / 12);
+        float x = (2.4f) * (3 + galaxySize / 12);
+        float y = (.4f) * (3 + galaxySize / 12);
+        float z = (4.8f) * (3 + galaxySize / 12);
+        x *= Random.Range(- 1.00f, x + .10f);
+        y *= Random.Range(- 1.00f, y + .10f);
+        z *= Random.Range(0, z + .10f);
 
         for (int i = 0; i < passes; i++)
         {
-            x = SlopeFloat(x, deviation);
-            y = SlopeFloat(y, deviation);
-            z = SlopeFloat(z, deviation);
+            //x = PullToPoint(x, 0, armWidth, starDensity);
+            y = PullToPoint(y, 0, .5f, starDensity);
+            z = PullToPoint(z, center, .5f, starDensity);
         }
 
         //Creates a space in the center for a supermassive
-        if (z > 0) { z += center; }
-        if (z < 0) { z -= center; }
+        if (z >= 0) { z += center; }
+        else if (z < 0) { z -= center; }
 
         Vector3 startPos = new Vector3(x, y, z);
         int spriteIndex = Determine_Star_Type();
@@ -69,20 +65,12 @@ public class Star : MonoBehaviour {
         sprite.sprite = GalaxyGenerator.Get_Star_Sprite(spriteIndex);
 
         InitializeScale((starType)spriteIndex);
-
+        InitializeOrbitalCenter();
         transform.localPosition = startPos;
 
         rDistance = transform.localPosition.magnitude;
 
         transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
-
-        InitializeOrbitalCenter();
-        InitializeMovement(20);
-
-        for (int i = 0; i < 50; i++)
-        {
-            RotateAroundGalaxyCenter();
-        }
 
         InitializeMovement();
     }
@@ -106,7 +94,7 @@ public class Star : MonoBehaviour {
 
     private void InitializeMovement()
     {
-        float x = 10;
+        float x = 2;
         float y = 0f;
         float z = 0;
 
@@ -116,14 +104,13 @@ public class Star : MonoBehaviour {
 
     private void InitializeMovement(float speed)
     {
-        float deviation = .1f;
         float x = speed;
         float y = 0;
         float z = 0;
-
-        x = SlopeFloat(x, deviation);
-
+        
         movement = new Vector3(x, y, z);
+        movement *= 10;
+        movement /= Mathf.Sqrt(rDistance);
     }
 
     private void InitializeOrbitalCenter()
@@ -162,7 +149,7 @@ public class Star : MonoBehaviour {
 
         transform.Translate(movement);        
 
-        transform.localRotation = Quaternion.Slerp(current, rotation, .8f);
+        transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
         transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
     }
 
@@ -178,20 +165,26 @@ public class Star : MonoBehaviour {
         transform.localPosition = newPos;
     }
 
-    private float SlopeFloat(float max, float deviation)
+    private float PullToPoint(float currentVal, float center, float reduction, float probability)
     {
-        //deviation is constrained between 0 and 1;
+        //probability is constrained between 0 and 1;
+        //reduction is constrained between 0 and 1;
 
-        if (deviation > 1) { deviation = 1; }
-        else if (deviation < 0) { deviation = 0; }
+        float newVal = currentVal; 
+        int roll = Random.Range(0, 100);
 
-        float rand1 = max - Random.Range(0, (max * deviation));
-        float rand2 = max - Random.Range(0, (max * deviation));
+        if (probability > 1) { probability = 1; }
+        else if (probability < 0) { probability = 0; }
 
-        max -= rand1;
-        max += rand2 * .8f;
+        if (reduction > 1) { reduction = 1; }
+        else if (reduction < 0) { reduction = 0; }
 
-        return max;
+        if (probability > roll)
+        {
+            newVal -= (currentVal - center) * reduction;
+        }
+
+        return newVal;
     }
 
     public starType Get_Star_Type()

@@ -21,6 +21,6 @@ public class Galaxy : MonoBehaviour {
 
     void Rotate()
     {
-        //transform.Rotate(0, -.1f, 0, Space.Self);
+        transform.Rotate(0, -.05f, 0, Space.Self);
     }
 }
