@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
-public class SpriteRotator : MonoBehaviour {
-
+public class SpriteRotator : MonoBehaviour
+{
     SpriteRenderer spriteRend;
     Quaternion cameraRotation;
     Quaternion spriteRotation;

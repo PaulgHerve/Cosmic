@@ -8,10 +8,11 @@ public class Star : MonoBehaviour {
     private starType star_Type;
     SpriteRenderer sprite;
 
-    public float rDistance;
+    private float rDistance;
+    private Vector3 orbitalCenter;
     private float oscillation;
     private Vector3 movement;
-    private bool isRotating = false;
+    private bool enable_Rotation;
 
     float scale;
 
@@ -19,18 +20,15 @@ public class Star : MonoBehaviour {
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
     }
-
-    void Start ()
-    {
-	
-	}
 	
 	void Update ()
     {
-        if (isRotating)
+        enable_Rotation = Galaxy.enable_Rotation;
+
+        if (enable_Rotation)
         {
             RotateAroundGalaxyCenter();
-            RotateWiggle();
+            //RotateWiggle();
         }
     }
 
@@ -78,6 +76,7 @@ public class Star : MonoBehaviour {
 
         transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
 
+        InitializeOrbitalCenter();
         InitializeMovement(20);
 
         for (int i = 0; i < 50; i++)
@@ -86,8 +85,6 @@ public class Star : MonoBehaviour {
         }
 
         InitializeMovement();
-
-        isRotating = true;
     }
 
     private int Determine_Star_Type()
@@ -109,11 +106,12 @@ public class Star : MonoBehaviour {
 
     private void InitializeMovement()
     {
-        float x = Random.Range(-.02f, .03f);
+        float x = 10;
         float y = 0f;
         float z = 0;
 
         movement = new Vector3(x, y, z);
+        movement /= Mathf.Sqrt(rDistance);
     }
 
     private void InitializeMovement(float speed)
@@ -126,6 +124,11 @@ public class Star : MonoBehaviour {
         x = SlopeFloat(x, deviation);
 
         movement = new Vector3(x, y, z);
+    }
+
+    private void InitializeOrbitalCenter()
+    {
+        orbitalCenter = new Vector3(0, 0, 0);
     }
 
     private void InitializeScale(starType sType)
@@ -151,7 +154,7 @@ public class Star : MonoBehaviour {
     //Rotates Camera Around a centerpoint
     private void RotateAroundGalaxyCenter()
     {
-        Vector3 targetPos = new Vector3(0, 0, 0);
+        Vector3 targetPos = orbitalCenter;           
 
         Vector3 relative = targetPos - transform.localPosition;
         Quaternion current = transform.localRotation;
@@ -159,7 +162,7 @@ public class Star : MonoBehaviour {
 
         transform.Translate(movement);        
 
-        transform.localRotation = Quaternion.Slerp(current, rotation, 1);
+        transform.localRotation = Quaternion.Slerp(current, rotation, .8f);
         transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
     }
 
