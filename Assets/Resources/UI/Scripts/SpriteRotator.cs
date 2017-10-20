@@ -2,15 +2,9 @@
 
 public class SpriteRotator : MonoBehaviour
 {
-    SpriteRenderer spriteRend;
     Quaternion cameraRotation;
     Quaternion spriteRotation;
     Transform tForm;
-
-    private void Awake()
-    {
-        spriteRend = GetComponentInChildren<SpriteRenderer>();
-    }
 
     private void Update()
     {

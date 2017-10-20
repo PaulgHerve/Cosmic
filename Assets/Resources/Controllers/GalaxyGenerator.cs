@@ -23,48 +23,50 @@ public class GalaxyGenerator : MonoBehaviour {
 
     private float DetermineArmValue(int armPairs, int arm)
     {
-        float val = 0.00f;
-        val += arm;
-        val /= (armPairs * 2);
-
-        if (val < 0) { val = 0; }
-
+        float inc = DetermineArmIncrement(armPairs);
+        float val = inc * arm;
         return val;
+    }
+
+    private float DetermineArmIncrement(int armPairs)
+    {
+        return 1.00f / armPairs;
     }
 
     public void GenerateGalaxy()
     {
         DestroyGalaxy();
 
-        int armVal = armPairs * 2;
+        int totalArms = armPairs;
         int Randomizer = Random.Range(500, 601);
+        float armInc = DetermineArmIncrement(armPairs);
+        float armVal;
         starCount = (int)(galaxySize * Randomizer);
 
         GameObject galaxy = Instantiate(galaxy_Prefab);
 
-        for (int a = 0; a < armVal; a++)
+        for (int a = 0; a < totalArms; a++)
         {
-            int stars = (int)(starCount / armPairs);
-            
+            int stars = (starCount / armPairs);
+            armVal = DetermineArmValue(armPairs, a);
+
             for (int i = 0; i < stars; i++)
             {
-                Star item = GenerateStar(galaxy, a);
+                GenerateStar(galaxy, a, armVal, armInc);
             }            
         }
 
         galaxy.transform.Rotate(0, 10, 15, Space.Self);
     }
 
-    private Star GenerateStar(GameObject galaxy, int arm)
-    {
-        float armVal = DetermineArmValue(armPairs, arm);
-
+    private Star GenerateStar(GameObject galaxy, int arm, float armVal, float armInc)
+    {      
         GameObject starObject = Instantiate(star_Prefab);
         Star star = starObject.GetComponent<Star>();
 
         stars.Add(star);
 
-        star.Generate(galaxySize, armVal);
+        star.Generate(galaxySize, armVal, armInc);
         star.transform.SetParent(galaxy.transform, false);
 
         return star;

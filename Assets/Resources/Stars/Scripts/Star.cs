@@ -32,28 +32,20 @@ public class Star : MonoBehaviour {
         }
     }
 
-    public void Generate(float galaxySize, float armVal)
+    public void Generate(float galaxySize, float armVal, float armInc)
     {
-        int passes = 5;
-
         float center = 48 + (10 * (galaxySize / 3));
         oscillation = Random.Range(-1, 1.01f) * (1 + galaxySize);
-        float deviation = .5f;
-        float starDensity = .5f;
-        float armWidth = (3 / deviation) * (3 + galaxySize / 12);
-        float x = (2f) * (3 + galaxySize / 12);
-        float y = (4f) * (3 + galaxySize / 12);
-        float z = (48f) * (3 + galaxySize / 12);
-        z *= Random.Range(0, 1.01f);
+        float x = (4f) * (3 + galaxySize / 12);
+        float y = (2f) * (3 + galaxySize / 12);
+        float z = (64) * (3 + galaxySize / 12);
+        z *= Random.Range(-1, 1.01f);
         x *= Random.Range(-1, 1.01f);
         y *= Random.Range(-1, 1.01f);
 
-        for (int i = 0; i < passes; i++)
-        {
-            //x = PullToPoint(x, 0, armWidth, starDensity);
-            //y = PullToPoint(y, 0, .25f, starDensity);
-            //z = PullToPoint(z, center, .25f, starDensity);
-        }
+        float roll = Random.Range(.1f, 1.01f);
+
+        z *= roll;
 
         //Creates a space in the center for a supermassive
         if (z >= 0) { z += center; }
@@ -70,14 +62,14 @@ public class Star : MonoBehaviour {
 
         rDistance = transform.localPosition.magnitude;
 
-        //transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+        float percent = (360.00f * armVal);
+        roll = Random.Range(0, .6f);
+        float maxVal = (360.00f * armInc) * roll;
 
-        float percent = 360.00f * armVal;
-        //float r = Random.Range(0.00f, percent);
+        percent += Random.Range(0, maxVal);
+
         IEnumerator thing = RotateAroundGalaxyCenter(percent);
-        StartCoroutine(thing); 
-
-        InitializeMovement();
+        StartCoroutine(thing);         
     }
 
     private int Determine_Star_Type()
@@ -163,30 +155,48 @@ public class Star : MonoBehaviour {
     {
         //Constrains degrees to between 0 - 360
         if (degrees < 0)                    { degrees = 0; }
-        if (degrees > 360)                  { degrees = 360; }
 
-        float move = (rDistance / 10) / 3;
-        Vector3 m = new Vector3(-move, 0, 0);
+        float num = 5;
+
+        degrees *= .5f;
+        degrees /= num;
+
+        float move = (2 * rDistance * Mathf.PI) / 360;
+        Vector3 m = new Vector3(move, 0, 0);
         Vector3 targetPos = orbitalCenter;
 
         Vector3 relative = targetPos - transform.localPosition;
         Quaternion current = transform.localRotation;
         Quaternion rotation = Quaternion.LookRotation(relative);
 
-        for (float i = 0.0f; i < degrees; i += .1f)
+        for (int i = 0; i < degrees; i++)
         {
-            transform.Translate(m);
+            for (int n = 0; n < num; n++)
+            {
+                relative = targetPos - transform.localPosition;
+                current = transform.localRotation;
+                rotation = Quaternion.LookRotation(relative);
 
-            transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
-            transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+                transform.Translate(m);
 
-            yield return new WaitForSeconds(.001f);
+                transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
+                transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+            }
+
+            yield return new WaitForSeconds(.01f);            
         }
-    }
 
-    public void Rotate90Degrees()
-    {
-        RotateAroundGalaxyCenter(90f);
+        InitializeMovement();
+
+        for (int i = 0; i < 30; i++)
+        {
+            for (int n = 0; n < 30; n++)
+            {
+                RotateAroundGalaxyCenter();
+            }
+
+            yield return new WaitForSeconds(.01f);
+        }
     }
 
     private void RotateWiggle()
@@ -199,28 +209,6 @@ public class Star : MonoBehaviour {
         newPos.y += currentY;
 
         transform.localPosition = newPos;
-    }
-
-    private float PullToPoint(float currentVal, float center, float reduction, float probability)
-    {
-        //probability is constrained between 0 and 1;
-        //reduction is constrained between 0 and 1;
-
-        float newVal = currentVal; 
-        int roll = Random.Range(0, 100);
-
-        if (probability > 1) { probability = 1; }
-        else if (probability < 0) { probability = 0; }
-
-        if (reduction > 1) { reduction = 1; }
-        else if (reduction < 0) { reduction = 0; }
-
-        if (probability > roll)
-        {
-            newVal -= (currentVal - center) * reduction;
-        }
-
-        return newVal;
     }
 
     public starType Get_Star_Type()

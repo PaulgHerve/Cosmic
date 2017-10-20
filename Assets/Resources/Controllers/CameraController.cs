@@ -9,9 +9,8 @@ public class CameraController : MonoBehaviour {
     Vector3 mousePosition;
     Vector3 mouseMove;
     Vector3 clickPosition;
-    float minDepth = -40;
-    float maxDepth = -400;
-    public float depth;
+    float minDepth = -20;
+    float maxDepth = -500;
     static bool gameActive = true;
     bool isMoving = false;
     static int pausePanelCount = 0;
@@ -23,7 +22,8 @@ public class CameraController : MonoBehaviour {
 
     private Vector3 dest;
 
-    public GameObject target;
+    private static float depth;
+    public static GameObject target;
 
     void Awake()
     {
@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour {
         scrollSensitivity = inputControl.zoomSpeed;
         panSensitivity = inputControl.panSpeed;
         clickPosition = new Vector2(0, 0);
-        depth = main.transform.position.z;
+        depth = -Vector3.Magnitude(main.transform.position);
     }
 
     void Update()
@@ -42,15 +42,9 @@ public class CameraController : MonoBehaviour {
             if (gameActive)
             {
                 MouseControls();
-                RotateCamera(null);
+                RotateCamera();
             }
         }
-    }
-
-    public void DefineConstraints(float xmin, float xmax, float ymin, float ymax)
-    {
-        float height = Screen.height / 5;
-        float width = Screen.width / 5;
     }
 
     //Controls camera movement using click functions
@@ -58,8 +52,6 @@ public class CameraController : MonoBehaviour {
     {
         if (InputController.GetTouch() && gameActive)
         {
-            Vector3 newPos = main.transform.position;
-
             if (InputController.GetTouchDown())
             {
                 clickPosition = mousePosition;
@@ -68,20 +60,30 @@ public class CameraController : MonoBehaviour {
             mouseMove.x = (2 * Screen.width * (clickPosition.x - mousePosition.x)) * depth * -.01f;
             mouseMove.y = (2 * Screen.height * (clickPosition.y - mousePosition.y)) * depth * -.01f; 
 
-            mouseMove *= panSensitivity;            
+            mouseMove *= panSensitivity;          
+                        
+            main.transform.Translate(mouseMove);
+
+            Vector3 targetPos = new Vector3(0, 0, 0);
+
+            if (target)
+            {
+                targetPos = target.transform.position;
+            }
 
             float d = Mathf.Abs(depth);
 
-            main.transform.Translate(mouseMove);
+            Vector3 newPos = Camera.main.transform.position;
 
-            main.transform.position = Vector3.ClampMagnitude(main.transform.position, d);
+            newPos = targetPos + Vector3.ClampMagnitude(newPos - targetPos, d);
+            main.transform.position = newPos;
 
             clickPosition = mousePosition;
         }
     }
 
     //Rotates Camera Around a centerpoint
-    private void RotateCamera(GameObject target)
+    private static void RotateCamera()
     {
         Vector3 targetPos = new Vector3(0, 0, 0);
 
@@ -90,11 +92,11 @@ public class CameraController : MonoBehaviour {
             targetPos = target.transform.position;
         }
 
-        Vector3 relative = targetPos - main.transform.position;
-        Quaternion current = main.transform.localRotation;
+        Vector3 relative = targetPos - Camera.main.transform.position;
+        Quaternion current = Camera.main.transform.localRotation;
         Quaternion rotation = Quaternion.LookRotation(relative);
 
-        main.transform.localRotation = Quaternion.Slerp(current, rotation, 1);
+        Camera.main.transform.localRotation = Quaternion.Slerp(current, rotation, 1);
     }
 
     //controls all mouse/click functions
@@ -148,6 +150,23 @@ public class CameraController : MonoBehaviour {
 
             isMoving = false;
         }
+    }
+
+    public static void StepBack()
+    {
+        if(target)
+        {
+            target = null;
+        }
+    }
+
+    public static void SetTarget(GameObject item)
+    {
+        target = item;
+
+        RotateCamera();
+
+        depth = -Mathf.Abs(Vector3.Magnitude(Camera.main.transform.position - target.transform.position));
     }
 
     public static void ToggleGameActive()
@@ -290,7 +309,6 @@ public class CameraController : MonoBehaviour {
         {
             for (int i = 0; i < 30; i++)
             {
-                Vector3 current = main.transform.position;
                 float change = speed * panSensitivity;
 
                 if (depth + change >= maxDepth)

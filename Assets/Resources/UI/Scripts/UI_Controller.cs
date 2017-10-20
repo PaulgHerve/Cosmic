@@ -28,20 +28,17 @@ public class UI_Controller : MonoBehaviour
         //Stores click location to prevent selecting a hex if the camera is being panned
         if (InputController.GetTouchDown())
         {
-            //if (hit && hit.transform.gameObject.CompareTag("Selectable_Object"))
-            //{
-                //if (!hit.transform.gameObject.CompareTag("UI"))
-                //{
-                //    clickPos = mousePos;
-                //}
-            //}
+            clickPos = mousePos;
         }
 
         if (InputController.GetTouchUp())
         {
             if (!buttonHit)
             {
-                Select_Object();
+                if (clickPos == mousePos)
+                {
+                    Select_Object();
+                }
             }
             else
             {
@@ -49,6 +46,12 @@ public class UI_Controller : MonoBehaviour
             }
 
             //ViewSelectedHex();
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            CameraController.StepBack();
+            SelectNewObject(null);
         }
     }
 
@@ -115,21 +118,34 @@ public class UI_Controller : MonoBehaviour
                     {
                         Selection_Object sHit = objectHit.GetComponentInParent<Selection_Object>();
 
-                        if (selected_Object_Hit != sHit)
-                        {
-                            ClearPrevSelectedObject();
-                            prev_Object = selected_Object_Hit;
-
-                            if (prev_Object)
-                            {
-                                prev_Object.Deselect_This_Object();
-                            }
-
-                            selected_Object_Hit = sHit;
-                            selected_Object_Hit.Select_This_Object();
-                        }
+                        SelectNewObject(sHit);
                     }
                 }
+            }
+        }
+    }
+
+    private static void SelectNewObject(Selection_Object sHit)
+    {
+        ClearPrevSelectedObject();
+        prev_Object = selected_Object_Hit;
+
+        if (prev_Object)
+        {
+            prev_Object.Deselect_This_Object();
+        }
+
+        selected_Object_Hit = sHit;
+
+        if (selected_Object_Hit)
+        {
+            selected_Object_Hit.Select_This_Object();
+
+            Star star = selected_Object_Hit.GetComponent<Star>();
+
+            if (star)
+            {
+                CameraController.SetTarget(star.gameObject);
             }
         }
     }
