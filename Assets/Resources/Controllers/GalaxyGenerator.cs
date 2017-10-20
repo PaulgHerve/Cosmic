@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class GalaxyGenerator : MonoBehaviour {
 
     private static Sprite[] star_Sprites;
 
-    public float galaxySize = 1;
-    public int armPairs;
+    private float galaxySize = .667f;
+    private int armPairs = 1;
+    private float armDensity = .5f;
     public GameObject arm_Prefab;
     private int starCount;
     private GameObject galaxy_Prefab;
@@ -30,7 +32,7 @@ public class GalaxyGenerator : MonoBehaviour {
 
     private float DetermineArmIncrement(int armPairs)
     {
-        return 1.00f / armPairs;
+        return .5f / armPairs;
     }
 
     public void GenerateGalaxy()
@@ -66,7 +68,7 @@ public class GalaxyGenerator : MonoBehaviour {
 
         stars.Add(star);
 
-        star.Generate(galaxySize, armVal, armInc);
+        star.Generate(galaxySize, armVal, armInc, armDensity);
         star.transform.SetParent(galaxy.transform, false);
 
         return star;
@@ -97,5 +99,25 @@ public class GalaxyGenerator : MonoBehaviour {
     public static Star[] GetStars()
     {
         return stars.ToArray();
+    }
+
+    public void SetGalaxySize(Slider s)
+    {
+        int val = (int)s.value;
+        float newVal = val / 6.00f;
+
+        galaxySize = newVal;
+    }
+
+    public void SetArmCount(Slider s)
+    {
+        int val = (int)s.value;
+        armPairs = val;
+    }
+
+    public void SetArmDensity(Slider s)
+    {
+        float val = s.value;
+        armDensity = 1 - val;
     }
 }

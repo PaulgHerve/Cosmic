@@ -32,7 +32,7 @@ public class Star : MonoBehaviour {
         }
     }
 
-    public void Generate(float galaxySize, float armVal, float armInc)
+    public void Generate(float galaxySize, float armVal, float armInc, float armDensity)
     {
         float center = 48 + (10 * (galaxySize / 3));
         oscillation = Random.Range(-1, 1.01f) * (1 + galaxySize);
@@ -63,10 +63,19 @@ public class Star : MonoBehaviour {
         rDistance = transform.localPosition.magnitude;
 
         float percent = (360.00f * armVal);
-        roll = Random.Range(0, .6f);
+        roll = Random.Range(0, armDensity);        
         float maxVal = (360.00f * armInc) * roll;
 
         percent += Random.Range(0, maxVal);
+
+        roll = Random.Range(0.00f,.51f);
+        if (roll < armInc)
+        {
+            roll = Random.Range(0, 1.01f);
+            maxVal = (360.00f * armInc) * roll;
+
+            percent += Random.Range(0, maxVal);
+        }
 
         IEnumerator thing = RotateAroundGalaxyCenter(percent);
         StartCoroutine(thing);         
@@ -77,14 +86,14 @@ public class Star : MonoBehaviour {
         int index = 0;
         float roll = Random.Range(0, 101);
 
-        if (roll < 6) { index = 0; }
-        else if (roll < 16) { index = 1; }
-        else if (roll < 26) { index = 2; }
-        else if (roll < 31) { index = 3; }
-        else if (roll < 41) { index = 4; }
-        else if (roll < 46) { index = 5; }
-        else if (roll < 56) { index = 6; }
-        else { index = 7; }
+        if (roll < 6) { index = 0; }                    //Black Hole
+        else if (roll < 16) { index = 1; }              //Blue
+        else if (roll < 21) { index = 2; }              //Blue Super
+        else if (roll < 26) { index = 3; }              //Pulsar
+        else if (roll < 41) { index = 4; }              //Red Dwarf
+        else if (roll < 44) { index = 5; }              //Red Giant
+        else if (roll < 56) { index = 6; }              //White Dwarf
+        else { index = 7; }                             //Yellow
 
         return index;
     }
@@ -121,13 +130,13 @@ public class Star : MonoBehaviour {
         float scaleMult = 1;
         float scaler = Random.Range(.5f, 1.01f);
 
-        if (t == 0)      { scaleMult = .15f; }                  //Black Hole
+        if (t == 0)      { scaleMult = .30f; }                  //Black Hole
         else if (t == 1) { scaleMult = .50f; }                  //Blue 
         else if (t == 2) { scaleMult = .80f; }                  //Blue Super
-        else if (t == 3) { scaleMult = .20f; }                  //Pulsar
+        else if (t == 3) { scaleMult = .50f; }                  //Pulsar
         else if (t == 4) { scaleMult = .25f; }                  //Red Dwarf
-        else if (t == 5) { scaleMult = 1.0f; }                  //Red Giant
-        else if (t == 6) { scaleMult = .2f; }                   //White Dwarf
+        else if (t == 5) { scaleMult = .90f; }                  //Red Giant
+        else if (t == 6) { scaleMult = .25f; }                  //White Dwarf
         else if (t == 7) { scaleMult = .40f; }                  //Yellow
 
         scaler *= scaleMult;
@@ -158,10 +167,10 @@ public class Star : MonoBehaviour {
 
         float num = 5;
 
-        degrees *= .5f;
+        degrees *= .500f;
         degrees /= num;
 
-        float move = (2 * rDistance * Mathf.PI) / 360;
+        float move = (2 * rDistance * Mathf.PI) / 180;
         Vector3 m = new Vector3(move, 0, 0);
         Vector3 targetPos = orbitalCenter;
 
@@ -183,7 +192,7 @@ public class Star : MonoBehaviour {
                 transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
             }
 
-            yield return new WaitForSeconds(.01f);            
+            yield return new WaitForSeconds(.005f);            
         }
 
         InitializeMovement();
@@ -192,10 +201,10 @@ public class Star : MonoBehaviour {
         {
             for (int n = 0; n < 30; n++)
             {
-                RotateAroundGalaxyCenter();
+                //RotateAroundGalaxyCenter();
             }
 
-            yield return new WaitForSeconds(.01f);
+            //yield return new WaitForSeconds(.01f);
         }
     }
 

@@ -148,6 +148,10 @@ public class UI_Controller : MonoBehaviour
                 CameraController.SetTarget(star.gameObject);
             }
         }
+        else
+        {
+            CameraController.SetTarget(null);
+        }
     }
 
     private static void ClearPrevSelectedObject()

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
+    private static CameraController cControl;
+
     Camera main;
     Player player;
     InputController inputControl;
@@ -18,7 +20,7 @@ public class CameraController : MonoBehaviour {
     private float scrollSensitivity;
     private float panSensitivity;
 
-    public bool isZooming = false;
+    private bool isZooming = false;
 
     private Vector3 dest;
 
@@ -28,6 +30,7 @@ public class CameraController : MonoBehaviour {
     void Awake()
     {
         main = Camera.main;
+        cControl = this;
         inputControl = FindObjectOfType<InputController>();
         scrollSensitivity = inputControl.zoomSpeed;
         panSensitivity = inputControl.panSpeed;
@@ -42,7 +45,6 @@ public class CameraController : MonoBehaviour {
             if (gameActive)
             {
                 MouseControls();
-                RotateCamera();
             }
         }
     }
@@ -64,6 +66,8 @@ public class CameraController : MonoBehaviour {
                         
             main.transform.Translate(mouseMove);
 
+            RotateCamera();
+
             Vector3 targetPos = new Vector3(0, 0, 0);
 
             if (target)
@@ -83,13 +87,17 @@ public class CameraController : MonoBehaviour {
     }
 
     //Rotates Camera Around a centerpoint
-    private static void RotateCamera()
+    private void RotateCamera()
     {
-        Vector3 targetPos = new Vector3(0, 0, 0);
+        Vector3 targetPos;
 
         if (target)
         {
             targetPos = target.transform.position;
+        }
+        else
+        {
+            targetPos = new Vector3(0, 0, 0);
         }
 
         Vector3 relative = targetPos - Camera.main.transform.position;
@@ -97,6 +105,36 @@ public class CameraController : MonoBehaviour {
         Quaternion rotation = Quaternion.LookRotation(relative);
 
         Camera.main.transform.localRotation = Quaternion.Slerp(current, rotation, 1);
+    }
+
+    //Rotates Camera Around a centerpoint
+    private static IEnumerator RotateCamera(Vector3 targetPos, float speed)
+    {
+        float inc = 1.000f / speed;
+
+        if (target)
+        {
+            targetPos = target.transform.position;
+        }
+        else
+        {
+            targetPos = new Vector3(0, 0, 0);
+        }
+
+        Vector3 relative = targetPos - Camera.main.transform.position;
+        Quaternion current = Camera.main.transform.localRotation;
+        Quaternion rotation = Quaternion.LookRotation(relative);
+
+        for (float i = 0.000f; i <= 360; i += inc)
+        {
+            relative = targetPos - Camera.main.transform.position;
+            current = Camera.main.transform.localRotation;
+            rotation = Quaternion.LookRotation(relative);
+
+            Camera.main.transform.localRotation = Quaternion.Slerp(current, rotation, speed);
+
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 
     //controls all mouse/click functions
@@ -163,10 +201,27 @@ public class CameraController : MonoBehaviour {
     public static void SetTarget(GameObject item)
     {
         target = item;
+        Vector3 pos = new Vector3(0, 0, 0);
 
-        RotateCamera();
+        if (target) { pos = target.transform.position; }
 
-        depth = -Mathf.Abs(Vector3.Magnitude(Camera.main.transform.position - target.transform.position));
+        depth = -Mathf.Abs(Vector3.Magnitude(Camera.main.transform.position - pos));
+
+        cControl.Rotate_To_Target(item);
+    }
+
+    public void Rotate_To_Target(GameObject target)
+    {
+        Vector3 pos = new Vector3(0, 0, 0);
+
+        if (target)
+        {
+            pos = target.transform.position;
+        }
+
+        IEnumerator thing = RotateCamera(pos, .15f);
+
+        StartCoroutine(thing);
     }
 
     public static void ToggleGameActive()
@@ -246,7 +301,7 @@ public class CameraController : MonoBehaviour {
 
     IEnumerator ZoomIn()
     {
-        float speed = .05f * inputControl.Zoom() * scrollSensitivity;
+        float speed = inputControl.Zoom() * scrollSensitivity;
 
         isZooming = true;
 
@@ -260,21 +315,25 @@ public class CameraController : MonoBehaviour {
             {
                 depth += change;
                 main.transform.Translate(0, 0, change);
-                yield return new WaitForSeconds(.01f);
+                yield return new WaitForSeconds(.001f);
             }
         }
         else
         {
-            for (int i = 0; i < 30; i++)
+            float depthRatio;
+            float change;
+
+            for (int i = 0; i < 20; i++)
             {
                 Vector3 current = main.transform.position;
-                float change = speed * panSensitivity;
+                depthRatio = .5f + 3 * (depth / maxDepth);
+                change = (speed * panSensitivity * depthRatio) / 20;
 
                 if (depth + change <= minDepth)
                 {                  
                     depth += change;
                     main.transform.Translate(0, 0, change);
-                    yield return new WaitForSeconds(.01f);
+                    yield return new WaitForSeconds(.001f);
                 }
                 else
                 {
@@ -288,7 +347,7 @@ public class CameraController : MonoBehaviour {
 
     IEnumerator ZoomOut()
     {        
-        float speed = .05f * inputControl.Zoom() * scrollSensitivity;
+        float speed = inputControl.Zoom() * scrollSensitivity;
 
         isZooming = true;
 
@@ -302,20 +361,25 @@ public class CameraController : MonoBehaviour {
             {
                 depth += change;
                 main.transform.Translate(0, 0, change);
-                yield return new WaitForSeconds(.01f);
+                yield return new WaitForSeconds(.001f);
             }
         }
         else
         {
-            for (int i = 0; i < 30; i++)
+            float depthRatio;
+            float change;
+
+            for (int i = 0; i < 20; i++)
             {
-                float change = speed * panSensitivity;
+                Vector3 current = main.transform.position;
+                depthRatio = .5f + 3 * (depth / maxDepth);
+                change = (speed * panSensitivity * depthRatio) / 20;
 
                 if (depth + change >= maxDepth)
                 {
                     depth += change;
                     main.transform.Translate(0, 0, change);
-                    yield return new WaitForSeconds(.01f);
+                    yield return new WaitForSeconds(.001f);
                 }
                 else
                 {
