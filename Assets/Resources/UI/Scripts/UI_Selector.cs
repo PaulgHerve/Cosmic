@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class UI_Selector : MonoBehaviour {
 
@@ -12,10 +11,6 @@ public class UI_Selector : MonoBehaviour {
 
     void Start ()
     {
-        SphereCollider c = GetComponent<SphereCollider>();
-
-        c.enabled = true;
-
         Deactivate_Indicator();
     }
 

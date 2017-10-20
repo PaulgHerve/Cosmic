@@ -7,6 +7,7 @@ public class Star : MonoBehaviour {
 
     private starType star_Type;
     SpriteRenderer sprite;
+    SphereCollider collider;
 
     private float rDistance;
     private Vector3 orbitalCenter;
@@ -19,6 +20,9 @@ public class Star : MonoBehaviour {
     void Awake()
     {
         sprite = GetComponentInChildren<SpriteRenderer>();
+        collider = GetComponentInChildren<SphereCollider>();
+
+        collider.enabled = false;
     }
 	
 	void Update ()
@@ -28,7 +32,11 @@ public class Star : MonoBehaviour {
         if (enable_Rotation)
         {
             RotateAroundGalaxyCenter();
-            //RotateWiggle();
+            collider.enabled = false;
+        }
+        else
+        {
+            collider.enabled = true;
         }
     }
 
@@ -36,16 +44,12 @@ public class Star : MonoBehaviour {
     {
         float center = 48 + (10 * (galaxySize / 3));
         oscillation = Random.Range(-1, 1.01f) * (1 + galaxySize);
-        float x = (4f) * (3 + galaxySize / 12);
+        float x = (3f) * (3 + galaxySize / 12);
         float y = (2f) * (3 + galaxySize / 12);
         float z = (64) * (3 + galaxySize / 12);
         z *= Random.Range(-1, 1.01f);
         x *= Random.Range(-1, 1.01f);
         y *= Random.Range(-1, 1.01f);
-
-        float roll = Random.Range(.1f, 1.01f);
-
-        z *= roll;
 
         //Creates a space in the center for a supermassive
         if (z >= 0) { z += center; }
@@ -63,13 +67,13 @@ public class Star : MonoBehaviour {
         rDistance = transform.localPosition.magnitude;
 
         float percent = (360.00f * armVal);
-        roll = Random.Range(0, armDensity);        
+        float roll = Random.Range(0, armDensity);        
         float maxVal = (360.00f * armInc) * roll;
 
         percent += Random.Range(0, maxVal);
 
         roll = Random.Range(0.00f,.51f);
-        if (roll < armInc)
+        if (roll < .5f * armInc)
         {
             roll = Random.Range(0, 1.01f);
             maxVal = (360.00f * armInc) * roll;
@@ -189,22 +193,24 @@ public class Star : MonoBehaviour {
                 transform.Translate(m);
 
                 transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
-                transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+                transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);                
             }
 
-            yield return new WaitForSeconds(.005f);            
+            //yield return new WaitForSeconds(.005f);            
         }
+
+        //yield return new WaitForSeconds(.25f);
 
         InitializeMovement();
 
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 120; i++)
         {
-            for (int n = 0; n < 30; n++)
+            for (int n = 0; n < 10; n++)
             {
-                //RotateAroundGalaxyCenter();
+                RotateAroundGalaxyCenter();
             }
 
-            //yield return new WaitForSeconds(.01f);
+            yield return new WaitForSeconds(.01f);
         }
     }
 
