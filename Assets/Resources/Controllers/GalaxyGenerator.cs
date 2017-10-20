@@ -12,7 +12,7 @@ public class GalaxyGenerator : MonoBehaviour {
     private GameObject galaxy_Prefab;
     private GameObject star_Prefab;
 
-    private List<Star> stars = new List<Star>();
+    private static List<Star> stars = new List<Star>();
     
     private void Awake()
     {
@@ -23,8 +23,11 @@ public class GalaxyGenerator : MonoBehaviour {
 
     private float DetermineArmValue(int armPairs, int arm)
     {
-        float val = (float)armPairs / (float)arm;
-        val *= 360;
+        float val = 0.00f;
+        val += arm;
+        val /= (armPairs * 2);
+
+        if (val < 0) { val = 0; }
 
         return val;
     }
@@ -42,18 +45,11 @@ public class GalaxyGenerator : MonoBehaviour {
         for (int a = 0; a < armVal; a++)
         {
             int stars = (int)(starCount / armPairs);
-
-            GameObject newArm = Instantiate(arm_Prefab);
-            newArm.transform.SetParent(galaxy.transform);
-
+            
             for (int i = 0; i < stars; i++)
             {
                 Star item = GenerateStar(galaxy, a);
-
-                item.transform.SetParent(newArm.transform, false);
-            }
-
-            newArm.transform.Rotate(0, (180 * a), 0, Space.Self);
+            }            
         }
 
         galaxy.transform.Rotate(0, 10, 15, Space.Self);
@@ -94,5 +90,10 @@ public class GalaxyGenerator : MonoBehaviour {
     public static Sprite Get_Star_Sprite(int index)
     {
         return star_Sprites[index];
+    }
+
+    public static Star[] GetStars()
+    {
+        return stars.ToArray();
     }
 }

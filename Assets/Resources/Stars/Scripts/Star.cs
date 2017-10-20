@@ -41,18 +41,18 @@ public class Star : MonoBehaviour {
         float deviation = .5f;
         float starDensity = .5f;
         float armWidth = (3 / deviation) * (3 + galaxySize / 12);
-        float x = (2.4f) * (3 + galaxySize / 12);
-        float y = (.4f) * (3 + galaxySize / 12);
-        float z = (4.8f) * (3 + galaxySize / 12);
-        x *= Random.Range(- 1.00f, x + .10f);
-        y *= Random.Range(- 1.00f, y + .10f);
-        z *= Random.Range(0, z + .10f);
+        float x = (2f) * (3 + galaxySize / 12);
+        float y = (4f) * (3 + galaxySize / 12);
+        float z = (48f) * (3 + galaxySize / 12);
+        z *= Random.Range(0, 1.01f);
+        x *= Random.Range(-1, 1.01f);
+        y *= Random.Range(-1, 1.01f);
 
         for (int i = 0; i < passes; i++)
         {
             //x = PullToPoint(x, 0, armWidth, starDensity);
-            y = PullToPoint(y, 0, .5f, starDensity);
-            z = PullToPoint(z, center, .5f, starDensity);
+            //y = PullToPoint(y, 0, .25f, starDensity);
+            //z = PullToPoint(z, center, .25f, starDensity);
         }
 
         //Creates a space in the center for a supermassive
@@ -70,7 +70,12 @@ public class Star : MonoBehaviour {
 
         rDistance = transform.localPosition.magnitude;
 
-        transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+        //transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+
+        float percent = 360.00f * armVal;
+        //float r = Random.Range(0.00f, percent);
+        IEnumerator thing = RotateAroundGalaxyCenter(percent);
+        StartCoroutine(thing); 
 
         InitializeMovement();
     }
@@ -151,6 +156,37 @@ public class Star : MonoBehaviour {
 
         transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
         transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+    }
+
+    //Rotates Camera Around a centerpoint
+    private IEnumerator RotateAroundGalaxyCenter(float degrees)
+    {
+        //Constrains degrees to between 0 - 360
+        if (degrees < 0)                    { degrees = 0; }
+        if (degrees > 360)                  { degrees = 360; }
+
+        float move = (rDistance / 10) / 3;
+        Vector3 m = new Vector3(-move, 0, 0);
+        Vector3 targetPos = orbitalCenter;
+
+        Vector3 relative = targetPos - transform.localPosition;
+        Quaternion current = transform.localRotation;
+        Quaternion rotation = Quaternion.LookRotation(relative);
+
+        for (float i = 0.0f; i < degrees; i += .1f)
+        {
+            transform.Translate(m);
+
+            transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
+            transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+
+            yield return new WaitForSeconds(.001f);
+        }
+    }
+
+    public void Rotate90Degrees()
+    {
+        RotateAroundGalaxyCenter(90f);
     }
 
     private void RotateWiggle()
