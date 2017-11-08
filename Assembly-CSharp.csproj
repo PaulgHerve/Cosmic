@@ -45,13 +45,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Center_Rotator.cs" />
-     <Compile Include="Assets\Game_Controller.cs" />
      <Compile Include="Assets\Resources\Controllers\CameraController.cs" />
-     <Compile Include="Assets\Resources\Controllers\GalaxyGenerator.cs" />
-     <Compile Include="Assets\Resources\Controllers\InputController.cs" />
+     <Compile Include="Assets\Resources\Controllers\Galaxy_Generator.cs" />
+     <Compile Include="Assets\Resources\Controllers\Game_Controller.cs" />
+     <Compile Include="Assets\Resources\Controllers\Input_Controller.cs" />
      <Compile Include="Assets\Resources\Controllers\MainCamera.cs" />
-     <Compile Include="Assets\Resources\Galaxy.cs" />
+     <Compile Include="Assets\Resources\Galaxy\Center_Rotator.cs" />
+     <Compile Include="Assets\Resources\Galaxy\Galaxy.cs" />
+     <Compile Include="Assets\Resources\Planets\Scripts\Planet.cs" />
      <Compile Include="Assets\Resources\Player\Player.cs" />
      <Compile Include="Assets\Resources\Stars\Scripts\Star.cs" />
      <Compile Include="Assets\Resources\UI\Scripts\Selection_Object.cs" />
@@ -59,7 +60,7 @@
      <Compile Include="Assets\Resources\UI\Scripts\UI_Controller.cs" />
      <Compile Include="Assets\Resources\UI\Scripts\UI_Selector.cs" />
      <Compile Include="Assets\Resources\UI\Scripts\UI_Selector_Indicator.cs" />
-     <Compile Include="Assets\Value_Text.cs" />
+     <Compile Include="Assets\Resources\UI\Scripts\Value_Text.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

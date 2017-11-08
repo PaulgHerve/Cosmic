@@ -7,11 +7,11 @@ public class CameraController : MonoBehaviour {
 
     Camera main;
     Player player;
-    InputController inputControl;
+    Input_Controller inputControl;
     Vector3 mousePosition;
     Vector3 mouseMove;
     Vector3 clickPosition;
-    float minDepth = -20;
+    float minDepth = -4;
     float maxDepth = -500;
     static bool gameActive = true;
     bool isMoving = false;
@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour {
     {
         main = Camera.main;
         cControl = this;
-        inputControl = FindObjectOfType<InputController>();
+        inputControl = FindObjectOfType<Input_Controller>();
         scrollSensitivity = inputControl.zoomSpeed;
         panSensitivity = inputControl.panSpeed;
         clickPosition = new Vector2(0, 0);
@@ -52,9 +52,9 @@ public class CameraController : MonoBehaviour {
     //Controls camera movement using click functions
     void MoveControls()
     {
-        if (InputController.GetTouch() && gameActive)
+        if (Input_Controller.GetTouch() && gameActive)
         {
-            if (InputController.GetTouchDown())
+            if (Input_Controller.GetTouchDown())
             {
                 clickPosition = mousePosition;
             }
@@ -140,8 +140,8 @@ public class CameraController : MonoBehaviour {
     //controls all mouse/click functions
     void MouseControls()
     {
-        mousePosition.x = ((InputController.Get0TouchPosition().x / Screen.width) - .5f);
-        mousePosition.y = ((InputController.Get0TouchPosition().y / Screen.height) - .5f);
+        mousePosition.x = ((Input_Controller.Get0TouchPosition().x / Screen.width) - .5f);
+        mousePosition.y = ((Input_Controller.Get0TouchPosition().y / Screen.height) - .5f);
 
         if (Input.touchSupported)
         {
@@ -282,7 +282,7 @@ public class CameraController : MonoBehaviour {
 
         if (Input.touchCount == 2)
         {
-            newDelta = InputController.CenterMultiTouch();
+            newDelta = Input_Controller.CenterMultiTouch();
         }
         else
         {

@@ -20,18 +20,18 @@ public class UI_Controller : MonoBehaviour
 
     private void GeneralControls()
     {
-        if (InputController.GetTouch())
+        if (Input_Controller.GetTouch())
         {
             SetMousePos();
         }
 
         //Stores click location to prevent selecting a hex if the camera is being panned
-        if (InputController.GetTouchDown())
+        if (Input_Controller.GetTouchDown())
         {
             clickPos = mousePos;
         }
 
-        if (InputController.GetTouchUp())
+        if (Input_Controller.GetTouchUp())
         {
             if (!buttonHit)
             {
@@ -61,13 +61,13 @@ public class UI_Controller : MonoBehaviour
         {
             if (Input.touchCount == 1)
             {
-                uiMousePos = uiCamera.ScreenToWorldPoint(InputController.Get0TouchPosition());                
+                uiMousePos = uiCamera.ScreenToWorldPoint(Input_Controller.Get0TouchPosition());                
             }
         }
         else if (Input.mousePresent)
         {
             mousePos = Input.mousePosition;
-            uiMousePos = uiCamera.ScreenToWorldPoint(InputController.Get0TouchPosition());
+            uiMousePos = uiCamera.ScreenToWorldPoint(Input_Controller.Get0TouchPosition());
         }
 
         Select_UI_Object();

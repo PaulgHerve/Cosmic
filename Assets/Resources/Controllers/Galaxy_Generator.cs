@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class GalaxyGenerator : MonoBehaviour {
+public class Galaxy_Generator : MonoBehaviour
+{
 
     private static Sprite[] star_Sprites;
 
@@ -15,7 +16,7 @@ public class GalaxyGenerator : MonoBehaviour {
     private GameObject star_Prefab;
 
     private static List<Star> stars = new List<Star>();
-    
+
     private void Awake()
     {
         galaxy_Prefab = Resources.Load<GameObject>("Prefabs/Galaxy");
@@ -35,9 +36,9 @@ public class GalaxyGenerator : MonoBehaviour {
         return .5f / armPairs;
     }
 
-    public void GenerateGalaxy()
+    public void Generate_Galaxy()
     {
-        DestroyGalaxy();
+        Destroy_Galaxy();
 
         int totalArms = armPairs;
         int Randomizer = Random.Range(500, 601);
@@ -54,15 +55,28 @@ public class GalaxyGenerator : MonoBehaviour {
 
             for (int i = 0; i < stars; i++)
             {
-                GenerateStar(galaxy, a, armVal, armInc);
-            }            
+                Generate_Star(galaxy, a, armVal, armInc);
+            }
         }
 
         galaxy.transform.Rotate(0, 10, 15, Space.Self);
     }
 
-    private Star GenerateStar(GameObject galaxy, int arm, float armVal, float armInc)
-    {      
+    //Generates a planet
+    private void Generate_Planet()
+    {
+
+    }
+
+    //Generates a group of celestial bodies associated to a host star
+    public void Generate_Solar_System(Star host)
+    {
+
+    }
+
+    //Generates a star and determines it's starting location
+    private Star Generate_Star(GameObject galaxy, int arm, float armVal, float armInc)
+    {
         GameObject starObject = Instantiate(star_Prefab);
         Star star = starObject.GetComponent<Star>();
 
@@ -74,7 +88,7 @@ public class GalaxyGenerator : MonoBehaviour {
         return star;
     }
 
-    private void DestroyGalaxy()
+    private void Destroy_Galaxy()
     {
         Galaxy g = FindObjectOfType<Galaxy>();
 

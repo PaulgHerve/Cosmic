@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class InputController : MonoBehaviour {
+public class Input_Controller : MonoBehaviour
+{
 
     public float zoomSpeed;
     public float panSpeed;
@@ -13,7 +14,7 @@ public class InputController : MonoBehaviour {
     public static bool GetTouch()
     {
         bool touch;
-        
+
         touch = Input.GetMouseButton(0);
 
         return touch;

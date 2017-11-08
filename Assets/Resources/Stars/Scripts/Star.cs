@@ -58,7 +58,7 @@ public class Star : MonoBehaviour {
         Vector3 startPos = new Vector3(x, y, z);
         int spriteIndex = Determine_Star_Type();
 
-        sprite.sprite = GalaxyGenerator.Get_Star_Sprite(spriteIndex);
+        sprite.sprite = Galaxy_Generator.Get_Star_Sprite(spriteIndex);
 
         InitializeScale((starType)spriteIndex);
         InitializeOrbitalCenter();
@@ -203,7 +203,7 @@ public class Star : MonoBehaviour {
 
         InitializeMovement();
 
-        for (int i = 0; i < 120; i++)
+        for (int i = 0; i < 240; i++)
         {
             for (int n = 0; n < 10; n++)
             {
