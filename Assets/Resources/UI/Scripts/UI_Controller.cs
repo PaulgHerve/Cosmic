@@ -3,6 +3,7 @@
 public class UI_Controller : MonoBehaviour
 {
     public Camera uiCamera;
+    public CameraController cameraControl;
 
     static GameObject buttonHit;
     static Selection_Object selected_Object_Hit;
@@ -12,6 +13,11 @@ public class UI_Controller : MonoBehaviour
     static Vector3 clickPos;
 
     private static RaycastHit hit;    
+
+    private void Awake()
+    {
+        cameraControl = FindObjectOfType<CameraController>();
+    }
 
     void Update()
     {
@@ -23,12 +29,17 @@ public class UI_Controller : MonoBehaviour
         if (Input_Controller.GetTouch())
         {
             SetMousePos();
+
+            if (!buttonHit)
+            {
+                cameraControl.MouseControls();
+            }
         }
 
         //Stores click location to prevent selecting a hex if the camera is being panned
         if (Input_Controller.GetTouchDown())
         {
-            clickPos = mousePos;
+            clickPos = mousePos;            
         }
 
         if (Input_Controller.GetTouchUp())
@@ -44,8 +55,6 @@ public class UI_Controller : MonoBehaviour
             {
                 buttonHit = null;
             }
-
-            //ViewSelectedHex();
         }
 
         if (Input.GetMouseButtonDown(1))
@@ -84,6 +93,7 @@ public class UI_Controller : MonoBehaviour
             if (item.transform.gameObject.CompareTag("UI"))
             {
                 buttonHit = item.transform.gameObject;
+
                 break;
             }
             else

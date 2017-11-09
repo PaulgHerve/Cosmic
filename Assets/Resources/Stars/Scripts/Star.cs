@@ -6,6 +6,7 @@ public class Star : MonoBehaviour {
     public enum starType { BLACK_HOLE, BLUE_GIANT, BLUE_SUPER, PULSAR, RED_DWARF, RED_GIANT, WHITE_DWARF, YELLOW_SUN }
 
     private starType star_Type;
+    Star_Effects effects;
     SpriteRenderer sprite;
     SphereCollider collider;
 
@@ -14,11 +15,13 @@ public class Star : MonoBehaviour {
     private float oscillation;
     private Vector3 movement;
     private bool enable_Rotation;
+    private int age = 0;
 
     float scale;
 
     void Awake()
     {
+        effects = GetComponentInChildren<Star_Effects>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         collider = GetComponentInChildren<SphereCollider>();
 
@@ -29,6 +32,8 @@ public class Star : MonoBehaviour {
     {
         enable_Rotation = Galaxy.enable_Rotation;
 
+        //Scale_To_Camera();                    Needs to be more efficiently executed
+
         if (enable_Rotation)
         {
             RotateAroundGalaxyCenter();
@@ -37,7 +42,7 @@ public class Star : MonoBehaviour {
         else
         {
             collider.enabled = true;
-        }
+        }     
     }
 
     public void Generate(float galaxySize, float armVal, float armInc, float armDensity)
@@ -56,11 +61,13 @@ public class Star : MonoBehaviour {
         else if (z < 0) { z -= center; }
 
         Vector3 startPos = new Vector3(x, y, z);
-        int spriteIndex = Determine_Star_Type();
+        star_Type = (starType)Determine_Star_Type();
+        int spriteIndex = (int)star_Type;
 
         sprite.sprite = Galaxy_Generator.Get_Star_Sprite(spriteIndex);
 
         InitializeScale((starType)spriteIndex);
+        SetStarEffectColors((starType)spriteIndex);
         InitializeOrbitalCenter();
         transform.localPosition = startPos;
 
@@ -82,7 +89,26 @@ public class Star : MonoBehaviour {
         }
 
         IEnumerator thing = RotateAroundGalaxyCenter(percent);
-        StartCoroutine(thing);         
+        StartCoroutine(thing);
+
+        InitializeMovement();
+
+        for (int i = 0; i < 240; i++)
+        {
+            RotateAroundGalaxyCenter(8 * movement);
+        }
+    }
+
+    //Generates a planet
+    private void Generate_Planet()
+    {
+
+    }
+
+    //Generates a group of celestial bodies associated to a host star
+    public void Generate_Solar_System(Star host)
+    {
+
     }
 
     private int Determine_Star_Type()
@@ -90,9 +116,9 @@ public class Star : MonoBehaviour {
         int index = 0;
         float roll = Random.Range(0, 101);
 
-        if (roll < 6) { index = 0; }                    //Black Hole
-        else if (roll < 16) { index = 1; }              //Blue
-        else if (roll < 21) { index = 2; }              //Blue Super
+        if (roll < 4) { index = 0; }                    //Black Hole
+        else if (roll < 15) { index = 1; }              //Blue
+        else if (roll < 20) { index = 2; }              //Blue Super
         else if (roll < 26) { index = 3; }              //Pulsar
         else if (roll < 41) { index = 4; }              //Red Dwarf
         else if (roll < 44) { index = 5; }              //Red Giant
@@ -134,18 +160,48 @@ public class Star : MonoBehaviour {
         float scaleMult = 1;
         float scaler = Random.Range(.5f, 1.01f);
 
-        if (t == 0)      { scaleMult = .30f; }                  //Black Hole
+        if (t == 0)      { scaleMult = .40f; }                  //Black Hole
         else if (t == 1) { scaleMult = .50f; }                  //Blue 
         else if (t == 2) { scaleMult = .80f; }                  //Blue Super
-        else if (t == 3) { scaleMult = .50f; }                  //Pulsar
+        else if (t == 3) { scaleMult = .70f; }                  //Pulsar
         else if (t == 4) { scaleMult = .25f; }                  //Red Dwarf
-        else if (t == 5) { scaleMult = .90f; }                  //Red Giant
+        else if (t == 5) { scaleMult = .85f; }                  //Red Giant
         else if (t == 6) { scaleMult = .25f; }                  //White Dwarf
         else if (t == 7) { scaleMult = .40f; }                  //Yellow
 
         scaler *= scaleMult;
 
         sprite.transform.localScale *= scaler;
+        scale = sprite.transform.localScale.x;
+    }
+
+    private void Scale_To_Camera()
+    {
+        float cameraScale = CameraController.GetCameraScaleRatio();
+
+        if (cameraScale < .25f)
+        {
+            cameraScale = .25f;
+        }
+
+        if (cameraScale > .8f)
+        {
+            cameraScale = .8f;
+        }
+
+        float scaler = scale * cameraScale;        
+
+        sprite.transform.localScale = new Vector3(scale * cameraScale, scale * cameraScale, scale * cameraScale);
+    }
+
+    private void SetStarEffectColors(starType sType)
+    {
+        int t = (int)sType;
+        Color32 glowColor = Icon_Controller.Get_Star_Haze_Color(sType);
+        Color32 hazeColor = Icon_Controller.Get_Star_Glow_Color(sType);
+
+        effects.Set_Glow(glowColor);
+        effects.Set_Haze(hazeColor);
     }
 
     //Rotates Camera Around a centerpoint
@@ -158,6 +214,21 @@ public class Star : MonoBehaviour {
         Quaternion rotation = Quaternion.LookRotation(relative);
 
         transform.Translate(movement);        
+
+        transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
+        transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+    }
+
+    //Rotates Camera Around a centerpoint at a controlled speed
+    private void RotateAroundGalaxyCenter(Vector3 speed)
+    {
+        Vector3 targetPos = orbitalCenter;
+
+        Vector3 relative = targetPos - transform.localPosition;
+        Quaternion current = transform.localRotation;
+        Quaternion rotation = Quaternion.LookRotation(relative);
+
+        transform.Translate(speed);
 
         transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
         transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
@@ -196,21 +267,26 @@ public class Star : MonoBehaviour {
                 transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);                
             }
 
-            //yield return new WaitForSeconds(.005f);            
+            yield return new WaitForEndOfFrame();           
+        }
+    }
+
+    public void AnimateAge(int runs)
+    {
+        Vector3 speed = movement;
+        float dif = Mathf.Abs(runs);
+        int age_Change = (int)(runs / dif);
+
+        if (runs < 0)
+        {
+            speed *= -1;
         }
 
-        //yield return new WaitForSeconds(.25f);
-
-        InitializeMovement();
-
-        for (int i = 0; i < 240; i++)
+        for (int i = 0; i < dif; i++)
         {
-            for (int n = 0; n < 10; n++)
-            {
-                RotateAroundGalaxyCenter();
-            }
+            age += age_Change;
 
-            yield return new WaitForSeconds(.01f);
+            RotateAroundGalaxyCenter(20 * speed);
         }
     }
 
@@ -229,5 +305,12 @@ public class Star : MonoBehaviour {
     public starType Get_Star_Type()
     {
         return star_Type;
+    }
+
+    public void Update_Location(int newAge)
+    {
+        int dif = newAge - age;
+
+        AnimateAge(dif);
     }
 }

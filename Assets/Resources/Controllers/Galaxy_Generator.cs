@@ -8,6 +8,7 @@ public class Galaxy_Generator : MonoBehaviour
     private static Sprite[] star_Sprites;
 
     private float galaxySize = .667f;
+    private int age = 0;
     private int armPairs = 1;
     private float armDensity = .5f;
     public GameObject arm_Prefab;
@@ -62,18 +63,6 @@ public class Galaxy_Generator : MonoBehaviour
         galaxy.transform.Rotate(0, 10, 15, Space.Self);
     }
 
-    //Generates a planet
-    private void Generate_Planet()
-    {
-
-    }
-
-    //Generates a group of celestial bodies associated to a host star
-    public void Generate_Solar_System(Star host)
-    {
-
-    }
-
     //Generates a star and determines it's starting location
     private Star Generate_Star(GameObject galaxy, int arm, float armVal, float armInc)
     {
@@ -123,6 +112,15 @@ public class Galaxy_Generator : MonoBehaviour
         galaxySize = newVal;
     }
 
+    public void SetAge(Slider s)
+    {
+        int val = (int)s.value;
+
+        age = val;
+
+        Update_Star_Locations();
+    }
+
     public void SetArmCount(Slider s)
     {
         int val = (int)s.value;
@@ -133,5 +131,15 @@ public class Galaxy_Generator : MonoBehaviour
     {
         float val = s.value;
         armDensity = 1 - val;
+    }
+
+    public void Update_Star_Locations()
+    {
+        for (int i = 0; i < stars.Count; i++)
+        {
+            Star item = stars[i];
+
+            item.Update_Location(age);
+        }
     }
 }

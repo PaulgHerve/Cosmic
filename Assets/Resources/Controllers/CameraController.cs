@@ -11,8 +11,8 @@ public class CameraController : MonoBehaviour {
     Vector3 mousePosition;
     Vector3 mouseMove;
     Vector3 clickPosition;
-    float minDepth = -4;
-    float maxDepth = -500;
+    static float minDepth = -4;
+    static float  maxDepth = -500;
     static bool gameActive = true;
     bool isMoving = false;
     static int pausePanelCount = 0;
@@ -36,17 +36,6 @@ public class CameraController : MonoBehaviour {
         panSensitivity = inputControl.panSpeed;
         clickPosition = new Vector2(0, 0);
         depth = -Vector3.Magnitude(main.transform.position);
-    }
-
-    void Update()
-    {
-        if (player)
-        {
-            if (gameActive)
-            {
-                MouseControls();
-            }
-        }
     }
 
     //Controls camera movement using click functions
@@ -138,27 +127,30 @@ public class CameraController : MonoBehaviour {
     }
 
     //controls all mouse/click functions
-    void MouseControls()
+    public void MouseControls()
     {
         mousePosition.x = ((Input_Controller.Get0TouchPosition().x / Screen.width) - .5f);
         mousePosition.y = ((Input_Controller.Get0TouchPosition().y / Screen.height) - .5f);
 
-        if (Input.touchSupported)
+        if (gameActive)
         {
-            if (Input.touchCount == 2)
+            if (Input.touchSupported)
+            {
+                if (Input.touchCount == 2)
+                {
+                    ZoomControls();
+                }
+                else if (Input.touchCount == 1)
+                {
+                    MoveControls();
+                }
+            }
+            else
             {
                 ZoomControls();
-            }
-            else if (Input.touchCount == 1)
-            {
                 MoveControls();
             }
-        }
-        else
-        {
-            ZoomControls();
-            MoveControls();
-        }                
+        }           
     }
 
     public void ZoomToLocation(Vector3 destination)
@@ -389,6 +381,13 @@ public class CameraController : MonoBehaviour {
         }
 
         isZooming = false;
+    }
+
+    public static float GetCameraScaleRatio()
+    {
+        float val = depth / (maxDepth - minDepth);
+
+        return val;
     }
 
     public Quaternion GetCameraRotation()
