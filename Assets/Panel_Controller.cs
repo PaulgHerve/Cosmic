@@ -2,7 +2,7 @@
 
 public class Panel_Controller : MonoBehaviour {
 
-	public void Activate()
+    public void Activate()
     {
         gameObject.SetActive(true);
     }

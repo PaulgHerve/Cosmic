@@ -3,7 +3,7 @@
 public class UI_Controller : MonoBehaviour
 {
     public Camera uiCamera;
-    public CameraController cameraControl;
+    private CameraController cameraControl;
 
     static GameObject buttonHit;
     static Selection_Object selected_Object_Hit;
@@ -11,7 +11,7 @@ public class UI_Controller : MonoBehaviour
     static Vector3 mousePos;
     static Vector3 uiMousePos;
     static Vector3 clickPos;
-
+   
     private static RaycastHit hit;    
 
     private void Awake()
@@ -39,7 +39,9 @@ public class UI_Controller : MonoBehaviour
         //Stores click location to prevent selecting a hex if the camera is being panned
         if (Input_Controller.GetTouchDown())
         {
-            clickPos = mousePos;            
+            clickPos = mousePos;
+
+            Select_UI_Object();
         }
 
         if (Input_Controller.GetTouchUp())
@@ -70,35 +72,52 @@ public class UI_Controller : MonoBehaviour
         {
             if (Input.touchCount == 1)
             {
-                uiMousePos = uiCamera.ScreenToWorldPoint(Input_Controller.Get0TouchPosition());                
+                mousePos = Input.mousePosition;
+                uiMousePos = Camera.main.ScreenToViewportPoint(Input_Controller.Get0TouchPosition());
+                uiMousePos.x *= Screen.width;
+                uiMousePos.y *= Screen.height;
+                uiMousePos.z = -1;
             }
         }
         else if (Input.mousePresent)
         {
             mousePos = Input.mousePosition;
-            uiMousePos = uiCamera.ScreenToWorldPoint(Input_Controller.Get0TouchPosition());
+            uiMousePos = Camera.main.ScreenToViewportPoint(Input_Controller.Get0TouchPosition());
+            uiMousePos.x *= Screen.width;
+            uiMousePos.y *= Screen.height;
+            uiMousePos.z = -1;
         }
-
-        Select_UI_Object();
     }
 
     public static void Select_UI_Object()
     {
-        RaycastHit[] uiArray = Physics.RaycastAll(uiMousePos, Vector3.zero);
+        Vector3 dir = new Vector3(0, 0, 20);
+        Ray r = new Ray(uiMousePos, dir);
+        bool h = Physics2D.Raycast(r.origin, dir, 20);
+        RaycastHit2D hit;        
 
-        for (int i = 0; i < uiArray.Length; i++)
+        if (h)
         {
-            RaycastHit item = uiArray[i];
+            RaycastHit2D[] hitArray = Physics2D.RaycastAll(r.origin, dir, 20);
+            hit = hitArray[0];
 
-            if (item.transform.gameObject.CompareTag("UI"))
+            if (hitArray.Length > 0)
             {
-                buttonHit = item.transform.gameObject;
+                for (int i = 0; i < hitArray.Length; i++)
+                {
+                    RaycastHit2D item = hitArray[i];
 
-                break;
-            }
-            else
-            {
-                buttonHit = null;
+                    if (item.transform.gameObject.CompareTag("UI"))
+                    {
+                        buttonHit = item.transform.gameObject;
+
+                        break;
+                    }
+                    else
+                    {
+                        buttonHit = null;
+                    }
+                }
             }
         }
     }
