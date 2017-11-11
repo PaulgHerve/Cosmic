@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour {
     Vector3 mousePosition;
     Vector3 mouseMove;
     Vector3 clickPosition;
-    static float minDepth = -4;
+    static float minDepth = -2;
     static float  maxDepth = -500;
     static bool gameActive = true;
     bool isMoving = false;
@@ -122,7 +122,7 @@ public class CameraController : MonoBehaviour {
 
             Camera.main.transform.localRotation = Quaternion.Slerp(current, rotation, speed);
 
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForEndOfFrame();
         }
     }
 
@@ -134,7 +134,13 @@ public class CameraController : MonoBehaviour {
 
         if (gameActive)
         {
-            if (Input.touchSupported)
+            if (Input.mousePresent)
+            {
+                ZoomControls();
+                MoveControls();
+            }
+
+            else if (Input.touchSupported)
             {
                 if (Input.touchCount == 2)
                 {
@@ -144,11 +150,6 @@ public class CameraController : MonoBehaviour {
                 {
                     MoveControls();
                 }
-            }
-            else
-            {
-                ZoomControls();
-                MoveControls();
             }
         }           
     }
@@ -256,11 +257,13 @@ public class CameraController : MonoBehaviour {
     {
         if (!isZooming)
         {
-            if (inputControl.Zoom() > 0)
+            float zoom = inputControl.Zoom();
+
+            if (zoom > 0)
             {
                 StartCoroutine("ZoomIn");
             }
-            else if (inputControl.Zoom() < 0)
+            else if (zoom < 0)
             {
                 StartCoroutine("ZoomOut");
             }
@@ -301,7 +304,7 @@ public class CameraController : MonoBehaviour {
         {
             //main.fieldOfView -= speed * panSensitivity;
             Vector3 current = main.transform.position;
-            float change = speed * panSensitivity * .05f;
+            float change = speed * .05f;
 
             if (depth + change <= minDepth)
             {
@@ -315,17 +318,17 @@ public class CameraController : MonoBehaviour {
             float depthRatio;
             float change;
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 6; i++)
             {
                 Vector3 current = main.transform.position;
                 depthRatio = .5f + 3 * (depth / maxDepth);
-                change = (speed * panSensitivity * depthRatio) / 20;
+                change = (speed * depthRatio) / 20;
 
                 if (depth + change <= minDepth)
                 {                  
                     depth += change;
                     main.transform.Translate(0, 0, change);
-                    yield return new WaitForSeconds(.001f);
+                    yield return new WaitForEndOfFrame();
                 }
                 else
                 {
@@ -347,13 +350,13 @@ public class CameraController : MonoBehaviour {
         {
             //main.fieldOfView -= speed * panSensitivity;
             Vector3 current = main.transform.position;
-            float change = speed * panSensitivity * .05f;
+            float change = speed * .05f;
 
             if (depth + change >= maxDepth)
             {
                 depth += change;
                 main.transform.Translate(0, 0, change);
-                yield return new WaitForSeconds(.001f);
+                yield return new WaitForEndOfFrame();
             }
         }
         else
@@ -361,11 +364,11 @@ public class CameraController : MonoBehaviour {
             float depthRatio;
             float change;
 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 6; i++)
             {
                 Vector3 current = main.transform.position;
                 depthRatio = .5f + 3 * (depth / maxDepth);
-                change = (speed * panSensitivity * depthRatio) / 20;
+                change = (speed * depthRatio) / 20;
 
                 if (depth + change >= maxDepth)
                 {

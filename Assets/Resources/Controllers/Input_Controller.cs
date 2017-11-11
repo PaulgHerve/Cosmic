@@ -55,6 +55,7 @@ public class Input_Controller : MonoBehaviour
     //Determines Zoom control type and controls ortho camera based on input
     public float Zoom()
     {
+        float keySensitivity = 100;
         float deltaMagnitudeDiff;
 
         if (Input.touchCount == 2)
@@ -73,10 +74,37 @@ public class Input_Controller : MonoBehaviour
             // Find the difference in the distances between each frame. 
             deltaMagnitudeDiff = -(prevTouchDeltaMag - touchDeltaMag) * Time.deltaTime * 2;
         }
+
+        else if (Input.GetKey(KeyCode.Equals))
+        {
+            deltaMagnitudeDiff = keySensitivity;
+        }
+
+        else if (Input.GetKey(KeyCode.Plus))
+        {
+            deltaMagnitudeDiff = keySensitivity;
+        }
+
+        else if (Input.GetKey(KeyCode.KeypadPlus))
+        {
+            deltaMagnitudeDiff = keySensitivity;
+        }
+
+        else if (Input.GetKey(KeyCode.Minus))
+        {
+            deltaMagnitudeDiff = -keySensitivity;
+        }
+
+        else if (Input.GetKey(KeyCode.KeypadMinus))
+        {
+            deltaMagnitudeDiff = -keySensitivity;
+        }
+
         else
         {
             deltaMagnitudeDiff = Input.GetAxis("MouseScrollWheel") * 1000;
-        }
+        }        
+
         return deltaMagnitudeDiff;
     }
 

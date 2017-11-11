@@ -32,7 +32,7 @@ public class Star : MonoBehaviour {
     {
         enable_Rotation = Galaxy.enable_Rotation;
 
-        //Scale_To_Camera();                    Needs to be more efficiently executed
+        Scale_To_Camera();                    //Needs to be more efficiently executed
 
         if (enable_Rotation)
         {
@@ -189,9 +189,12 @@ public class Star : MonoBehaviour {
             cameraScale = .8f;
         }
 
-        float scaler = scale * cameraScale;        
+        float scaler = 2 * scale * cameraScale;
 
-        sprite.transform.localScale = new Vector3(scale * cameraScale, scale * cameraScale, scale * cameraScale);
+        if (scaler != sprite.transform.localScale.x)
+        {
+            sprite.transform.localScale = new Vector3(scaler, scaler, scaler);
+        }      
     }
 
     private void SetStarEffectColors(starType sType)

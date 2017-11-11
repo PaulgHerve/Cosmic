@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Icon_Controller.cs" />
      <Compile Include="Assets\Panel_Controller.cs" />
+     <Compile Include="Assets\Planet_Manager.cs" />
      <Compile Include="Assets\Resources\Controllers\CameraController.cs" />
      <Compile Include="Assets\Resources\Controllers\Galaxy_Generator.cs" />
      <Compile Include="Assets\Resources\Controllers\Game_Controller.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Resources\UI\Scripts\UI_Selector_Indicator.cs" />
      <Compile Include="Assets\Resources\UI\Scripts\Value_Text.cs" />
      <Compile Include="Assets\Star_Effects.cs" />
+     <Compile Include="Assets\Stellar_Orbit.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

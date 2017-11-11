@@ -26,14 +26,14 @@ public class UI_Controller : MonoBehaviour
 
     private void GeneralControls()
     {
+        if (!buttonHit)
+        {
+            cameraControl.MouseControls();
+        }
+
         if (Input_Controller.GetTouch())
         {
             SetMousePos();
-
-            if (!buttonHit)
-            {
-                cameraControl.MouseControls();
-            }
         }
 
         //Stores click location to prevent selecting a hex if the camera is being panned
@@ -50,7 +50,10 @@ public class UI_Controller : MonoBehaviour
             {
                 if (clickPos == mousePos)
                 {
-                    Select_Object();
+                    if (Game_Controller.Get_Game_State() == Game_Controller.gameState.PLAY)
+                    {
+                        Select_Object();
+                    }
                 }
             }
             else

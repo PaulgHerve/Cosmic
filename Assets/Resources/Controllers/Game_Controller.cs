@@ -8,9 +8,19 @@ public class Game_Controller : MonoBehaviour {
 
     private static gameState current_Game_State = gameState.MENU;
     
+    void Start()
+    {
+        current_Game_State = gameState.SETUP;
+    }
+
     public static gameState Get_Game_State()
     {
         return current_Game_State;
+    }
+
+    public void Start_Game()
+    {
+        current_Game_State = gameState.PLAY;
     }
 
     public static void Set_Game_State(gameState newState)
