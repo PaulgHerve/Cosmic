@@ -6,9 +6,11 @@ public class Star : MonoBehaviour {
     public enum starType { BLACK_HOLE, BLUE_GIANT, BLUE_SUPER, PULSAR, RED_DWARF, RED_GIANT, WHITE_DWARF, YELLOW_SUN }
 
     private starType star_Type;
+
+    Planet_Manager planets;
     Star_Effects effects;
     SpriteRenderer sprite;
-    SphereCollider collider;
+    new SphereCollider collider;
 
     private float rDistance;
     private Vector3 orbitalCenter;

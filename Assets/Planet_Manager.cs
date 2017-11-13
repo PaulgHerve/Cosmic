@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class Planet_Manager : MonoBehaviour {
 
@@ -6,6 +7,8 @@ public class Planet_Manager : MonoBehaviour {
 
     private Star host_Star;
     private Star.starType starType;
+
+    List<Stellar_Orbit> orbits = new List<Stellar_Orbit>();
 
     public void Activate()
     {
@@ -19,6 +22,9 @@ public class Planet_Manager : MonoBehaviour {
 
     private void GeneratePlanets()
     {
+        int OrbitCount = Random.Range(0, 9);
+        int index = 0;
+
 
     }
 
