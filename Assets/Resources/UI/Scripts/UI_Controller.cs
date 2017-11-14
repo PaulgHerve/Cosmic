@@ -4,6 +4,7 @@ public class UI_Controller : MonoBehaviour
 {
     public Camera uiCamera;
     private CameraController cameraControl;
+    private static UI_Selector uiSelector;
 
     static GameObject buttonHit;
     static Selection_Object selected_Object_Hit;
@@ -16,6 +17,7 @@ public class UI_Controller : MonoBehaviour
 
     private void Awake()
     {
+        uiSelector = FindObjectOfType<UI_Selector>();
         cameraControl = FindObjectOfType<CameraController>();
     }
 
@@ -157,32 +159,30 @@ public class UI_Controller : MonoBehaviour
         }
     }
 
-    private static void SelectNewObject(Selection_Object sHit)
+    public static void SelectNewObject(Selection_Object sHit)
     {
         ClearPrevSelectedObject();
         prev_Object = selected_Object_Hit;
-
-        if (prev_Object)
-        {
-            prev_Object.Deselect_This_Object();
-        }
 
         selected_Object_Hit = sHit;
 
         if (selected_Object_Hit)
         {
-            selected_Object_Hit.Select_This_Object();
-
-            Star star = selected_Object_Hit.GetComponent<Star>();
-
-            if (star)
-            {
-                CameraController.SetTarget(star.gameObject);
-            }
+            selected_Object_Hit.Select_This_Object();            
         }
+
         else
         {
+            uiSelector.Deactivate_Indicator();
             CameraController.SetTarget(null);
+        }
+
+        if (prev_Object)
+        {
+            if (prev_Object != sHit)
+            {
+                prev_Object.Deselect_This_Object();
+            }
         }
     }
 
@@ -200,25 +200,9 @@ public class UI_Controller : MonoBehaviour
     {
         return uiMousePos;
     }
-
-    //public Hex ViewSelectedHex()
-    //{
-    //    if (MapController.hexSelected)
-    //    {
-    //        if (prevHex != hexSelected)
-    //        {
-    //            prevHex = hexSelected;
-    //        }
-
-    //        hexSelected = MapController.hexSelected.GetComponent<Hex>();
-    //    }
-    //    else
-    //    {
-    //        hexSelected = null;
-    //    }
-
-    //    hexInfo.UpdateHudCounters(hexSelected);
-
-    //    return hexSelected;
-    //}
+    
+    public static UI_Selector Get_UI_Selector()
+    {
+        return uiSelector;
+    }
 }

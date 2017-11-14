@@ -7,6 +7,7 @@ public class Planet : MonoBehaviour {
     private int climate;
     private int size;
     private int temp;
+    private Star star;
 
     public int Get_Atmosphere()
     {
@@ -26,6 +27,11 @@ public class Planet : MonoBehaviour {
     public int Get_Size()
     {
         return size;
+    }
+
+    public Star Get_Star()
+    {
+        return star;
     }
 
     public int Get_Temp()
@@ -51,6 +57,11 @@ public class Planet : MonoBehaviour {
     public void Set_Size(int val)
     {
         size = val;
+    }
+
+    public void Set_Star(Star newStar)
+    {
+        star = newStar;
     }
 
     public void Set_Temp(int val)

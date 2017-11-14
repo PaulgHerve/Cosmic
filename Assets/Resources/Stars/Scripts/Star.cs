@@ -7,7 +7,7 @@ public class Star : MonoBehaviour {
 
     private starType star_Type;
 
-    Planet_Manager planets;
+    Planet_Manager planet_Manager;
     Star_Effects effects;
     SpriteRenderer sprite;
     new SphereCollider collider;
@@ -26,6 +26,7 @@ public class Star : MonoBehaviour {
         effects = GetComponentInChildren<Star_Effects>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         collider = GetComponentInChildren<SphereCollider>();
+        planet_Manager = GetComponentInChildren<Planet_Manager>();
 
         collider.enabled = false;
     }
@@ -70,6 +71,8 @@ public class Star : MonoBehaviour {
 
         InitializeScale((starType)spriteIndex);
         SetStarEffectColors((starType)spriteIndex);
+        Generate_Solar_System();
+
         InitializeOrbitalCenter();
         transform.localPosition = startPos;
 
@@ -101,16 +104,10 @@ public class Star : MonoBehaviour {
         }
     }
 
-    //Generates a planet
-    private void Generate_Planet()
-    {
-
-    }
-
     //Generates a group of celestial bodies associated to a host star
-    public void Generate_Solar_System(Star host)
+    public void Generate_Solar_System()
     {
-
+        planet_Manager.Initialize(this);
     }
 
     private int Determine_Star_Type()
@@ -118,14 +115,14 @@ public class Star : MonoBehaviour {
         int index = 0;
         float roll = Random.Range(0, 101);
 
-        if (roll < 4) { index = 0; }                    //Black Hole
-        else if (roll < 15) { index = 1; }              //Blue
-        else if (roll < 20) { index = 2; }              //Blue Super
-        else if (roll < 26) { index = 3; }              //Pulsar
-        else if (roll < 41) { index = 4; }              //Red Dwarf
-        else if (roll < 44) { index = 5; }              //Red Giant
-        else if (roll < 56) { index = 6; }              //White Dwarf
-        else { index = 7; }                             //Yellow
+        if (roll < 4) { index = 0; }                            //Black Hole
+        else if (roll < 15) { index = 1; }                      //Blue
+        else if (roll < 20) { index = 2; }                      //Blue Super
+        else if (roll < 26) { index = 3; }                      //Pulsar
+        else if (roll < 41) { index = 4; }                      //Red Dwarf
+        else if (roll < 44) { index = 5; }                      //Red Giant
+        else if (roll < 56) { index = 6; }                      //White Dwarf
+        else { index = 7; }                                     //Yellow
 
         return index;
     }
@@ -162,14 +159,14 @@ public class Star : MonoBehaviour {
         float scaleMult = 1;
         float scaler = Random.Range(.5f, 1.01f);
 
-        if (t == 0)      { scaleMult = .40f; }                  //Black Hole
-        else if (t == 1) { scaleMult = .50f; }                  //Blue 
-        else if (t == 2) { scaleMult = .80f; }                  //Blue Super
-        else if (t == 3) { scaleMult = .70f; }                  //Pulsar
-        else if (t == 4) { scaleMult = .25f; }                  //Red Dwarf
-        else if (t == 5) { scaleMult = .85f; }                  //Red Giant
-        else if (t == 6) { scaleMult = .25f; }                  //White Dwarf
-        else if (t == 7) { scaleMult = .40f; }                  //Yellow
+        if (t == 0)      { scaleMult = .40f; }                          //Black Hole
+        else if (t == 1) { scaleMult = .50f; }                          //Blue 
+        else if (t == 2) { scaleMult = .80f; }                          //Blue Super
+        else if (t == 3) { scaleMult = .70f; }                          //Pulsar
+        else if (t == 4) { scaleMult = .25f; }                          //Red Dwarf
+        else if (t == 5) { scaleMult = .85f; }                          //Red Giant
+        else if (t == 6) { scaleMult = .25f; }                          //White Dwarf
+        else if (t == 7) { scaleMult = .40f; }                          //Yellow
 
         scaler *= scaleMult;
 
@@ -317,5 +314,15 @@ public class Star : MonoBehaviour {
         int dif = newAge - age;
 
         AnimateAge(dif);
+    }
+
+    public void View_Star_On()
+    {
+        planet_Manager.View_System();
+    }
+
+    public void View_Star_Off()
+    {
+        planet_Manager.Hide_System();
     }
 }

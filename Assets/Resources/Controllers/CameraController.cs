@@ -101,20 +101,11 @@ public class CameraController : MonoBehaviour {
     {
         float inc = 1.000f / speed;
 
-        if (target)
-        {
-            targetPos = target.transform.position;
-        }
-        else
-        {
-            targetPos = new Vector3(0, 0, 0);
-        }
-
         Vector3 relative = targetPos - Camera.main.transform.position;
         Quaternion current = Camera.main.transform.localRotation;
         Quaternion rotation = Quaternion.LookRotation(relative);
 
-        for (float i = 0.000f; i <= 360; i += inc)
+        for (float i = 0.000f; i <= 240; i += inc)
         {
             relative = targetPos - Camera.main.transform.position;
             current = Camera.main.transform.localRotation;
@@ -212,7 +203,7 @@ public class CameraController : MonoBehaviour {
             pos = target.transform.position;
         }
 
-        IEnumerator thing = RotateCamera(pos, .15f);
+        IEnumerator thing = RotateCamera(pos, .2f);
 
         StartCoroutine(thing);
     }
