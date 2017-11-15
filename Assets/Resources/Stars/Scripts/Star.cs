@@ -14,10 +14,9 @@ public class Star : MonoBehaviour {
 
     private float rDistance;
     private Vector3 orbitalCenter;
-    private float oscillation;
     private Vector3 movement;
     private bool enable_Rotation;
-    private int age = 0;
+    private float age = 0;
 
     float scale;
 
@@ -50,11 +49,10 @@ public class Star : MonoBehaviour {
 
     public void Generate(float galaxySize, float armVal, float armInc, float armDensity)
     {
-        float center = 48 + (10 * (galaxySize / 3));
-        oscillation = Random.Range(-1, 1.01f) * (1 + galaxySize);
-        float x = (3f) * (3 + galaxySize / 12);
-        float y = (2f) * (3 + galaxySize / 12);
-        float z = (64) * (3 + galaxySize / 12);
+        float center = 512 + (12 * (galaxySize / 3));
+        float x = (16f) * (6 + galaxySize / 12);
+        float y = (12f) * (6 + galaxySize / 12);
+        float z = (256) * (6 + galaxySize / 12);
         z *= Random.Range(-1, 1.01f);
         x *= Random.Range(-1, 1.01f);
         y *= Random.Range(-1, 1.01f);
@@ -71,24 +69,23 @@ public class Star : MonoBehaviour {
 
         InitializeScale((starType)spriteIndex);
         SetStarEffectColors((starType)spriteIndex);
-        Generate_Solar_System();
 
         InitializeOrbitalCenter();
         transform.localPosition = startPos;
 
         rDistance = transform.localPosition.magnitude;
 
-        float percent = (360.00f * armVal);
-        float roll = Random.Range(0, armDensity);        
-        float maxVal = (360.00f * armInc) * roll;
+        float percent = (360.000f * armVal);
+        float roll = Random.Range(0.000f, armDensity);        
+        float maxVal = (360.000f * armInc) * roll;
 
-        percent += Random.Range(0, maxVal);
+        percent += Random.Range(0.000f, maxVal);
 
-        roll = Random.Range(0.00f,.51f);
+        roll = Random.Range(0.000f, .510f);
         if (roll < .5f * armInc)
         {
-            roll = Random.Range(0, 1.01f);
-            maxVal = (360.00f * armInc) * roll;
+            roll = Random.Range(0.000f, 1.001f);
+            maxVal = (360.000f * armInc) * roll;
 
             percent += Random.Range(0, maxVal);
         }
@@ -100,8 +97,10 @@ public class Star : MonoBehaviour {
 
         for (int i = 0; i < 240; i++)
         {
-            RotateAroundGalaxyCenter(8 * movement);
+            RotateAroundGalaxyCenter(256 * movement);
         }
+
+        Generate_Solar_System();
     }
 
     //Generates a group of celestial bodies associated to a host star
@@ -273,35 +272,37 @@ public class Star : MonoBehaviour {
         }
     }
 
-    public void AnimateAge(int runs)
+    public void AnimateAge(float runs)
     {
         Vector3 speed = movement;
         float dif = Mathf.Abs(runs);
-        int age_Change = (int)(runs / dif);
+        float age_Change = (runs / dif);
 
         if (runs < 0)
         {
             speed *= -1;
         }
 
+        if (dif > 24)
+        {
+            dif /= 12.000f;
+            speed *= 12.000f;
+            age_Change *= 12.000f;
+        }
+
+        else if (dif > 12)
+        {
+            dif /= 6.000f;
+            speed *= 6.000f;
+            age_Change *= 6.000f;
+        }
+
         for (int i = 0; i < dif; i++)
         {
             age += age_Change;
 
-            RotateAroundGalaxyCenter(20 * speed);
+            RotateAroundGalaxyCenter(512 * speed);
         }
-    }
-
-    private void RotateWiggle()
-    {
-        float currentRotation = transform.localRotation.y;
-        float currentY = (currentRotation * oscillation / rDistance);
-
-        Vector3 newPos = transform.localPosition;
-
-        newPos.y += currentY;
-
-        transform.localPosition = newPos;
     }
 
     public starType Get_Star_Type()
@@ -309,9 +310,9 @@ public class Star : MonoBehaviour {
         return star_Type;
     }
 
-    public void Update_Location(int newAge)
+    public void Update_Location(float newAge)
     {
-        int dif = newAge - age;
+        float dif = newAge - age;
 
         AnimateAge(dif);
     }

@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour {
     Vector3 mouseMove;
     Vector3 clickPosition;
     static float minDepth = -2;
-    static float  maxDepth = -500;
+    static float  maxDepth = -2400;
     static bool gameActive = true;
     bool isMoving = false;
     static int pausePanelCount = 0;

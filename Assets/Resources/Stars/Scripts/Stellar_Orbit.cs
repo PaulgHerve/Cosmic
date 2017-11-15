@@ -5,6 +5,7 @@ public class Stellar_Orbit : MonoBehaviour {
     private ParticleSystem ring;
     private Planet planet;
     private SpriteRenderer orbit_Sprite;
+    private Orbit_Drawer orbit_Draw;
 
     private float orbit_Size;
     private float orbit_distance;
@@ -16,6 +17,7 @@ public class Stellar_Orbit : MonoBehaviour {
         ring = GetComponentInChildren<ParticleSystem>();
         planet = GetComponentInChildren<Planet>();
         orbit_Sprite = GetComponentsInChildren<SpriteRenderer>()[1];
+        orbit_Draw = gameObject.AddComponent<Orbit_Drawer>();
 
         star = host_Star;
         zone = orbit_Zone;
@@ -23,6 +25,11 @@ public class Stellar_Orbit : MonoBehaviour {
         Set_Orbit_Size(ring_Index + 1);
 
         Generate_Planet();
+    }
+
+    private void Draw_Orbit()
+    {
+        orbit_Draw.Draw_Orbit(orbit_Size);
     }
 
     private void Generate_Planet()
@@ -38,7 +45,7 @@ public class Stellar_Orbit : MonoBehaviour {
     private void Set_Orbit_Size(float val)
     {
         orbit_distance = val;
-        orbit_Size = 16 * val;
+        orbit_Size = 8 + (8 * val);
 
         Update_Orbital_Ring();
     }
@@ -57,6 +64,8 @@ public class Stellar_Orbit : MonoBehaviour {
     public void View()
     {
         transform.gameObject.SetActive(true);
+
+        Draw_Orbit();
     }
 
     public void Hide()

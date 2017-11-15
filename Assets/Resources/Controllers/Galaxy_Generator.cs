@@ -7,7 +7,7 @@ public class Galaxy_Generator : MonoBehaviour
 
     private static Sprite[] star_Sprites;
 
-    private float galaxySize = .667f;
+    private float galaxySize = 1f;
     private int age = 0;
     private int armPairs = 1;
     private float armDensity = .5f;

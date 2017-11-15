@@ -132,12 +132,12 @@ public class UI_Controller : MonoBehaviour
     {
         Ray r = Camera.main.ScreenPointToRay(mousePos);
         r.origin = Camera.main.transform.position;
-        bool h = Physics.Raycast(r, 1000);
+        bool h = Physics.Raycast(r, 2400);
         RaycastHit hit;
 
         if (h)
         {
-            RaycastHit[] hitArray = Physics.RaycastAll(Camera.main.transform.position, r.direction, 1000);
+            RaycastHit[] hitArray = Physics.RaycastAll(Camera.main.transform.position, r.direction, 2400);
             hit = hitArray[0];
 
             GameObject objectHit = null;

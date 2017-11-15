@@ -11,24 +11,43 @@ public class Selection_Object : MonoBehaviour {
         ui_Selector = UI_Controller.Get_UI_Selector();
     }
 
-    public void Select_This_Object()
+    public void Focus_Object()
     {
-        current_Object = this;
-        ui_Selector.Activate_Indicator(transform.position);
-
         Star star = GetComponent<Star>();
-        Planet planet = GetComponent<Planet>();
 
         if (star)
         {
-            ui_Selector.SetScale(.15f);
             CameraController.SetTarget(star.gameObject);
             star.View_Star_On();
         }
+    }
 
-        else if (planet)
+    public void Select_This_Object()
+    {
+        if (current_Object != this)
         {
-            ui_Selector.SetScale(.05f);
+            current_Object = this;
+            ui_Selector.Activate_Indicator(transform.position);
+
+            Star star = GetComponent<Star>();
+            Planet planet = GetComponent<Planet>();
+
+            if (star)
+            {
+                ui_Selector.SetScale(.15f);
+                CameraController.SetTarget(star.gameObject);
+                star.View_Star_On();
+            }
+
+            else if (planet)
+            {
+                ui_Selector.SetScale(.05f);
+            }
+        }
+
+        else
+        {
+            Focus_Object();
         }
     }
 
@@ -68,5 +87,5 @@ public class Selection_Object : MonoBehaviour {
 
             //UI_Controller.SelectNewObject(s);
         }
-    }
+    }    
 }
