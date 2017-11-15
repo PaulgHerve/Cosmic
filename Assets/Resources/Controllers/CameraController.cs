@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour {
     private static CameraController cControl;
 
     Camera main;
-    Player player;
     Input_Controller inputControl;
     Vector3 mousePosition;
     Vector3 mouseMove;
@@ -387,10 +386,5 @@ public class CameraController : MonoBehaviour {
     public Quaternion GetCameraRotation()
     {
         return GetComponent<Transform>().rotation;
-    }
-
-    public void SetPlayer(Player p)
-    {
-        player = p;
     }
 }

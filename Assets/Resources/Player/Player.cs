@@ -10,7 +10,7 @@ public class Player : NetworkBehaviour {
         }
         else
         {
-            Camera.main.GetComponent<CameraController>().SetPlayer(this);
+            //Camera.main.GetComponent<CameraController>().SetPlayer(this);
         }
 	}
 	

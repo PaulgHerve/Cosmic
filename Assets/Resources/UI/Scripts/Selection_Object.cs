@@ -27,21 +27,24 @@ public class Selection_Object : MonoBehaviour {
         if (current_Object != this)
         {
             current_Object = this;
-            ui_Selector.Activate_Indicator(transform.position);
 
             Star star = GetComponent<Star>();
             Planet planet = GetComponent<Planet>();
 
             if (star)
             {
-                ui_Selector.SetScale(.15f);
+                ui_Selector.Select_Star(star);
                 CameraController.SetTarget(star.gameObject);
                 star.View_Star_On();
             }
 
             else if (planet)
             {
-                ui_Selector.SetScale(.05f);
+                ui_Selector.Select_Planet(planet);
+            }
+            else
+            {
+                star.View_Star_Off();
             }
         }
 
@@ -51,7 +54,30 @@ public class Selection_Object : MonoBehaviour {
         }
     }
 
-    public void Deselect_This_Object()
+    public void Select_Parent_Object()
+    {
+        Selection_Object target = null;
+
+        Planet planet = GetComponent<Planet>();
+
+        if (planet)
+        {
+            target = planet.Get_Star().gameObject.GetComponent<Selection_Object>();
+        }
+
+        if (target)
+        {
+            target.Select_This_Object();
+        }
+
+        else
+        {
+            
+            CameraController.SetTarget(null);
+        }
+    }
+
+    private void Deselect_This_Object()
     {
         Star star = GetComponent<Star>();
         Planet planet = GetComponent<Planet>();
@@ -86,6 +112,6 @@ public class Selection_Object : MonoBehaviour {
             //Selection_Object s = star.gameObject.GetComponent<Selection_Object>();
 
             //UI_Controller.SelectNewObject(s);
-        }
+        }        
     }    
 }

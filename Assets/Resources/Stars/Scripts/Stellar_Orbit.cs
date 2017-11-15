@@ -2,19 +2,16 @@
 
 public class Stellar_Orbit : MonoBehaviour {
 
-    private ParticleSystem ring;
     private Planet planet;
     private SpriteRenderer orbit_Sprite;
     private Orbit_Drawer orbit_Draw;
 
-    private float orbit_Size;
-    private float orbit_distance;
+    private float orbit_Distance;
     private Star star;
     private int zone;
 
     public void Activate(Star host_Star, int orbit_Zone, int ring_Index) 
     {
-        ring = GetComponentInChildren<ParticleSystem>();
         planet = GetComponentInChildren<Planet>();
         orbit_Sprite = GetComponentsInChildren<SpriteRenderer>()[1];
         orbit_Draw = gameObject.AddComponent<Orbit_Drawer>();
@@ -29,7 +26,7 @@ public class Stellar_Orbit : MonoBehaviour {
 
     private void Draw_Orbit()
     {
-        orbit_Draw.Draw_Orbit(orbit_Size);
+        orbit_Draw.Draw_Orbit(orbit_Distance);
     }
 
     private void Generate_Planet()
@@ -39,13 +36,12 @@ public class Stellar_Orbit : MonoBehaviour {
 
     public float Get_Orbit_Size()
     {
-        return orbit_Size;
+        return orbit_Distance;
     }
 
     private void Set_Orbit_Size(float val)
     {
-        orbit_distance = val;
-        orbit_Size = 8 + (8 * val);
+        orbit_Distance = 8 + (8 * val);
 
         Update_Orbital_Ring();
     }
@@ -53,10 +49,10 @@ public class Stellar_Orbit : MonoBehaviour {
     private void Update_Orbital_Ring()
     {
         Vector3 localPos = planet.transform.localPosition;
-        Vector3 orbitScale = new Vector3(orbit_Size, orbit_Size, orbit_Size);
+        Vector3 orbitScale = new Vector3(orbit_Distance, orbit_Distance, orbit_Distance);
 
         orbit_Sprite.transform.localScale = orbitScale;
-        localPos.x = orbit_Size;
+        localPos.x = orbit_Distance;
 
         planet.transform.localPosition = localPos;
     }
@@ -71,5 +67,15 @@ public class Stellar_Orbit : MonoBehaviour {
     public void Hide()
     {
         transform.gameObject.SetActive(false);
+    }
+
+    public Star Get_Star()
+    {
+        return star;
+    }
+
+    public int Get_Zone()
+    {
+        return zone;
     }
 }

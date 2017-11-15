@@ -20,16 +20,6 @@ public class UI_Selector_Indicator : MonoBehaviour {
     {
         float speed = rotation_Speed * Time.deltaTime * 100;
 
-        transform.Rotate(0, 0, speed);
-    }
-
-    public void Activate()
-    {
-        sprite.enabled = true;
-    }
-
-    public void Deactivate()
-    {
-        sprite.enabled = false;
+        sprite.transform.Rotate(0, 0, speed);
     }
 }

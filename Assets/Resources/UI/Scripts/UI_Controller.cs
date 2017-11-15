@@ -99,12 +99,10 @@ public class UI_Controller : MonoBehaviour
         Vector3 dir = new Vector3(0, 0, 20);
         Ray r = new Ray(uiMousePos, dir);
         bool h = Physics2D.Raycast(r.origin, dir, 20);
-        RaycastHit2D hit;        
 
         if (h)
         {
             RaycastHit2D[] hitArray = Physics2D.RaycastAll(r.origin, dir, 20);
-            hit = hitArray[0];
 
             if (hitArray.Length > 0)
             {
@@ -159,30 +157,57 @@ public class UI_Controller : MonoBehaviour
         }
     }
 
+    //Selects the parent object in the stellar_hierarchy (NONE, STAR, PLANET, SURFACE)
+    public static void Select_Parent_Object(Selection_Object sHit)
+    {
+        if (sHit)
+        {
+            Selection_Object target = null;
+
+            Planet planet = sHit.GetComponent<Planet>();
+
+            if (planet)
+            {
+                target = planet.Get_Star().gameObject.GetComponent<Selection_Object>();
+            }
+
+            if (target)
+            {
+                print("Planet");
+                target.Select_This_Object();
+            }
+
+            else
+            {
+                print("Star");
+                uiSelector.Deactivate_All();
+                CameraController.SetTarget(null);
+            }
+        }
+
+        else
+        {
+            print("No Target");
+            uiSelector.Deactivate_All();
+            CameraController.SetTarget(null);
+        }
+    }
+
     public static void SelectNewObject(Selection_Object sHit)
     {
-        ClearPrevSelectedObject();
-        prev_Object = selected_Object_Hit;
-
-        selected_Object_Hit = sHit;
-
-        if (selected_Object_Hit)
+        if (sHit)
         {
+            ClearPrevSelectedObject();
+            prev_Object = selected_Object_Hit;
+
+            selected_Object_Hit = sHit;
+
             selected_Object_Hit.Select_This_Object();            
         }
 
         else
         {
-            uiSelector.Deactivate_Indicator();
-            CameraController.SetTarget(null);
-        }
-
-        if (prev_Object)
-        {
-            if (prev_Object != sHit)
-            {
-                prev_Object.Deselect_This_Object();
-            }
+            Select_Parent_Object(selected_Object_Hit);
         }
     }
 
