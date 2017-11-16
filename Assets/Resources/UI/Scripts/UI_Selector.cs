@@ -69,7 +69,7 @@ public class UI_Selector : MonoBehaviour {
         Vector3 starPos = target.Get_Star().transform.position;
 
         Set_Position(starPos);
-        Set_Scale(.25f);
+        Set_Scale(1);
 
         Set_Mini_Position(pos);
         Set_Mini_Scale(.05f);

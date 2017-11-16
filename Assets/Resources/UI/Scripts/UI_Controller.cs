@@ -8,7 +8,6 @@ public class UI_Controller : MonoBehaviour
 
     static GameObject buttonHit;
     static Selection_Object selected_Object_Hit;
-    static Selection_Object prev_Object;
     static Vector3 mousePos;
     static Vector3 uiMousePos;
     static Vector3 clickPos;
@@ -162,34 +161,36 @@ public class UI_Controller : MonoBehaviour
     {
         if (sHit)
         {
-            Selection_Object target = null;
-
             Planet planet = sHit.GetComponent<Planet>();
+            Star star = sHit.GetComponent<Star>();
 
             if (planet)
             {
-                target = planet.Get_Star().gameObject.GetComponent<Selection_Object>();
+                star = planet.Get_Star();
+                Selection_Object parent = star.GetComponent<Selection_Object>();
+
+                parent.Select_This_Object();
+                selected_Object_Hit = parent;
             }
 
-            if (target)
+            else if (star)
             {
-                print("Planet");
-                target.Select_This_Object();
-            }
-
-            else
-            {
-                print("Star");
+                sHit.Deselect_This_Object();
                 uiSelector.Deactivate_All();
-                CameraController.SetTarget(null);
-            }
-        }
 
-        else
-        {
-            print("No Target");
-            uiSelector.Deactivate_All();
-            CameraController.SetTarget(null);
+                float minDepth = -160;
+
+                if (CameraController.Get_Depth() > minDepth)
+                {
+                    CameraController.Zoom_Then_Deselect(sHit, minDepth, 24);
+                }
+                else
+                {
+                    CameraController.SetTarget(null);
+                }
+
+                selected_Object_Hit = null;
+            }
         }
     }
 
@@ -197,23 +198,16 @@ public class UI_Controller : MonoBehaviour
     {
         if (sHit)
         {
-            ClearPrevSelectedObject();
-            prev_Object = selected_Object_Hit;
+            sHit.Select_This_Object();
 
+            //Must fire after "Select_This_Object()" due to current selection check
             selected_Object_Hit = sHit;
-
-            selected_Object_Hit.Select_This_Object();            
         }
 
         else
         {
             Select_Parent_Object(selected_Object_Hit);
         }
-    }
-
-    private static void ClearPrevSelectedObject()
-    {
-        prev_Object = null;
     }
 
     public static Vector2 GetMouseLocation()
@@ -229,5 +223,10 @@ public class UI_Controller : MonoBehaviour
     public static UI_Selector Get_UI_Selector()
     {
         return uiSelector;
+    }
+
+    public static Selection_Object Get_Current_Selected_Object()
+    {
+        return selected_Object_Hit;
     }
 }

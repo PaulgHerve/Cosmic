@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
+    public enum focus_Level { NONE, STAR, SYSTEM, PLANET, STRUCTURE };
+
     private static CameraController cControl;
 
     Camera main;
@@ -21,9 +23,8 @@ public class CameraController : MonoBehaviour {
 
     private bool isZooming = false;
 
-    private Vector3 dest;
-
     private static float depth;
+    private static focus_Level focus;
     public static GameObject target;
 
     void Awake()
@@ -104,7 +105,7 @@ public class CameraController : MonoBehaviour {
         Quaternion current = Camera.main.transform.localRotation;
         Quaternion rotation = Quaternion.LookRotation(relative);
 
-        for (float i = 0.000f; i <= 240; i += inc)
+        for (float i = 0.000f; i <= 64; i += inc)
         {
             relative = targetPos - Camera.main.transform.position;
             current = Camera.main.transform.localRotation;
@@ -114,6 +115,12 @@ public class CameraController : MonoBehaviour {
 
             yield return new WaitForEndOfFrame();
         }
+
+        relative = targetPos - Camera.main.transform.position;
+        current = Camera.main.transform.localRotation;
+        rotation = Quaternion.LookRotation(relative);
+
+        Camera.main.transform.localRotation = Quaternion.Slerp(current, rotation, 1);
     }
 
     //controls all mouse/click functions
@@ -144,30 +151,98 @@ public class CameraController : MonoBehaviour {
         }           
     }
 
-    public void ZoomToLocation(Vector3 destination)
+    public static void Zoom_To_Location(Vector3 destination, float endDepth, float speed)
     {
-        dest = destination;
-        StartCoroutine("ZoomZoom");
+        IEnumerator item = cControl.ZoomZoom(destination, endDepth, speed);
+
+        cControl.StartCoroutine(item);
     }
 
-    private IEnumerator ZoomZoom()
+    public static void Zoom_To_Selection_Object(Selection_Object destination_Object, float endDepth, float speed)
+    {
+        Vector3 destination = destination_Object.transform.position;
+
+        IEnumerator item = cControl.ZoomZoom(destination, endDepth, speed);
+
+        cControl.StartCoroutine(item);
+    }
+
+    public static void Zoom_Then_Deselect(Selection_Object destination_Object, float endDepth, float speed)
+    {
+        Vector3 destination = destination_Object.transform.position;
+
+        IEnumerator item = cControl.ZoomThenDeselect(destination, endDepth, speed);
+
+        cControl.StartCoroutine(item);
+    }
+
+    private IEnumerator ZoomThenDeselect(Vector3 destination, float endDepth, float speed)
     {
         if (isMoving == false)
         {
-            int rate = 1 + (int)(20 / scrollSensitivity);
+            Vector3 current = transform.position;
+            Vector3 distance = destination - current;
+            float sizeChange = endDepth - depth;
+            int ticks = Mathf.Abs((int)(sizeChange / speed));
 
-            Vector3 distance = dest - gameObject.transform.position;
-            float sizechange = 150 - main.orthographicSize;
+            if (sizeChange < 0) { speed *= -1; }
 
             isMoving = true;
 
-            for (int i = 0; i < rate; i++)
+            for (int i = 0; i < ticks; i++)
             {
-                gameObject.transform.position += distance / rate;
-                main.orthographicSize += sizechange / rate;
+                if (depth + speed != minDepth)
+                {
+                    depth += speed;
 
-                yield return new WaitForSeconds(.001f);
+                    main.transform.Translate(0, 0, speed);
+
+                    yield return new WaitForSeconds(.01f);
+                }
             }
+
+            sizeChange = endDepth - depth;
+            depth += sizeChange;
+
+            main.transform.Translate(0, 0, sizeChange);
+
+            isMoving = false;
+
+            yield return new WaitForSeconds(.01f);
+        }
+        
+        SetTarget(null);
+    }
+
+    private IEnumerator ZoomZoom(Vector3 destination, float endDepth, float speed)
+    {
+        if (isMoving == false)
+        {
+            Vector3 current = transform.position;
+            Vector3 distance = destination - current;
+            float sizeChange = endDepth - depth;
+            int ticks = Mathf.Abs((int)(sizeChange / speed));
+
+            if (sizeChange < 0) { speed *= -1; }
+
+            isMoving = true;
+
+            for (int i = 0; i < ticks; i++)
+            {
+                if (depth + speed != minDepth)
+                {
+                    depth += speed;
+
+                    main.transform.Translate(0, 0, speed);
+
+                    yield return new WaitForSeconds(.01f);
+                }             
+            }
+
+            sizeChange = endDepth - depth;
+            depth += sizeChange;
+
+            main.transform.Translate(0, 0, sizeChange);
 
             isMoving = false;
         }
@@ -202,7 +277,7 @@ public class CameraController : MonoBehaviour {
             pos = target.transform.position;
         }
 
-        IEnumerator thing = RotateCamera(pos, .2f);
+        IEnumerator thing = RotateCamera(pos, .25f);
 
         StartCoroutine(thing);
     }
@@ -258,31 +333,7 @@ public class CameraController : MonoBehaviour {
                 StartCoroutine("ZoomOut");
             }
         }
-    }
-
-    //Centers Screen during zooming if 2 fingers are present
-    Vector3 ZoomCenter()
-    {
-        Vector3 newDelta;
-
-        if (Input.touchCount == 2)
-        {
-            newDelta = Input_Controller.CenterMultiTouch();
-        }
-        else
-        {
-            //This wont work right now
-            float size = main.orthographicSize / 800;
-            float speed = inputControl.zoomSpeed * size;
-
-            mousePosition.x = ((Input.mousePosition.x / Screen.width) - .5f);
-            mousePosition.y = ((Input.mousePosition.y / Screen.height) - .5f);
-
-            newDelta = new Vector3(mousePosition.x * Screen.width / 40 * speed, mousePosition.y * Screen.height / 40 * speed);
-        }
-
-        return newDelta;
-    }
+    }    
 
     IEnumerator ZoomIn()
     {
@@ -383,8 +434,23 @@ public class CameraController : MonoBehaviour {
         return val;
     }
 
+    public static float Get_Depth()
+    {
+        return depth;
+    }
+
     public Quaternion GetCameraRotation()
     {
         return GetComponent<Transform>().rotation;
+    }
+
+    public static void Set_Focus_Level(focus_Level newLevel)
+    {
+        focus = newLevel;
+    }
+
+    public static focus_Level Get_Focus_Level()
+    {
+        return focus;
     }
 }

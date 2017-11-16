@@ -34,7 +34,7 @@ public class Star : MonoBehaviour {
     {
         enable_Rotation = Galaxy.enable_Rotation;
 
-        Scale_To_Camera();                    //Needs to be more efficiently executed
+        //Scale_To_Camera();
 
         if (enable_Rotation)
         {
