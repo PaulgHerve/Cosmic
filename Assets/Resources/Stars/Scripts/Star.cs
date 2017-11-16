@@ -320,10 +320,14 @@ public class Star : MonoBehaviour {
     public void View_Star_On()
     {
         planet_Manager.View_System();
+
+        sprite.sortingOrder = 4;
     }
 
     public void View_Star_Off()
     {
         planet_Manager.Hide_System();
+
+        sprite.sortingOrder = 1;
     }
 }

@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour {
     Vector3 mousePosition;
     Vector3 mouseMove;
     Vector3 clickPosition;
-    static float minDepth = -2;
+    static float minDepth = -25;
     static float  maxDepth = -2400;
     static bool gameActive = true;
     bool isMoving = false;
@@ -245,14 +245,6 @@ public class CameraController : MonoBehaviour {
             main.transform.Translate(0, 0, sizeChange);
 
             isMoving = false;
-        }
-    }
-
-    public static void StepBack()
-    {
-        if(target)
-        {
-            target = null;
         }
     }
 

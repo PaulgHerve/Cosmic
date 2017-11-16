@@ -6,7 +6,7 @@ public class Star_Effects : MonoBehaviour {
 
     private void Awake()
     {
-        visual_Effects = GetComponentsInChildren<SpriteRenderer>();
+        visual_Effects = GetComponentsInChildren<SpriteRenderer>();        
     }
 
     public void Set_Glow(Color32 color)

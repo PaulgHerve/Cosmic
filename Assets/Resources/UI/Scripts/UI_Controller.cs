@@ -65,7 +65,6 @@ public class UI_Controller : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            CameraController.StepBack();
             SelectNewObject(null);
         }
     }
@@ -175,21 +174,20 @@ public class UI_Controller : MonoBehaviour
 
             else if (star)
             {
-                sHit.Deselect_This_Object();
-                uiSelector.Deactivate_All();
-
                 float minDepth = -160;
 
                 if (CameraController.Get_Depth() > minDepth)
                 {
-                    CameraController.Zoom_Then_Deselect(sHit, minDepth, 24);
-                }
-                else
-                {
-                    CameraController.SetTarget(null);
+                    CameraController.Zoom_To_Selection_Object(sHit, minDepth, 24);
                 }
 
-                selected_Object_Hit = null;
+                else
+                {
+                    sHit.Deselect_This_Object();
+                    uiSelector.Deactivate_All();
+                    CameraController.SetTarget(null);
+                    selected_Object_Hit = null;
+                }
             }
         }
     }

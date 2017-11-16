@@ -59,8 +59,6 @@ public class Galaxy_Generator : MonoBehaviour
                 Generate_Star(galaxy, a, armVal, armInc);
             }
         }
-
-        galaxy.transform.Rotate(0, 10, 15, Space.Self);
     }
 
     //Generates a star and determines it's starting location

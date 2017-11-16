@@ -75,11 +75,11 @@ public class Selection_Object : MonoBehaviour {
             {
                 CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
 
-                float minDepth = -26;
+                float minDepth = -32;
 
                 if (CameraController.Get_Depth() < minDepth)
                 {
-                    CameraController.Zoom_To_Selection_Object(this, minDepth, 36);
+                    CameraController.Zoom_To_Selection_Object(this, minDepth, 32);
                 }
             }
 
