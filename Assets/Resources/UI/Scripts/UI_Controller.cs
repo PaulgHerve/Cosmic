@@ -174,11 +174,11 @@ public class UI_Controller : MonoBehaviour
 
             else if (star)
             {
-                float minDepth = -160;
+                float minDepth = -520;
 
                 if (CameraController.Get_Depth() > minDepth)
                 {
-                    CameraController.Zoom_To_Selection_Object(sHit, minDepth, 24);
+                    CameraController.Zoom_To_Selection_Object(sHit, minDepth, 120);
                 }
 
                 else

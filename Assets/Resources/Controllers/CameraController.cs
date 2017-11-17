@@ -15,13 +15,14 @@ public class CameraController : MonoBehaviour {
     static float minDepth = -25;
     static float  maxDepth = -2400;
     static bool gameActive = true;
-    bool isMoving = false;
     static int pausePanelCount = 0;
 
     private float scrollSensitivity;
     private float panSensitivity;
 
-    private bool isZooming = false;
+    static bool isMoving = false;
+    static bool isZooming = false;
+    static IEnumerator currentRotation = null;
 
     private static float depth;
     private static focus_Level focus;
@@ -46,14 +47,14 @@ public class CameraController : MonoBehaviour {
             if (Input_Controller.GetTouchDown())
             {
                 clickPosition = mousePosition;
+
             }
 
             mouseMove.x = (2 * Screen.width * (clickPosition.x - mousePosition.x)) * depth * -.01f;
-            mouseMove.y = (2 * Screen.height * (clickPosition.y - mousePosition.y)) * depth * -.01f; 
+            mouseMove.y = (2 * Screen.height * (clickPosition.y - mousePosition.y)) * depth * -.01f;
 
-            mouseMove *= panSensitivity;          
-                        
-            main.transform.Translate(mouseMove);
+            mouseMove *= panSensitivity;
+            main.transform.Translate(mouseMove);            
 
             RotateCamera();
 
@@ -98,7 +99,7 @@ public class CameraController : MonoBehaviour {
 
     //Rotates Camera Around a centerpoint
     private static IEnumerator RotateCamera(Vector3 targetPos, float speed)
-    {
+    {        
         float inc = 1.000f / speed;
 
         Vector3 relative = targetPos - Camera.main.transform.position;
@@ -113,7 +114,7 @@ public class CameraController : MonoBehaviour {
 
             Camera.main.transform.localRotation = Quaternion.Slerp(current, rotation, speed);
 
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(.02f);
         }
 
         relative = targetPos - Camera.main.transform.position;
@@ -235,7 +236,7 @@ public class CameraController : MonoBehaviour {
 
                     main.transform.Translate(0, 0, speed);
 
-                    yield return new WaitForSeconds(.01f);
+                    yield return new WaitForSeconds(.02f);
                 }             
             }
 
@@ -269,7 +270,15 @@ public class CameraController : MonoBehaviour {
             pos = target.transform.position;
         }
 
+        if (currentRotation != null)
+        {
+            cControl.StopCoroutine(currentRotation);
+            currentRotation = null;
+        }
+
         IEnumerator thing = RotateCamera(pos, .25f);
+
+        currentRotation = thing;
 
         StartCoroutine(thing);
     }

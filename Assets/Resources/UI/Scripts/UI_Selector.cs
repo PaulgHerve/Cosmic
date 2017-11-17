@@ -59,8 +59,8 @@ public class UI_Selector : MonoBehaviour {
         Set_Position(pos);
         Set_Mini_Position(pos);
 
-        Set_Scale(1.6f);
-        Set_Mini_Scale(.2f);        
+        Set_Scale(1);
+        Set_Mini_Scale(.8f);        
     }
 
     public void Select_Planet(Planet target)
@@ -69,10 +69,10 @@ public class UI_Selector : MonoBehaviour {
         Vector3 starPos = target.Get_Star().transform.position;
 
         Set_Position(starPos);
-        Set_Scale(1.6f);
+        Set_Scale(1);
 
         Set_Mini_Position(pos);
-        Set_Mini_Scale(.04f);
+        Set_Mini_Scale(.2f);
     }
 
     public void Set_Mini_Position(Vector3 pos)

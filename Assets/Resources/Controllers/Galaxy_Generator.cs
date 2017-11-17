@@ -46,6 +46,7 @@ public class Galaxy_Generator : MonoBehaviour
         float armInc = DetermineArmIncrement(armPairs);
         float armVal;
         starCount = (int)(galaxySize * Randomizer);
+        string[] starNames = NameList.Get_Star_Names(starCount);
 
         GameObject galaxy = Instantiate(galaxy_Prefab);
 
@@ -56,20 +57,20 @@ public class Galaxy_Generator : MonoBehaviour
 
             for (int i = 0; i < stars; i++)
             {
-                Generate_Star(galaxy, a, armVal, armInc);
+                Generate_Star(galaxy, a, armVal, armInc, starNames[i]);
             }
         }
     }
 
     //Generates a star and determines it's starting location
-    private Star Generate_Star(GameObject galaxy, int arm, float armVal, float armInc)
+    private Star Generate_Star(GameObject galaxy, int arm, float armVal, float armInc, string newName)
     {
         GameObject starObject = Instantiate(star_Prefab);
         Star star = starObject.GetComponent<Star>();
 
         stars.Add(star);
 
-        star.Generate(galaxySize, armVal, armInc, armDensity);
+        star.Generate(galaxySize, armVal, armInc, armDensity, newName);
         star.transform.SetParent(galaxy.transform, false);
 
         return star;

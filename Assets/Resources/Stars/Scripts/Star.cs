@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Star : MonoBehaviour {
@@ -17,15 +18,22 @@ public class Star : MonoBehaviour {
     private Vector3 movement;
     private bool enable_Rotation;
     private float age = 0;
+    private Vector3 baseScale;
+    private Canvas canvas;
+
+    IEnumerator currentAnimation = null;
 
     float scale;
 
     void Awake()
     {
+        baseScale = transform.localScale;
         effects = GetComponentInChildren<Star_Effects>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         collider = GetComponentInChildren<SphereCollider>();
         planet_Manager = GetComponentInChildren<Planet_Manager>();
+        canvas = GetComponentInChildren<Canvas>();
+        canvas.worldCamera = Camera.main;
 
         collider.enabled = false;
     }
@@ -47,7 +55,7 @@ public class Star : MonoBehaviour {
         }     
     }
 
-    public void Generate(float galaxySize, float armVal, float armInc, float armDensity)
+    public void Generate(float galaxySize, float armVal, float armInc, float armDensity, string newName)
     {
         float center = 512 + (12 * (galaxySize / 3));
         float x = (16f) * (6 + galaxySize / 12);
@@ -66,7 +74,9 @@ public class Star : MonoBehaviour {
         int spriteIndex = (int)star_Type;
 
         sprite.sprite = Galaxy_Generator.Get_Star_Sprite(spriteIndex);
+        name = newName;
 
+        Initialize_Name();
         InitializeScale((starType)spriteIndex);
         SetStarEffectColors((starType)spriteIndex);
 
@@ -171,6 +181,13 @@ public class Star : MonoBehaviour {
 
         sprite.transform.localScale *= scaler;
         scale = sprite.transform.localScale.x;
+    }
+
+    private void Initialize_Name()
+    {
+        Text nameText = GetComponentInChildren<Text>();
+
+        nameText.text = name;
     }
 
     private void Scale_To_Camera()
@@ -317,11 +334,23 @@ public class Star : MonoBehaviour {
         AnimateAge(dif);
     }
 
+    private void Set_Name_Layer_Forward()
+    {
+        canvas.sortingOrder = 6;
+    }
+
+    private void Set_Name_Layer_Back()
+    {
+        canvas.sortingOrder = 1;
+    }
+
     public void View_Star_On()
     {
         planet_Manager.View_System();
 
         sprite.sortingOrder = 4;
+        Set_Name_Layer_Forward();
+        Increase_Scale();
     }
 
     public void View_Star_Off()
@@ -329,5 +358,58 @@ public class Star : MonoBehaviour {
         planet_Manager.Hide_System();
 
         sprite.sortingOrder = 1;
+        Set_Name_Layer_Back();
+        Decrease_Scale();
+    }
+
+    private void Increase_Scale()
+    {
+        if (currentAnimation != null)
+        {
+            StopCoroutine(currentAnimation);
+            currentAnimation = null;
+        }
+
+        IEnumerator thing = Animate_Change_Scale(4);
+
+        currentAnimation = thing;
+
+        StartCoroutine(thing);
+    }
+
+    private void Decrease_Scale()
+    {
+        if (currentAnimation != null)
+        {
+            StopCoroutine(currentAnimation);
+            currentAnimation = null;
+        }
+
+        IEnumerator thing = Animate_Change_Scale(baseScale.x);
+
+        currentAnimation = thing;
+
+        StartCoroutine(thing);
+    }
+
+    private IEnumerator Animate_Change_Scale(float newScale)
+    {
+        float ticks = 3;
+        Vector3 currentScale = transform.localScale;
+        Vector3 intendedScale = new Vector3(newScale, newScale, newScale);
+        Vector3 dif = intendedScale - currentScale;
+        Vector3 step = dif / ticks;
+
+        if (dif.x < 0)
+        {
+            yield return new WaitForSeconds(.25f);
+        }
+
+        for (int i = 0; i < ticks; i++)
+        {
+            transform.localScale += step;
+
+            yield return new WaitForSeconds(.02f);
+        }
     }
 }

@@ -62,7 +62,6 @@ public class Selection_Object : MonoBehaviour {
 
                 current_Object = this;
                 CameraController.Set_Focus_Level(CameraController.focus_Level.PLANET);
-                //CameraController.Zoom_To_Selection_Object(planet.Get_Star().GetComponent<Selection_Object>(), -26);
                 ui_Selector.Select_Planet(planet);
             }
         }
@@ -75,11 +74,11 @@ public class Selection_Object : MonoBehaviour {
             {
                 CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
 
-                float minDepth = -32;
+                float minDepth = -400;
 
                 if (CameraController.Get_Depth() < minDepth)
                 {
-                    CameraController.Zoom_To_Selection_Object(this, minDepth, 32);
+                    CameraController.Zoom_To_Selection_Object(this, minDepth, 160);
                 }
             }
 
