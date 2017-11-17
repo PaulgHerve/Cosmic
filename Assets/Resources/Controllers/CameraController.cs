@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour {
     Vector3 mousePosition;
     Vector3 mouseMove;
     Vector3 clickPosition;
-    static float minDepth = -25;
+    static float minDepth = -150;
     static float  maxDepth = -2400;
     static bool gameActive = true;
     static int pausePanelCount = 0;
@@ -453,5 +453,13 @@ public class CameraController : MonoBehaviour {
     public static focus_Level Get_Focus_Level()
     {
         return focus;
+    }
+
+    public static void Reduce_Focus_Level()
+    {
+        if (focus > 0)
+        {
+            focus--;
+        }
     }
 }

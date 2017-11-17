@@ -54,6 +54,16 @@ public class Stellar_Orbit : MonoBehaviour {
         planet.transform.localPosition = localPos;
     }
 
+    public void Set_Check_Rotation()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    public void Set_View_Rotation()
+    {
+        transform.rotation = Quaternion.Euler(340, 30, 0);
+    }
+
     public void View()
     {
         transform.gameObject.SetActive(true);

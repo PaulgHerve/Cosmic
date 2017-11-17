@@ -218,6 +218,8 @@ public class Star : MonoBehaviour {
         Color32 glowColor = Icon_Controller.Get_Star_Haze_Color(sType);
         Color32 hazeColor = Icon_Controller.Get_Star_Glow_Color(sType);
 
+        glowColor.a -= 4;
+
         effects.Set_Glow(glowColor);
         effects.Set_Haze(hazeColor);
     }
@@ -344,13 +346,22 @@ public class Star : MonoBehaviour {
         canvas.sortingOrder = 1;
     }
 
+    public void Check_Star_On()
+    {
+        planet_Manager.Check_System();
+
+        sprite.sortingOrder = 5;
+        Set_Name_Layer_Forward();
+        Set_Scale(2);
+    }
+
     public void View_Star_On()
     {
         planet_Manager.View_System();
 
         sprite.sortingOrder = 4;
         Set_Name_Layer_Forward();
-        Increase_Scale();
+        Set_Scale(4);
     }
 
     public void View_Star_Off()
@@ -362,7 +373,7 @@ public class Star : MonoBehaviour {
         Decrease_Scale();
     }
 
-    private void Increase_Scale()
+    private void Set_Scale(float newScale)
     {
         if (currentAnimation != null)
         {
@@ -370,7 +381,7 @@ public class Star : MonoBehaviour {
             currentAnimation = null;
         }
 
-        IEnumerator thing = Animate_Change_Scale(4);
+        IEnumerator thing = Animate_Change_Scale(newScale);
 
         currentAnimation = thing;
 
@@ -399,12 +410,7 @@ public class Star : MonoBehaviour {
         Vector3 intendedScale = new Vector3(newScale, newScale, newScale);
         Vector3 dif = intendedScale - currentScale;
         Vector3 step = dif / ticks;
-
-        if (dif.x < 0)
-        {
-            yield return new WaitForSeconds(.25f);
-        }
-
+        
         for (int i = 0; i < ticks; i++)
         {
             transform.localScale += step;

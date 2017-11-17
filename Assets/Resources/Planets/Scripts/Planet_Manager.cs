@@ -6,12 +6,12 @@ public class Planet_Manager : MonoBehaviour {
 
     private Star host_Star;
     private Star.starType starType;
-
+    private SpriteRotator rotator;
     Stellar_Orbit[] orbits; 
 
     private void Generate_Planets()
     {
-        int orbitCount = Random.Range(0, 9);
+        int orbitCount = Random.Range(2, 8);
         orbits = new Stellar_Orbit[orbitCount];
         int range = 0;
         int[] zones = new int[orbitCount];
@@ -40,18 +40,44 @@ public class Planet_Manager : MonoBehaviour {
 
     public void Initialize(Star star)
     {
+        rotator = GetComponentInChildren<SpriteRotator>();
         host_Star = star;
         starType = star.Get_Star_Type();
 
         Generate_Planets();
     }
 
-    public void View_System()
+    private void Rotate_To_Default()
     {
+        Quaternion startRotation = transform.rotation;
+        Vector3 rotation = startRotation.eulerAngles;
+
+        transform.Rotate(-rotation.x, -rotation.y, -rotation.z, Space.Self);
+    }
+
+    public void Check_System()
+    {
+        rotator.enabled = false;
+        Rotate_To_Default();
+
         for (int i = 0; i < orbits.Length; i++)
         {
             Stellar_Orbit item = orbits[i];
 
+            item.Set_Check_Rotation();
+            item.View();
+        }
+    }    
+
+    public void View_System()
+    {
+        rotator.enabled = true;
+
+        for (int i = 0; i < orbits.Length; i++)
+        {
+            Stellar_Orbit item = orbits[i];
+
+            item.Set_View_Rotation();
             item.View();
         }
     }

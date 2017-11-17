@@ -167,14 +167,16 @@ public class UI_Controller : MonoBehaviour
             {
                 star = planet.Get_Star();
                 Selection_Object parent = star.GetComponent<Selection_Object>();
-
-                parent.Select_This_Object();
+                
+                sHit.Select_Planets_Host_Star();
                 selected_Object_Hit = parent;
             }
 
             else if (star)
-            {
-                float minDepth = -520;
+            {      
+                float minDepth = -560;
+
+                star.Check_Star_On();
 
                 if (CameraController.Get_Depth() > minDepth)
                 {
