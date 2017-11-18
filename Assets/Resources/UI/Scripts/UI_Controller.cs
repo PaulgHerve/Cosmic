@@ -7,7 +7,6 @@ public class UI_Controller : MonoBehaviour
     private static UI_Selector uiSelector;
 
     static GameObject buttonHit;
-    static Selection_Object selected_Object_Hit;
     static Vector3 mousePos;
     static Vector3 uiMousePos;
     static Vector3 clickPos;
@@ -65,7 +64,7 @@ public class UI_Controller : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            SelectNewObject(null);
+            Selection_Object.Backup_Current_Selection();
         }
     }
 
@@ -148,65 +147,10 @@ public class UI_Controller : MonoBehaviour
                     {
                         Selection_Object sHit = objectHit.GetComponentInParent<Selection_Object>();
 
-                        SelectNewObject(sHit);
+                        sHit.Select_Object();
                     }
                 }
             }
-        }
-    }
-
-    //Selects the parent object in the stellar_hierarchy (NONE, STAR, PLANET, SURFACE)
-    public static void Select_Parent_Object(Selection_Object sHit)
-    {
-        if (sHit)
-        {
-            Planet planet = sHit.GetComponent<Planet>();
-            Star star = sHit.GetComponent<Star>();
-
-            if (planet)
-            {
-                star = planet.Get_Star();
-                Selection_Object parent = star.GetComponent<Selection_Object>();
-                
-                sHit.Select_Planets_Host_Star();
-                selected_Object_Hit = parent;
-            }
-
-            else if (star)
-            {      
-                float minDepth = -560;
-
-                star.Check_Star_On();
-
-                if (CameraController.Get_Depth() > minDepth)
-                {
-                    CameraController.Zoom_To_Selection_Object(sHit, minDepth, 120);
-                }
-
-                else
-                {
-                    sHit.Deselect_This_Object();
-                    uiSelector.Deactivate_All();
-                    CameraController.SetTarget(null);
-                    selected_Object_Hit = null;
-                }
-            }
-        }
-    }
-
-    public static void SelectNewObject(Selection_Object sHit)
-    {
-        if (sHit)
-        {
-            sHit.Select_This_Object();
-
-            //Must fire after "Select_This_Object()" due to current selection check
-            selected_Object_Hit = sHit;
-        }
-
-        else
-        {
-            Select_Parent_Object(selected_Object_Hit);
         }
     }
 
@@ -223,10 +167,5 @@ public class UI_Controller : MonoBehaviour
     public static UI_Selector Get_UI_Selector()
     {
         return uiSelector;
-    }
-
-    public static Selection_Object Get_Current_Selected_Object()
-    {
-        return selected_Object_Hit;
     }
 }
