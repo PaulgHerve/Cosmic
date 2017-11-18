@@ -71,6 +71,7 @@ public class Planet_Manager : MonoBehaviour {
 
     public void View_System()
     {
+        Rotate_To_Default();
         rotator.enabled = true;
 
         for (int i = 0; i < orbits.Length; i++)
@@ -84,6 +85,8 @@ public class Planet_Manager : MonoBehaviour {
 
     public void Hide_System()
     {
+        Rotate_To_Default();
+
         for (int i = 0; i < orbits.Length; i++)
         {
             Stellar_Orbit item = orbits[i];

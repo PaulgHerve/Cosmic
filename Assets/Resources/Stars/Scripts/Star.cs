@@ -346,7 +346,7 @@ public class Star : MonoBehaviour {
         canvas.sortingOrder = 1;
     }
 
-    public void Check_Star_On()
+    public void Star_View_On()
     {
         planet_Manager.Check_System();
 
@@ -355,7 +355,7 @@ public class Star : MonoBehaviour {
         Set_Scale(2);
     }
 
-    public void View_Star_On()
+    public void System_View_On()
     {
         planet_Manager.View_System();
 
@@ -364,7 +364,7 @@ public class Star : MonoBehaviour {
         Set_Scale(4);
     }
 
-    public void View_Star_Off()
+    public void System_View_Off()
     {
         planet_Manager.Hide_System();
 

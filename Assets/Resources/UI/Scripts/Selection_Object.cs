@@ -11,54 +11,95 @@ public class Selection_Object : MonoBehaviour {
         ui_Selector = UI_Controller.Get_UI_Selector();
     }
 
-    private void Select_New_Star(Star star)
+    private static void Select_New_Star(Star star)
     {
         if (current_Object)
         {
             current_Object.Deselect_This_Object();
         }
 
-        current_Object = this;
+        current_Object = star.GetComponent<Selection_Object>();
         ui_Selector.Select_Star(star);
         CameraController.Set_Focus_Level(CameraController.focus_Level.STAR);
         CameraController.SetTarget(star.gameObject);
-        star.Check_Star_On();
+        star.Star_View_On();
+    }
+    
+    private static void Select_New_Planet(Planet planet)
+    {
+        current_Object = planet.GetComponent<Selection_Object>();
+        ui_Selector.Select_Planet(planet);
+        CameraController.Set_Focus_Level(CameraController.focus_Level.PLANET);
     }
 
-    private void Zoom_To_Star(Star star)
+    private static void StarToSystem(Star star)
     {
-        current_Object = this;
+        current_Object = star.GetComponent<Selection_Object>();
         ui_Selector.Select_Star(star);
         CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
         CameraController.SetTarget(star.gameObject);
 
-        float minDepth = -350;
+        float minDepth = -360;
 
         //Zooms camera to SYSTEM view
         if (CameraController.Get_Depth() < minDepth)
         {
-            CameraController.Zoom_To_Selection_Object(this, minDepth, 120);
+            CameraController.Zoom_To_Selection_Object(current_Object, minDepth, 50);
         }
 
-        star.View_Star_On();
+        star.System_View_On();
     }
 
-    public void Select_Planets_Host_Star()
+    private static void PlanetToSurface(Planet planet)
     {
-        Planet planet = GetComponent<Planet>();
+
+    }
+
+    private static void SurfaceToPlanet(Planet planet)
+    {
+        current_Object = planet.GetComponent<Selection_Object>();
+        ui_Selector.Select_Planet(planet);
+        CameraController.Set_Focus_Level(CameraController.focus_Level.PLANET);
+    }
+
+    private static void PlanetToSystem(Planet planet)
+    {
         Star star = planet.Get_Star();
 
-        current_Object = this;
+        current_Object = star.GetComponent<Selection_Object>();
         ui_Selector.Select_Star(star);
         CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
         CameraController.SetTarget(star.gameObject);
     }
 
-    private void Select_New_Planet(Planet planet)
+    private static void SystemToStar(Star star)
     {
-        current_Object = this;
-        ui_Selector.Select_Planet(planet);
-        CameraController.Set_Focus_Level(CameraController.focus_Level.PLANET);
+        current_Object = star.GetComponent<Selection_Object>();
+        ui_Selector.Select_Star(star);
+        CameraController.Set_Focus_Level(CameraController.focus_Level.STAR);
+        CameraController.SetTarget(star.gameObject);
+
+        float minDepth = -550;
+
+        if (CameraController.Get_Depth() > minDepth)
+        {
+            CameraController.Zoom_To_Selection_Object(current_Object, minDepth, 45);
+        }
+
+        star.Star_View_On();
+    }
+
+    private static void StarToGalaxy()
+    {
+        if (current_Object)
+        {
+            current_Object.Deselect_This_Object();
+        }
+
+        current_Object = null;
+        ui_Selector.Deactivate_All();
+        CameraController.Set_Focus_Level(CameraController.focus_Level.NONE);
+        CameraController.SetTarget(null);
     }
 
     public void Select_Object()
@@ -82,10 +123,35 @@ public class Selection_Object : MonoBehaviour {
         CameraController.focus_Level focus_Level = CameraController.Get_Focus_Level();
         Star hostStar = planet.Get_Star();
 
-        if (focus_Level == CameraController.focus_Level.STAR) { }
-        if (focus_Level == CameraController.focus_Level.SYSTEM) { }
-        if (focus_Level == CameraController.focus_Level.PLANET) { }
-        if (focus_Level == CameraController.focus_Level.STRUCTURE) { }
+        if (focus_Level == CameraController.focus_Level.STAR) { Select_New_Planet(planet); }
+        if (focus_Level == CameraController.focus_Level.SYSTEM) { Select_New_Planet(planet); }
+        if (focus_Level == CameraController.focus_Level.PLANET)
+        {
+            Planet prevPlanet = null;
+
+            if (current_Object)
+            {
+                prevPlanet = current_Object.GetComponent<Planet>();
+            }
+
+            if (prevPlanet)
+            {
+                if (prevPlanet != this)                                 //Previous Planet is not this planet
+                {
+                    Select_New_Planet(planet);
+                }
+
+                else                                                    //Previous planet is this planet
+                {
+                    //Zoom to structure
+                }
+            }
+        }
+
+        if (focus_Level == CameraController.focus_Level.SURFACE)
+        {
+
+        }
     }
 
     private void Select_Star(Star star)
@@ -93,6 +159,7 @@ public class Selection_Object : MonoBehaviour {
         CameraController.focus_Level focus_Level = CameraController.Get_Focus_Level();
 
         if (focus_Level == CameraController.focus_Level.NONE) { Select_New_Star(star); }
+
         if (focus_Level == CameraController.focus_Level.STAR)
         {
             Star prevStar = null;
@@ -106,7 +173,7 @@ public class Selection_Object : MonoBehaviour {
             {
                 if (prevStar == star)
                 {
-                    Zoom_To_Star(star);                                 //Previous star is this star (Double click)
+                    StarToSystem(star);                                 //Previous star is this star (Double click)
                 }
 
                 else
@@ -121,12 +188,10 @@ public class Selection_Object : MonoBehaviour {
         if (focus_Level == CameraController.focus_Level.SYSTEM)
         {
             Star prevStar = null;
-            Planet prevPlanet = null;
 
             if (current_Object)
             {
                 prevStar = current_Object.GetComponent<Star>();
-                prevPlanet = current_Object.GetComponent<Planet>();
             }
             
             if (prevStar)                                               //Previous Object was a Star
@@ -136,12 +201,23 @@ public class Selection_Object : MonoBehaviour {
                     Select_New_Star(star);
                 }
             }
+        }
 
-            else if(prevPlanet)                                         //Prev object was a planet
+        if (focus_Level == CameraController.focus_Level.PLANET)         //Peevious object was a planet
+        {
+            Planet prevPlanet = null;
+            Star hostStar = null;
+
+            if (current_Object)
             {
-                prevStar = prevPlanet.Get_Star();
+                prevPlanet = current_Object.GetComponent<Planet>();
+            }
 
-                if (prevStar != star)                                   //Previous Host Star was not this Star
+            if (prevPlanet)                                             //Prev object was a planet
+            {
+                hostStar = prevPlanet.Get_Star();
+
+                if (hostStar != star)                                   //Previous Host Star was not this Star
                 {
                     Select_New_Star(star);
                 }
@@ -150,174 +226,34 @@ public class Selection_Object : MonoBehaviour {
                 {                                                       //Same as zoom to star without the zooming or re-org of planet manager
                     current_Object = this;
                     ui_Selector.Select_Star(star);
+                    CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
                     CameraController.SetTarget(star.gameObject);
                 }
             }
         }
 
-        if (focus_Level == CameraController.focus_Level.PLANET) { }
-        if (focus_Level == CameraController.focus_Level.STRUCTURE) { }
-    }
-
-    private void Select_This_Object()
-    {
-        Star star = GetComponent<Star>();
-        Planet planet = GetComponent<Planet>();
-
-        //This is a newly selected Object
-        if (current_Object != this)
+        if (focus_Level == CameraController.focus_Level.SURFACE)
         {
-            Selection_Object prev = current_Object;
 
-            //There is currently a selected object
-            if (prev)
-            {
-                Planet prevPlanet = prev.GetComponent<Planet>();
-                Star prevStar = prev.GetComponent<Star>();
-
-                print(prev);
-
-                //This is a newly selected star
-                if (star)
-                {
-                    if (current_Object)
-                    {
-                        //The previously selected object was a star
-                        if (prevStar)
-                        {
-                            //The previous Object was This star
-                            if (star == prevStar)
-                            {
-                                Zoom_To_Star(star);
-                            }
-
-                            else
-                            {
-                                Select_New_Star(star);
-                            }
-                        }
-
-                        //The previously object is a planet
-                        else if (prevPlanet)
-                        {
-                            Star planet_Host = prevPlanet.Get_Star();
-
-                            //The current parent belongs to this star
-                            if (planet_Host = star)
-                            {
-                                current_Object.Select_Planets_Host_Star();
-                            }
-
-                            //This Star belongs to a different Planet
-                            else
-                            {
-                                Select_New_Star(star);
-                            }
-                        }
-                    }     
-                }
-
-                //This is a planet
-                else if (planet)
-                {
-                    //This is now the Host_Star for this planet
-                    star = planet.Get_Star();
-                      
-                    //The previous object was a star                  
-                    if (prevStar)
-                    {
-                        //The Previous star was this planet's host star
-                        if (prevStar == star)
-                        {
-                            current_Object = this;
-                            CameraController.Set_Focus_Level(CameraController.focus_Level.PLANET);
-                            ui_Selector.Select_Planet(planet);
-                        }
-
-                        else
-                        {
-                            current_Object.Deselect_This_Object();
-                        }
-                    }
-
-                    //The previous Object was not a star
-                    else
-                    {
-                        current_Object = this;
-                        CameraController.Set_Focus_Level(CameraController.focus_Level.PLANET);
-                        ui_Selector.Select_Planet(planet);
-                    }
-                }
-            }
-
-            //No currently selected object
-            else
-            {
-                Select_New_Star(star);
-            }
         }
-
-        //this is a double click
-        else
-        {
-            //Is this a zoom in for the selected star?
-            if (star)
-            {
-                if (CameraController.Get_Focus_Level() == CameraController.focus_Level.STAR)
-                {
-                    CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
-
-                    float minDepth = -350;
-
-                    if (CameraController.Get_Depth() < minDepth)
-                    {
-                        CameraController.Zoom_To_Selection_Object(this, minDepth, 120);
-                    }
-                }
-            }
-
-            else if (planet)
-            {
-                CameraController.Set_Focus_Level(CameraController.focus_Level.STRUCTURE);
-            }
-        }        
     }
 
     //Selects the parent object in the stellar_hierarchy (NONE, STAR, PLANET, SURFACE)
     public static void Backup_Current_Selection()
     {
-        Selection_Object sHit = current_Object;
+        Selection_Object current = current_Object;
 
-        if (sHit)
+        if (current_Object)
         {
-            Planet planet = sHit.GetComponent<Planet>();
-            Star star = sHit.GetComponent<Star>();
+            CameraController.focus_Level focus_Level = CameraController.Get_Focus_Level();
 
-            if (planet)
-            {
-                star = planet.Get_Star();
+            Planet planet = current.GetComponent<Planet>();
+            Star star = current.GetComponent<Star>();
 
-                sHit.Select_Planets_Host_Star();
-            }
-
-            else if (star)
-            {
-                float minDepth = -560;
-
-                star.Check_Star_On();
-
-                if (CameraController.Get_Depth() > minDepth)
-                {
-                    CameraController.Zoom_To_Selection_Object(sHit, minDepth, 120);
-                }
-
-                else
-                {
-                    sHit.Deselect_This_Object();
-                    ui_Selector.Deactivate_All();
-                    CameraController.SetTarget(null);
-                }
-            }
+            if (focus_Level == CameraController.focus_Level.STAR) { StarToGalaxy(); }
+            else if (focus_Level == CameraController.focus_Level.SYSTEM) { SystemToStar(star); }
+            else if (focus_Level == CameraController.focus_Level.PLANET) { SystemToStar(planet.Get_Star()); }
+            else if (focus_Level == CameraController.focus_Level.SURFACE) { SurfaceToPlanet(planet); }
         }
     }
 
@@ -330,12 +266,12 @@ public class Selection_Object : MonoBehaviour {
         {
             star = planet.Get_Star();
 
-            star.View_Star_Off();
+            star.System_View_Off();
         }
 
         else if (star)
         {
-            star.View_Star_Off();            
+            star.System_View_Off();            
         }        
 
         current_Object = null;

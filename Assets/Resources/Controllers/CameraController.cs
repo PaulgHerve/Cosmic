@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
-    public enum focus_Level { NONE, STAR, SYSTEM, PLANET, STRUCTURE };
+    public enum focus_Level { NONE, STAR, SYSTEM, PLANET, SURFACE };
 
     private static CameraController cControl;
 
