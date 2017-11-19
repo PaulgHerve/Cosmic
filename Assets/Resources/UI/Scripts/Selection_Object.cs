@@ -21,7 +21,7 @@ public class Selection_Object : MonoBehaviour {
         current_Object = star.GetComponent<Selection_Object>();
         ui_Selector.Select_Star(star);
         CameraController.Set_Focus_Level(CameraController.focus_Level.STAR);
-        CameraController.SetTarget(star.gameObject);
+        //CameraController.SetTarget(star.gameObject);
         star.Star_View_On();
     }
     
@@ -35,19 +35,37 @@ public class Selection_Object : MonoBehaviour {
     private static void StarToSystem(Star star)
     {
         current_Object = star.GetComponent<Selection_Object>();
-        ui_Selector.Select_Star(star);
+        ui_Selector.Select_System(star);
         CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
         CameraController.SetTarget(star.gameObject);
+                
+        star.System_View_On();
 
-        float minDepth = -360;
+        float minDepth = -240;
+        float speed = 50;
+
+        speed = speed * CameraController.Get_Current_Depth_Ratio();
 
         //Zooms camera to SYSTEM view
-        if (CameraController.Get_Depth() < minDepth)
+        if (CameraController.Get_Depth() > minDepth)
         {
-            CameraController.Zoom_To_Selection_Object(current_Object, minDepth, 50);
+            CameraController.Zoom_To_Selection_Object(current_Object, minDepth, speed);
         }
+    }
 
-        star.System_View_On();
+    private static void Zoom_To_Star(Star star)
+    {
+        current_Object = star.GetComponent<Selection_Object>();
+        float minDepth = -240;
+        float speed = 50;
+
+        speed = speed * CameraController.Get_Current_Depth_Ratio();
+
+        //Zooms camera to SYSTEM view
+        if (CameraController.Get_Depth() != minDepth)
+        {
+            CameraController.Zoom_To_Selection_Object(current_Object, minDepth, speed);
+        }
     }
 
     private static void PlanetToSurface(Planet planet)
@@ -67,7 +85,7 @@ public class Selection_Object : MonoBehaviour {
         Star star = planet.Get_Star();
 
         current_Object = star.GetComponent<Selection_Object>();
-        ui_Selector.Select_Star(star);
+        ui_Selector.Select_System(star);
         CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
         CameraController.SetTarget(star.gameObject);
     }
@@ -200,6 +218,11 @@ public class Selection_Object : MonoBehaviour {
                 {
                     Select_New_Star(star);
                 }
+
+                else
+                {
+                    Zoom_To_Star(star);                                 //Previous Object was this star
+                }
             }
         }
 
@@ -225,7 +248,7 @@ public class Selection_Object : MonoBehaviour {
                 else                                                    //Previous Host Star was this Star
                 {                                                       //Same as zoom to star without the zooming or re-org of planet manager
                     current_Object = this;
-                    ui_Selector.Select_Star(star);
+                    ui_Selector.Select_System(star);
                     CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
                     CameraController.SetTarget(star.gameObject);
                 }

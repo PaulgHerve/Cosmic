@@ -4,6 +4,9 @@ public class UI_Selector : MonoBehaviour {
 
     UI_Selector_Indicator indicator;
     UI_Selector_Indicator mini_Indicator;
+    public SpriteRenderer blur;
+
+    private Selection_Object select;
 
     void Awake()
     {
@@ -13,6 +16,14 @@ public class UI_Selector : MonoBehaviour {
         mini_Indicator = things[1];
     }
 
+    private void Update()
+    {
+        if (select)
+        {
+            mini_Indicator.transform.position = select.transform.position;
+        }
+    }
+
     void Start ()
     {
         Deactivate_All();
@@ -20,46 +31,65 @@ public class UI_Selector : MonoBehaviour {
 
     private void Activate_Indicator()
     {
-        indicator.gameObject.SetActive(true);
+        indicator.Activate();
     }
 
     private void Activate_Mini_Indicator()
     {
-        mini_Indicator.gameObject.SetActive(true);
+        mini_Indicator.Activate();
     }
 
     private void Deactivate_Indicator()
     {
-        indicator.gameObject.SetActive(false);
+        indicator.Deactivate();
     }
 
     private void Deactivate_Mini_Indicator()
     {
-        mini_Indicator.gameObject.SetActive(false);
+        mini_Indicator.Deactivate();
     }
 
     public void Activate_All()
     {
         Activate_Indicator();
         Activate_Mini_Indicator();
+        blur.enabled = true;
     }
 
     public void Deactivate_All()
     {
         Deactivate_Indicator();
         Deactivate_Mini_Indicator();
+        blur.enabled = false;
+        select = null;
+    }
+
+    public void Select_System(Star target)
+    {
+        Vector3 pos = target.transform.position;
+        select = null;
+
+        Set_Position(pos);
+        Set_Mini_Position(pos);
+
+        Activate_Mini_Indicator();
+        blur.enabled = true;
+        Deactivate_Indicator();
+        Set_Mini_Scale(.8f);
     }
 
     public void Select_Star(Star target)
     {
         Vector3 pos = target.transform.position;
+        select = null;
 
         Activate_All();
 
         Set_Position(pos);
         Set_Mini_Position(pos);
 
-        Set_Scale(1);
+        Activate_Indicator();
+        Set_Scale(3);
         Set_Mini_Scale(.8f);        
     }
 
@@ -67,10 +97,11 @@ public class UI_Selector : MonoBehaviour {
     {
         Vector3 pos = target.transform.position;
         Vector3 starPos = target.Get_Star().transform.position;
+        select = target.GetComponent<Selection_Object>();
 
         Set_Position(starPos);
-        Set_Scale(1);
 
+        Deactivate_Indicator();
         Set_Mini_Position(pos);
         Set_Mini_Scale(.2f);
     }

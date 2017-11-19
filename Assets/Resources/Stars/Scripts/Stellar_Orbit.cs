@@ -1,23 +1,29 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Stellar_Orbit : MonoBehaviour {
 
     private Planet planet;
+    SpriteRotator planet_Rotator;
     private Orbit_Drawer orbit_Draw;
 
     private float orbit_Distance;
     private Star star;
     private int zone;
+    private Quaternion startRotation;
+
+    private IEnumerator currentAnimation;
 
     public void Activate(Star host_Star, int orbit_Zone, int ring_Index) 
     {
         planet = GetComponentInChildren<Planet>();
+        planet_Rotator = planet.GetComponent<SpriteRotator>();
         orbit_Draw = gameObject.AddComponent<Orbit_Drawer>();
 
         star = host_Star;
         zone = orbit_Zone;
 
-        Set_Orbit_Size(ring_Index + 2);
+        Set_Orbit_Size(ring_Index);
 
         Generate_Planet();
     }
@@ -30,6 +36,18 @@ public class Stellar_Orbit : MonoBehaviour {
     private void Generate_Planet()
     {
         planet.Set_Star(star);
+
+        Initialize_Start_Rotation();
+    }
+
+    private void Initialize_Start_Rotation()
+    {
+        float yRotation = Random.Range(0, 360);
+        startRotation = new Quaternion();
+
+        startRotation = Quaternion.Euler(0, yRotation, 0);
+
+        transform.localRotation = startRotation;
     }
 
     public float Get_Orbit_Size()
@@ -39,7 +57,7 @@ public class Stellar_Orbit : MonoBehaviour {
 
     private void Set_Orbit_Size(float val)
     {
-        orbit_Distance = 8 + (8 * val);
+        orbit_Distance = 15 + (6 * val);
 
         Update_Orbital_Ring();
     }
@@ -56,12 +74,55 @@ public class Stellar_Orbit : MonoBehaviour {
 
     public void Set_Check_Rotation()
     {
-        transform.rotation = Quaternion.Euler(0, 0, 0);
+        if (currentAnimation != null)
+        {
+            StopCoroutine(currentAnimation);
+            currentAnimation = null;
+        }
+
+        Quaternion endRotation = startRotation;
+
+        IEnumerator rotate = RotateToQuaternion(endRotation);
+
+        currentAnimation = rotate;
+        planet_Rotator.enabled = true;
+        StartCoroutine(rotate);
     }
 
     public void Set_View_Rotation()
     {
-        transform.rotation = Quaternion.Euler(340, 30, 0);
+        if (currentAnimation != null)
+        {
+            StopCoroutine(currentAnimation);
+            currentAnimation = null;
+        }
+
+        Quaternion endRotation = Quaternion.Euler(340, 30, 0);
+
+        IEnumerator rotate = RotateToQuaternion(endRotation);
+
+        currentAnimation = rotate;
+        planet_Rotator.enabled = false;
+        StartCoroutine(rotate);
+    }
+
+    private IEnumerator RotateToQuaternion(Quaternion endRotation)
+    {
+        Quaternion currentRotation = transform.localRotation;
+
+        while (currentRotation != endRotation)
+        {
+            currentRotation = transform.localRotation;
+            transform.localRotation = Quaternion.Slerp(currentRotation, endRotation, .25f);
+
+            planet_Rotator.TriggerRotator();
+
+            yield return new WaitForSeconds(.02f);
+        }
+
+        currentAnimation = null;
+
+        yield return null;
     }
 
     public void View()

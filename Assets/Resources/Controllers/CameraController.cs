@@ -440,6 +440,11 @@ public class CameraController : MonoBehaviour {
         return depth;
     }
 
+    public static float Get_Current_Depth_Ratio()
+    {
+        return .5f + 3 * (depth / maxDepth);
+    }
+
     public Quaternion GetCameraRotation()
     {
         return GetComponent<Transform>().rotation;

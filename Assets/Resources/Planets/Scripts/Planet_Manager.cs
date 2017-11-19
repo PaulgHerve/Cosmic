@@ -52,7 +52,7 @@ public class Planet_Manager : MonoBehaviour {
         Quaternion startRotation = transform.rotation;
         Vector3 rotation = startRotation.eulerAngles;
 
-        transform.Rotate(-rotation.x, -rotation.y, -rotation.z, Space.Self);
+        transform.localRotation = Quaternion.identity;
     }
 
     public void Check_System()
@@ -64,8 +64,8 @@ public class Planet_Manager : MonoBehaviour {
         {
             Stellar_Orbit item = orbits[i];
 
-            item.Set_Check_Rotation();
             item.View();
+            item.Set_Check_Rotation();
         }
     }    
 
@@ -78,8 +78,8 @@ public class Planet_Manager : MonoBehaviour {
         {
             Stellar_Orbit item = orbits[i];
 
-            item.Set_View_Rotation();
             item.View();
+            item.Set_View_Rotation();
         }
     }
 

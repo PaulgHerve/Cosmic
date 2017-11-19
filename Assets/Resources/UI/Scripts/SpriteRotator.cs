@@ -19,4 +19,9 @@ public class SpriteRotator : MonoBehaviour
 
         transform.rotation = spriteRotation;
     }
+
+    public void TriggerRotator()
+    {
+        SetRotationToCamera();
+    }
 }
