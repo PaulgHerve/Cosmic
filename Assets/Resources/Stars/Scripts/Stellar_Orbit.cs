@@ -30,12 +30,13 @@ public class Stellar_Orbit : MonoBehaviour {
 
     private void Draw_Orbit()
     {
-        orbit_Draw.Draw_Orbit(orbit_Distance);
+        orbit_Draw.Draw_Orbit(orbit_Distance + .2f);
     }
 
     private void Generate_Planet()
     {
         planet.Set_Star(star);
+        planet.GenerateSize();
 
         Initialize_Start_Rotation();
     }
@@ -57,7 +58,7 @@ public class Stellar_Orbit : MonoBehaviour {
 
     private void Set_Orbit_Size(float val)
     {
-        orbit_Distance = 15 + (6 * val);
+        orbit_Distance = 15 + (6.5f * val);
 
         Update_Orbital_Ring();
     }

@@ -20,7 +20,19 @@ public class UI_Selector : MonoBehaviour {
     {
         if (select)
         {
-            mini_Indicator.transform.position = select.transform.position;
+            CameraController.focus_Level focus = CameraController.Get_Focus_Level();
+
+            if ((int)focus > 2)
+            {
+                Planet p = select.GetComponent<Planet>();
+
+                Set_Planet_Position(p);
+            }
+
+            else
+            {
+                mini_Indicator.transform.position = select.transform.position;
+            }
         }
     }
 
@@ -101,7 +113,7 @@ public class UI_Selector : MonoBehaviour {
 
     public void Select_Planet(Planet target)
     {
-        Vector3 pos = target.transform.position;
+        Vector3 pos = target.Get_Sprite().gameObject.transform.position;
         Vector3 starPos = target.Get_Star().transform.position;
         select = target.GetComponent<Selection_Object>();
 
@@ -110,6 +122,12 @@ public class UI_Selector : MonoBehaviour {
         Deactivate_Indicator();
         Set_Mini_Position(pos);
         Set_Mini_Scale(.2f);
+    }
+
+    private void Set_Planet_Position(Planet target)
+    {
+        Vector3 pos = target.Get_Sprite().gameObject.transform.position;
+        Set_Mini_Position(pos);
     }
 
     public void Set_Mini_Position(Vector3 pos)
