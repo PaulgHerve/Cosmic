@@ -81,12 +81,18 @@ public class UI_Selector : MonoBehaviour {
     public void Select_Star(Star target)
     {
         Vector3 pos = target.transform.position;
+        Vector3 camPos = pos;
         select = null;
+
+        if(CameraController.target)
+        {
+            camPos = CameraController.target.transform.position;
+        }
 
         Activate_All();
 
         Set_Position(pos);
-        Set_Mini_Position(pos);
+        Set_Mini_Position(camPos);
 
         Activate_Indicator();
         Set_Scale(3);

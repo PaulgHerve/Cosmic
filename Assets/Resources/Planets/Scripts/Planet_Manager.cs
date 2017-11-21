@@ -2,11 +2,14 @@
 
 public class Planet_Manager : MonoBehaviour {
 
+    public enum ringState { STAR, SYSTEM };
+
     public GameObject orbit_Prefab;
 
     private Star host_Star;
     private Star.starType starType;
     private SpriteRotator rotator;
+    private ringState currentState = ringState.STAR;
     Stellar_Orbit[] orbits; 
 
     private void Generate_Planets()
@@ -67,6 +70,8 @@ public class Planet_Manager : MonoBehaviour {
             item.View();
             item.Set_Check_Rotation();
         }
+
+        currentState = ringState.STAR;
     }    
 
     public void View_System()
@@ -81,6 +86,8 @@ public class Planet_Manager : MonoBehaviour {
             item.View();
             item.Set_View_Rotation();
         }
+
+        currentState = ringState.SYSTEM;
     }
 
     public void Hide_System()
@@ -93,6 +100,11 @@ public class Planet_Manager : MonoBehaviour {
 
             item.Hide();
         }
+    }
+
+    public ringState Get_Current_RingState()
+    {
+        return currentState;
     }
 
     private int[] ReOrder_Zones(int[] array)

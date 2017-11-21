@@ -21,7 +21,6 @@ public class Selection_Object : MonoBehaviour {
         current_Object = star.GetComponent<Selection_Object>();
         ui_Selector.Select_Star(star);
         CameraController.Set_Focus_Level(CameraController.focus_Level.STAR);
-        //CameraController.SetTarget(star.gameObject);
         star.Star_View_On();
     }
     
@@ -34,29 +33,19 @@ public class Selection_Object : MonoBehaviour {
 
     private static void StarToSystem(Star star)
     {
-        current_Object = star.GetComponent<Selection_Object>();
         ui_Selector.Select_System(star);
         CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
         CameraController.SetTarget(star.gameObject);
                 
         star.System_View_On();
 
-        float minDepth = -240;
-        float speed = 50;
-
-        speed = speed * CameraController.Get_Current_Depth_Ratio();
-
-        //Zooms camera to SYSTEM view
-        if (CameraController.Get_Depth() > minDepth)
-        {
-            CameraController.Zoom_To_Selection_Object(current_Object, minDepth, speed);
-        }
+        ZoomToStar(star);
     }
 
-    private static void Zoom_To_Star(Star star)
+    private static void ZoomToStar(Star star)
     {
         current_Object = star.GetComponent<Selection_Object>();
-        float minDepth = -240;
+        float minDepth = -300;
         float speed = 50;
 
         speed = speed * CameraController.Get_Current_Depth_Ratio();
@@ -175,6 +164,7 @@ public class Selection_Object : MonoBehaviour {
     private void Select_Star(Star star)
     {
         CameraController.focus_Level focus_Level = CameraController.Get_Focus_Level();
+        GameObject cameraTarget = null;
 
         if (focus_Level == CameraController.focus_Level.NONE) { Select_New_Star(star); }
 
@@ -191,16 +181,31 @@ public class Selection_Object : MonoBehaviour {
             {
                 if (prevStar == star)
                 {
-                    StarToSystem(star);                                 //Previous star is this star (Double click)
+                    cameraTarget = CameraController.target;
+
+                    if (cameraTarget)                                           //The camera has a target
+                    {
+                        if (cameraTarget != star.gameObject)                    //The camera target is not this star
+                        {
+                            CameraController.SetTarget(star.gameObject);
+                        }
+
+                        else
+                        {
+                            StarToSystem(star);                                 //The camera target and previous target are this star (Double click)
+                        }
+                    }
+
+                    CameraController.SetTarget(star.gameObject);                //The previous object is thist star, but not the camera target. Make this object the camera target
                 }
 
                 else
                 {
-                    Select_New_Star(star);                              //Previously selected star is not this star
+                    Select_New_Star(star);                                      //Previously selected star is not this star
                 }
             }
 
-            else { Select_New_Star(star); }                             //No previously selected star
+            else { Select_New_Star(star); }                                     //No previously selected star
         }
 
         if (focus_Level == CameraController.focus_Level.SYSTEM)
@@ -212,16 +217,16 @@ public class Selection_Object : MonoBehaviour {
                 prevStar = current_Object.GetComponent<Star>();
             }
             
-            if (prevStar)                                               //Previous Object was a Star
+            if (prevStar)                                                       //Previous Object was a Star
             {
-                if (prevStar != star)                                   //Previous Object was not this Star
+                if (prevStar != star)                                           //Previous Object was not this Star
                 {
                     Select_New_Star(star);
                 }
 
                 else
                 {
-                    Zoom_To_Star(star);                                 //Previous Object was this star
+                    ZoomToStar(star);                                 //Previous Object was this star
                 }
             }
         }
@@ -229,7 +234,7 @@ public class Selection_Object : MonoBehaviour {
         if (focus_Level == CameraController.focus_Level.PLANET)         //Peevious object was a planet
         {
             Planet prevPlanet = null;
-            Star hostStar = null;
+            Star hostStar = null;            
 
             if (current_Object)
             {
@@ -239,7 +244,7 @@ public class Selection_Object : MonoBehaviour {
             if (prevPlanet)                                             //Prev object was a planet
             {
                 hostStar = prevPlanet.Get_Star();
-
+                
                 if (hostStar != star)                                   //Previous Host Star was not this Star
                 {
                     Select_New_Star(star);
@@ -247,10 +252,23 @@ public class Selection_Object : MonoBehaviour {
 
                 else                                                    //Previous Host Star was this Star
                 {                                                       //Same as zoom to star without the zooming or re-org of planet manager
-                    current_Object = this;
-                    ui_Selector.Select_System(star);
-                    CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
-                    CameraController.SetTarget(star.gameObject);
+                    Planet_Manager.ringState current = GetComponentInChildren<Planet_Manager>().Get_Current_RingState();
+
+                    if (current == Planet_Manager.ringState.STAR)
+                    {
+                        current_Object = this;
+                        ui_Selector.Select_Star(star);
+                        CameraController.Set_Focus_Level(CameraController.focus_Level.STAR);
+                        //CameraController.SetTarget(star.gameObject);
+                    }
+
+                    else
+                    {
+                        current_Object = this;
+                        ui_Selector.Select_System(star);
+                        CameraController.Set_Focus_Level(CameraController.focus_Level.SYSTEM);
+                        CameraController.SetTarget(star.gameObject);
+                    }
                 }
             }
         }
