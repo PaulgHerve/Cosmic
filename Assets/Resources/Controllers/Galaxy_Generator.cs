@@ -70,8 +70,8 @@ public class Galaxy_Generator : MonoBehaviour
 
         stars.Add(star);
 
-        star.Generate(galaxySize, armVal, armInc, armDensity, newName);
         star.transform.SetParent(galaxy.transform, false);
+        star.Generate(galaxySize, armVal, armInc, armDensity, newName);
 
         return star;
     }

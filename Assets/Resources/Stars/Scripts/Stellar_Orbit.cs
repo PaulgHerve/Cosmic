@@ -3,8 +3,12 @@ using System.Collections;
 
 public class Stellar_Orbit : MonoBehaviour {
 
+    public GameObject bodyObject;
+
     private Planet planet;
-    SpriteRotator planet_Rotator;
+    private Planet_Info_Preview preview;
+    private Planet_Overview overview;
+    private SpriteRotator planet_Rotator;
     private Orbit_Drawer orbit_Draw;
 
     private float orbit_Distance;
@@ -17,8 +21,12 @@ public class Stellar_Orbit : MonoBehaviour {
     public void Activate(Star host_Star, int orbit_Zone, int ring_Index) 
     {
         planet = GetComponentInChildren<Planet>();
-        planet_Rotator = planet.GetComponent<SpriteRotator>();
+        preview = GetComponentInChildren<Planet_Info_Preview>();
+        overview = GetComponentInChildren<Planet_Overview>();
+        planet_Rotator = bodyObject.GetComponent<SpriteRotator>();
         orbit_Draw = gameObject.AddComponent<Orbit_Drawer>();
+
+        Deactivate_Planet_Preview();
 
         star = host_Star;
         zone = orbit_Zone;
@@ -35,6 +43,7 @@ public class Stellar_Orbit : MonoBehaviour {
 
     private void Generate_Planet()
     {
+        planet.Set_Stellar_Orbit(this);
         planet.Set_Star(star);
         planet.GenerateSize();
 
@@ -58,19 +67,19 @@ public class Stellar_Orbit : MonoBehaviour {
 
     private void Set_Orbit_Size(float val)
     {
-        orbit_Distance = 15 + (6.5f * val);
+        orbit_Distance = 15 + (7.5f * val);
 
         Update_Orbital_Ring();
     }
 
     private void Update_Orbital_Ring()
     {
-        Vector3 localPos = planet.transform.localPosition;
-        Vector3 orbitScale = new Vector3(orbit_Distance, orbit_Distance, orbit_Distance);
+        Vector3 localPos = bodyObject.transform.localPosition;
+        //Vector3 orbitScale = new Vector3(orbit_Distance, orbit_Distance, orbit_Distance);
 
         localPos.x = orbit_Distance;
 
-        planet.transform.localPosition = localPos;
+        bodyObject.transform.localPosition = localPos;
     }
 
     public void Set_Check_Rotation()
@@ -126,15 +135,33 @@ public class Stellar_Orbit : MonoBehaviour {
         yield return null;
     }
 
+    public void Activate_Planet_Preview()
+    {
+        preview.Activate(planet);
+    }
+
+    public void Deactivate_Planet_Preview()
+    {
+        preview.Deactivate();
+    }
+
+    public void Toggle_Planet_Preview()
+    {
+        preview.Toggle(planet);
+    }
+
     public void View()
     {
         transform.gameObject.SetActive(true);
 
         Draw_Orbit();
+        overview.Populate(planet);
     }
 
     public void Hide()
     {
+        Deactivate_Planet_Preview();
+
         transform.gameObject.SetActive(false);
     }
 

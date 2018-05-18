@@ -20,6 +20,7 @@ public class Star : MonoBehaviour {
     private float age = 0;
     private Vector3 baseScale;
     private Canvas canvas;
+    private RectTransform rect;
 
     IEnumerator currentAnimation = null;
 
@@ -27,7 +28,8 @@ public class Star : MonoBehaviour {
 
     void Awake()
     {
-        baseScale = transform.localScale;
+        rect = GetComponent<RectTransform>();
+        baseScale = rect.localScale;
         effects = GetComponentInChildren<Star_Effects>();
         sprite = GetComponentInChildren<SpriteRenderer>();
         collider = GetComponentInChildren<SphereCollider>();
@@ -42,7 +44,7 @@ public class Star : MonoBehaviour {
     {
         enable_Rotation = Galaxy.enable_Rotation;
 
-        //Scale_To_Camera();
+        Scale_To_Camera();
 
         if (enable_Rotation)
         {
@@ -57,13 +59,13 @@ public class Star : MonoBehaviour {
 
     public void Generate(float galaxySize, float armVal, float armInc, float armDensity, string newName)
     {
-        float center = 512 + (12 * (galaxySize / 3));
-        float x = (16f) * (6 + galaxySize / 12);
-        float y = (12f) * (6 + galaxySize / 12);
-        float z = (256) * (6 + galaxySize / 12);
-        z *= Random.Range(-1, 1.01f);
-        x *= Random.Range(-1, 1.01f);
-        y *= Random.Range(-1, 1.01f);
+        float center = 512 + (12.00f * (galaxySize / 3.00f));
+        float x = (20.00f) * (6.00f + galaxySize / 12.00f);
+        float y = (12.00f) * (6.00f + galaxySize / 12.00f);
+        float z = (256.00f) * (6.00f + galaxySize / 12.00f);
+        z *= Random.Range(-1.00f, 1.01f);
+        x *= Random.Range(-1.00f, 1.01f);
+        y *= Random.Range(-1.00f, 1.01f);
 
         //Creates a space in the center for a supermassive
         if (z >= 0) { z += center; }
@@ -81,24 +83,15 @@ public class Star : MonoBehaviour {
         SetStarEffectColors((starType)spriteIndex);
 
         InitializeOrbitalCenter();
-        transform.localPosition = startPos;
+        rect.localPosition = startPos;
 
-        rDistance = transform.localPosition.magnitude;
+        rDistance = Vector3.Magnitude(new Vector3(rect.localPosition.x, 0, rect.localPosition.z));
 
-        float percent = (360.000f * armVal);
-        float roll = Random.Range(0.000f, armDensity);        
-        float maxVal = (360.000f * armInc) * roll;
+        float percent = (360.00000f * armVal);
+        float roll = Random.Range(0.00000f, armDensity);        
+        float maxVal = (360.00000f * armInc) * roll;
 
-        percent += Random.Range(0.000f, maxVal);
-
-        roll = Random.Range(0.000f, .510f);
-        if (roll < .5f * armInc)
-        {
-            roll = Random.Range(0.000f, 1.001f);
-            maxVal = (360.000f * armInc) * roll;
-
-            percent += Random.Range(0, maxVal);
-        }
+        percent += Random.Range(0.00000f, maxVal);
 
         IEnumerator thing = RotateAroundGalaxyCenter(percent);
         StartCoroutine(thing);
@@ -110,7 +103,7 @@ public class Star : MonoBehaviour {
             RotateAroundGalaxyCenter(256 * movement);
         }
 
-        Generate_Solar_System();
+        Generate_Solar_System();        
     }
 
     //Generates a group of celestial bodies associated to a host star
@@ -138,9 +131,9 @@ public class Star : MonoBehaviour {
 
     private void InitializeMovement()
     {
-        float x = 2;
-        float y = 0f;
-        float z = 0;
+        float x = 2.000f;
+        float y = 0.000f;
+        float z = 0.000f;
 
         movement = new Vector3(x, y, z);
         movement /= Mathf.Sqrt(rDistance);
@@ -148,7 +141,7 @@ public class Star : MonoBehaviour {
 
     private void InitializeMovement(float speed)
     {
-        float x = speed;
+        float x = speed * 1.000f;
         float y = 0;
         float z = 0;
         
@@ -214,7 +207,6 @@ public class Star : MonoBehaviour {
 
     private void SetStarEffectColors(starType sType)
     {
-        int t = (int)sType;
         Color32 glowColor = Icon_Controller.Get_Star_Haze_Color(sType);
         Color32 hazeColor = Icon_Controller.Get_Star_Glow_Color(sType);
 
@@ -229,14 +221,19 @@ public class Star : MonoBehaviour {
     {
         Vector3 targetPos = orbitalCenter;           
 
-        Vector3 relative = targetPos - transform.localPosition;
-        Quaternion current = transform.localRotation;
+        Vector3 relative = targetPos - rect.localPosition;
+        Quaternion current = rect.localRotation;
         Quaternion rotation = Quaternion.LookRotation(relative);
 
-        transform.Translate(movement);        
+        rect.Translate(movement);
 
-        transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
-        transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+        rect.localRotation = Quaternion.Slerp(current, rotation, 1f);
+
+        Vector3 newPos = new Vector3(rect.localPosition.x, 0, rect.localPosition.z);
+        newPos = Vector3.ClampMagnitude(newPos, rDistance);
+        newPos.y = rect.localPosition.y;
+
+        rect.localPosition = newPos;
     }
 
     //Rotates Camera Around a centerpoint at a controlled speed
@@ -244,14 +241,19 @@ public class Star : MonoBehaviour {
     {
         Vector3 targetPos = orbitalCenter;
 
-        Vector3 relative = targetPos - transform.localPosition;
-        Quaternion current = transform.localRotation;
+        Vector3 relative = targetPos - rect.localPosition;
+        Quaternion current = rect.localRotation;
         Quaternion rotation = Quaternion.LookRotation(relative);
 
-        transform.Translate(speed);
+        rect.Translate(speed);
 
-        transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
-        transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);
+        rect.localRotation = Quaternion.Slerp(current, rotation, 1f);
+
+        Vector3 newPos = new Vector3(rect.localPosition.x, 0, rect.localPosition.z);
+        newPos = Vector3.ClampMagnitude(newPos, rDistance);
+        newPos.y = rect.localPosition.y;
+
+        rect.localPosition = newPos;
     }
 
     //Rotates Camera Around a centerpoint
@@ -269,22 +271,27 @@ public class Star : MonoBehaviour {
         Vector3 m = new Vector3(move, 0, 0);
         Vector3 targetPos = orbitalCenter;
 
-        Vector3 relative = targetPos - transform.localPosition;
-        Quaternion current = transform.localRotation;
+        Vector3 relative = targetPos - rect.localPosition;
+        Quaternion current = rect.localRotation;
         Quaternion rotation = Quaternion.LookRotation(relative);
 
         for (int i = 0; i < degrees; i++)
         {
             for (int n = 0; n < num; n++)
             {
-                relative = targetPos - transform.localPosition;
-                current = transform.localRotation;
+                relative = targetPos - rect.localPosition;
+                current = rect.localRotation;
                 rotation = Quaternion.LookRotation(relative);
 
-                transform.Translate(m);
+                rect.Translate(m);
 
-                transform.localRotation = Quaternion.Slerp(current, rotation, 1f);
-                transform.localPosition = Vector3.ClampMagnitude(transform.localPosition, rDistance);                
+                rect.localRotation = Quaternion.Slerp(current, rotation, 1f);
+
+                Vector3 newPos = new Vector3(rect.localPosition.x, 0, rect.localPosition.z);
+                newPos = Vector3.ClampMagnitude(newPos, rDistance);
+                newPos.y = rect.localPosition.y;
+
+                rect.localPosition = newPos;
             }
 
             yield return new WaitForEndOfFrame();           
@@ -406,14 +413,14 @@ public class Star : MonoBehaviour {
     private IEnumerator Animate_Change_Scale(float newScale)
     {
         float ticks = 3;
-        Vector3 currentScale = transform.localScale;
+        Vector3 currentScale = rect.localScale;
         Vector3 intendedScale = new Vector3(newScale, newScale, newScale);
         Vector3 dif = intendedScale - currentScale;
         Vector3 step = dif / ticks;
         
         for (int i = 0; i < ticks; i++)
         {
-            transform.localScale += step;
+            rect.localScale += step;
 
             yield return new WaitForSeconds(.02f);
         }

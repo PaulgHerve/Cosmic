@@ -2,6 +2,8 @@
 
 public class Planet : MonoBehaviour {
 
+    private Stellar_Orbit orbit_Controller;
+
     private bool is_Habitable;
     private int atmosphere;
     private int climate;
@@ -22,6 +24,26 @@ public class Planet : MonoBehaviour {
         Vector3 newScale = new Vector3(scaler, scaler, scaler);
 
         transform.localScale = newScale;
+    }
+
+    public void Set_Stellar_Orbit(Stellar_Orbit stellarOrbit)
+    {
+        orbit_Controller = stellarOrbit;
+    }
+    
+    public void Activate_Preview()
+    {
+        orbit_Controller.Activate_Planet_Preview();
+    }
+
+    public void Deactivate_Preview()
+    {
+        orbit_Controller.Deactivate_Planet_Preview();
+    }
+
+    public void Toggle_Preview()
+    {
+        orbit_Controller.Toggle_Planet_Preview();
     }
 
     public int Get_Atmosphere()

@@ -56,7 +56,7 @@ public class UI_Selector : MonoBehaviour {
         indicator.Deactivate();
     }
 
-    private void Deactivate_Mini_Indicator()
+    public void Deactivate_Mini_Indicator()
     {
         mini_Indicator.Deactivate();
     }
@@ -104,11 +104,20 @@ public class UI_Selector : MonoBehaviour {
         Activate_All();
 
         Set_Position(pos);
-        Set_Mini_Position(camPos);
+
+        if (camPos != pos)
+        {
+            Set_Mini_Position(camPos);
+        }
+
+        else
+        {
+            Deactivate_Mini_Indicator();
+        }
 
         Activate_Indicator();
         Set_Scale(3);
-        Set_Mini_Scale(.8f);        
+        Set_Mini_Scale(.8f);
     }
 
     public void Select_Planet(Planet target)
@@ -120,6 +129,7 @@ public class UI_Selector : MonoBehaviour {
         Set_Position(starPos);
 
         Deactivate_Indicator();
+        Activate_Mini_Indicator();
         Set_Mini_Position(pos);
         Set_Mini_Scale(.2f);
     }

@@ -12,7 +12,8 @@ public class CameraController : MonoBehaviour {
     Vector3 mousePosition;
     Vector3 mouseMove;
     Vector3 clickPosition;
-    static float minDepth = -150;
+    static float minDepth = -100;
+    static float minDepthSystemView = -250;
     static float  maxDepth = -2400;
     static bool gameActive = true;
     static int pausePanelCount = 0;
@@ -154,6 +155,8 @@ public class CameraController : MonoBehaviour {
 
     public static void Zoom_To_Location(Vector3 destination, float endDepth, float speed)
     {
+        //Debug.Log("Zoom_To_Location");
+
         IEnumerator item = cControl.ZoomZoom(destination, endDepth, speed);
 
         cControl.StartCoroutine(item);
@@ -161,8 +164,9 @@ public class CameraController : MonoBehaviour {
 
     public static void Zoom_To_Selection_Object(Selection_Object destination_Object, float endDepth, float speed)
     {
-        Vector3 destination = destination_Object.transform.position;
+        //Debug.Log("Zoom_To_Selection_Object");
 
+        Vector3 destination = destination_Object.transform.position;
         IEnumerator item = cControl.ZoomZoom(destination, endDepth, speed);
 
         cControl.StartCoroutine(item);
@@ -170,8 +174,9 @@ public class CameraController : MonoBehaviour {
 
     public static void Zoom_Then_Deselect(Selection_Object destination_Object, float endDepth, float speed)
     {
-        Vector3 destination = destination_Object.transform.position;
+        //Debug.Log("Zoom_Then_Deselect");
 
+        Vector3 destination = destination_Object.transform.position;
         IEnumerator item = cControl.ZoomThenDeselect(destination, endDepth, speed);
 
         cControl.StartCoroutine(item);
@@ -182,7 +187,6 @@ public class CameraController : MonoBehaviour {
         if (isMoving == false)
         {
             Vector3 current = transform.position;
-            Vector3 distance = destination - current;
             float sizeChange = endDepth - depth;
             int ticks = Mathf.Abs((int)(sizeChange / speed));
 
@@ -220,24 +224,29 @@ public class CameraController : MonoBehaviour {
         if (isMoving == false)
         {
             Vector3 current = transform.position;
-            Vector3 distance = destination - current;
             float sizeChange = endDepth - depth;
             int ticks = Mathf.Abs((int)(sizeChange / speed));
+            float zoomLimit = minDepth;
 
             if (sizeChange < 0) { speed *= -1; }
 
             isMoving = true;
 
+            if (focus == focus_Level.SYSTEM || focus == focus_Level.PLANET)
+            {
+                zoomLimit = minDepthSystemView;
+            }
+
             for (int i = 0; i < ticks; i++)
             {
-                if (depth + speed != minDepth)
+                if (depth + speed != zoomLimit)
                 {
                     depth += speed;
 
                     main.transform.Translate(0, 0, speed);
 
                     yield return new WaitForSeconds(.02f);
-                }             
+                }
             }
 
             sizeChange = endDepth - depth;
@@ -339,16 +348,21 @@ public class CameraController : MonoBehaviour {
     IEnumerator ZoomIn()
     {
         float speed = inputControl.Zoom() * scrollSensitivity;
+        float zoomLimit = minDepth;
 
-        isZooming = true;
+        if (focus == focus_Level.SYSTEM || focus == focus_Level.PLANET)
+        {
+            zoomLimit = minDepthSystemView;
+        }
+
+        isZooming = true;        
 
         if (Input.touchCount == 2)
         {
-            //main.fieldOfView -= speed * panSensitivity;
             Vector3 current = main.transform.position;
-            float change = speed * .05f;
+            float change = speed * .05f;            
 
-            if (depth + change <= minDepth)
+            if (depth + change <= zoomLimit)
             {
                 depth += change;
                 main.transform.Translate(0, 0, change);
@@ -366,7 +380,7 @@ public class CameraController : MonoBehaviour {
                 depthRatio = .5f + 3 * (depth / maxDepth);
                 change = (speed * depthRatio) / 20;
 
-                if (depth + change <= minDepth)
+                if (depth + change <= zoomLimit)
                 {                  
                     depth += change;
                     main.transform.Translate(0, 0, change);
@@ -390,7 +404,6 @@ public class CameraController : MonoBehaviour {
 
         if (Input.touchCount == 2)
         {
-            //main.fieldOfView -= speed * panSensitivity;
             Vector3 current = main.transform.position;
             float change = speed * .05f;
 

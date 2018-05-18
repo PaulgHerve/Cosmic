@@ -2,6 +2,8 @@
 
 public class Selection_Object : MonoBehaviour {
 
+    public int selection_Priority;
+
     static UI_Selector ui_Selector;
 
     static Selection_Object current_Object;
@@ -29,6 +31,8 @@ public class Selection_Object : MonoBehaviour {
         current_Object = planet.GetComponent<Selection_Object>();
         ui_Selector.Select_Planet(planet);
         CameraController.Set_Focus_Level(CameraController.focus_Level.PLANET);
+
+        planet.Activate_Preview();
     }
 
     private static void StarToSystem(Star star)
@@ -59,7 +63,13 @@ public class Selection_Object : MonoBehaviour {
 
     private static void PlanetToSurface(Planet planet)
     {
+        //Debug.Log("PlanetToSurface");
 
+        current_Object = planet.GetComponent<Selection_Object>();
+        ui_Selector.Select_Planet(planet);
+        CameraController.Set_Focus_Level(CameraController.focus_Level.SURFACE);
+
+        UI_Controller.surface_Manager.Activate(planet);
     }
 
     private static void SurfaceToPlanet(Planet planet)
@@ -67,6 +77,8 @@ public class Selection_Object : MonoBehaviour {
         current_Object = planet.GetComponent<Selection_Object>();
         ui_Selector.Select_Planet(planet);
         CameraController.Set_Focus_Level(CameraController.focus_Level.PLANET);
+
+        UI_Controller.surface_Manager.Deactivate();
     }
 
     private static void PlanetToSystem(Planet planet)
@@ -86,7 +98,7 @@ public class Selection_Object : MonoBehaviour {
         CameraController.Set_Focus_Level(CameraController.focus_Level.STAR);
         CameraController.SetTarget(star.gameObject);
 
-        float minDepth = -550;
+        float minDepth = -150;
 
         if (CameraController.Get_Depth() > minDepth)
         {
@@ -114,6 +126,8 @@ public class Selection_Object : MonoBehaviour {
         Star star = GetComponent<Star>();
         Planet planet = GetComponent<Planet>();
 
+        //Debug.Log(gameObject.name);
+
         if (planet)
         {
             Select_Planet(planet);
@@ -128,7 +142,6 @@ public class Selection_Object : MonoBehaviour {
     private void Select_Planet(Planet planet)
     {
         CameraController.focus_Level focus_Level = CameraController.Get_Focus_Level();
-        Star hostStar = planet.Get_Star();
 
         if (focus_Level == CameraController.focus_Level.STAR) { Select_New_Planet(planet); }
         if (focus_Level == CameraController.focus_Level.SYSTEM) { Select_New_Planet(planet); }
@@ -143,7 +156,7 @@ public class Selection_Object : MonoBehaviour {
 
             if (prevPlanet)
             {
-                if (prevPlanet != this)                                 //Previous Planet is not this planet
+                if (current_Object != this)                             //Previous Planet is not this planet
                 {
                     Select_New_Planet(planet);
                 }
@@ -151,7 +164,14 @@ public class Selection_Object : MonoBehaviour {
                 else                                                    //Previous planet is this planet
                 {
                     //Zoom to structure
+
+                    PlanetToSurface(planet);
                 }
+            }
+
+            else                                                        //No Previous Planet was selected, This shouldn't ever happen
+            {
+                Select_New_Planet(planet);
             }
         }
 
@@ -188,6 +208,8 @@ public class Selection_Object : MonoBehaviour {
                         if (cameraTarget != star.gameObject)                    //The camera target is not this star
                         {
                             CameraController.SetTarget(star.gameObject);
+                            ui_Selector.Set_Mini_Position(star.gameObject.transform.position);
+                            ui_Selector.Deactivate_Mini_Indicator();
                         }
 
                         else

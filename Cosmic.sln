@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{9CDDA33F-E168-6730-57D1-FACFB8615FCF}") = "Cosmic", "Assembly-CSharp.csproj", "{92725F20-16DB-A100-62F6-72ECB06D4C44}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmic", "Cosmic.csproj", "{A24C8974-289E-C4C5-4D60-6C73E20B9828}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{92725F20-16DB-A100-62F6-72ECB06D4C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92725F20-16DB-A100-62F6-72ECB06D4C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92725F20-16DB-A100-62F6-72ECB06D4C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92725F20-16DB-A100-62F6-72ECB06D4C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A24C8974-289E-C4C5-4D60-6C73E20B9828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A24C8974-289E-C4C5-4D60-6C73E20B9828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A24C8974-289E-C4C5-4D60-6C73E20B9828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A24C8974-289E-C4C5-4D60-6C73E20B9828}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

@@ -14,8 +14,6 @@ public class Orbit_Drawer : MonoBehaviour
 
     public void Draw_Orbit(float radius)
     {
-        Color32 color = new Color32(255, 255, 255, 220);
-
         Theta = 0f;
         Size = (int)((1f / ThetaScale) + 1f);
         
@@ -27,7 +25,7 @@ public class Orbit_Drawer : MonoBehaviour
             float y = 0;
             float z = radius * Mathf.Sin(Theta);
 
-            lineDrawer.SetVertexCount(Size);
+            lineDrawer.positionCount = (Size);
             lineDrawer.SetPosition(i, new Vector3(x, y, z));
         }
     }

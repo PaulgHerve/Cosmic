@@ -107,6 +107,11 @@ public class Planet_Manager : MonoBehaviour {
         return currentState;
     }
 
+    public Star.starType GetStarType()
+    {
+        return starType;
+    }
+
     private int[] ReOrder_Zones(int[] array)
     {
         int[] return_list = new int[array.Length];

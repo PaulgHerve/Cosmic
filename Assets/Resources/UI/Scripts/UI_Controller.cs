@@ -3,6 +3,8 @@
 public class UI_Controller : MonoBehaviour
 {
     public Camera uiCamera;
+    public Surface_Manager surfaceManager;
+    public static Surface_Manager surface_Manager;
     private CameraController cameraControl;
     private static UI_Selector uiSelector;
 
@@ -10,13 +12,13 @@ public class UI_Controller : MonoBehaviour
     static Vector3 mousePos;
     static Vector3 uiMousePos;
     static Vector3 clickPos;
-   
-    private static RaycastHit hit;    
 
     private void Awake()
     {
         uiSelector = FindObjectOfType<UI_Selector>();
         cameraControl = FindObjectOfType<CameraController>();
+
+        surface_Manager = surfaceManager;
     }
 
     void Update()
@@ -130,6 +132,8 @@ public class UI_Controller : MonoBehaviour
         bool h = Physics.Raycast(r, 2400);
         RaycastHit hit;
 
+        Selection_Object currentWinner = null;
+
         if (h)
         {
             RaycastHit[] hitArray = Physics.RaycastAll(Camera.main.transform.position, r.direction, 2400);
@@ -138,18 +142,43 @@ public class UI_Controller : MonoBehaviour
             GameObject objectHit = null;
 
             if (hitArray.Length > 0)
-            {               
-                objectHit = hit.transform.gameObject;
-
-                if (objectHit.CompareTag("Selectable_Object"))
+            {
+                for (int i = 0; i < hitArray.Length; i++)
                 {
-                    if (!buttonHit)
-                    {
-                        Selection_Object sHit = objectHit.GetComponentInParent<Selection_Object>();
+                    hit = hitArray[i];
+                    objectHit = hit.transform.gameObject;
 
-                        sHit.Select_Object();
+                    if (objectHit.CompareTag("Selectable_Object"))      //- -   -   -   -   -   Object is a Selectable_Object
+                    {
+                        if (!buttonHit)                                 //- -   -   -   -   -   No UI element was also clicked
+                        {
+                            Selection_Object sHit = objectHit.GetComponentInParent<Selection_Object>();
+
+                            if (sHit)
+                            {
+                                int score = sHit.selection_Priority;
+
+                                if (currentWinner)
+                                {
+                                    if (score < currentWinner.selection_Priority)
+                                    {
+                                        currentWinner = sHit;
+                                    }
+                                }
+
+                                else
+                                {
+                                    currentWinner = sHit;
+                                }
+                            }
+                        }
                     }
                 }
+            }
+
+            if (currentWinner)      //- -   -   -   -   -   -   A winner was found based on priority
+            {
+                currentWinner.Select_Object();
             }
         }
     }
